@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BasketData</title>
+</head>
+<body>
+    <h1>Basket Data For localStorage</h1>
+</body>
+</html>
+<script>
+    var product = [
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Onion - Medium/Kanda- Madhyam",
+        productPrice: 32.32,
+        strikePrice: 45,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/10000148_30-fresho-onion.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Tomato Hybrid/Tomato Sankarit",
+        productPrice: 36,
+        strikePrice: 45,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/10000201_15-fresho-tomato-hybrid.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Cauliflower (Medium)/Phul Kobi (Madhyam)",
+        productPrice: 45,
+        strikePrice: 50.20,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/10000074_19-fresho-cauliflower.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Ladies Finger/Bhendi",
+        productPrice: 21.21,
+        strikePrice: 40,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/10000143_14-fresho-ladies-finger.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Mushrooms - Button/Alambe-Batan",
+        productPrice: 39.39,
+        strikePrice: 57.50,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/10000273_16-fresho-mushrooms-button.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Capsicum Hybrid Green/Sankarit Dhobli Mirchi",
+        productPrice: 68.68,
+        strikePrice: 113,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/10000069_20-fresho-capsicum-green.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Cucumber/Kakdi- Hirvi",
+        productPrice: 44.44,
+        strikePrice: 65,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/10000103_16-fresho-cucumber.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Banana - Yelakki/Kele- Yelakki",
+        productPrice: 90,
+        strikePrice: 112,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/10000031_21-fresho-banana-yelakki.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Carrot English/Gajar English (Lal)",
+        productPrice: 119,
+        strikePrice: 140,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/10000271_13-fresho-carrot-ooty.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Lemon - Organically Grown",
+        productPrice: 90,
+        strikePrice: 112,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/50000526_6-fresho-lemon-organically-grown.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Beetroot - Grade A/Beet",
+        productPrice: 56,
+        strikePrice: 77.56,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/10000047_21-fresho-beetroot.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Tender Coconut - Medium",
+        productPrice: 41,
+        strikePrice: 51,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/40057966_2-fresho-tender-coconut-medium.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Potato - New Crop",
+        productPrice: 25,
+        strikePrice: 31,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/40048457_7-fresho-potato-new-crop.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Baby Apple Shimla",
+        productPrice: 179,
+        strikePrice: 223.19,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/40226802_1-fresho-baby-apple-shimla.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Coriander/Kothambir/Sambhar",
+        productPrice: 4.40,
+        strikePrice: 5.50,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/10000097_19-fresho-coriander-leaves.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Beans - French, Ring",
+        productPrice: 50.50,
+        strikePrice: 83.75,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/10000044_42-fresho-beans-french-ring.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Ginger - Organically Grown",
+        productPrice: 50.50,
+        strikePrice: 95.47,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/40029980_3-fresho-ginger-organically-grown.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Chilli - Hybrid",
+        productPrice: 137.15,
+        strikePrice: 171,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/mm/30000645_12-fresho-chilli-hybrid.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Radish White/Mula Pandhra",
+        productPrice: 36.61,
+        strikePrice: 61.21,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/mm/10000166_16-fresho-radish-white.jpg"
+    },
+    {
+        category: "Fruit-and-vegetables",
+        productName: "Sweet Corn",
+        productPrice: 45,
+        strikePrice: 56.12,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/mm/40004992_14-fresho-sweet-corn.jpg"
+    },
+    {
+        category: "foodgrains-oil-and-masala",
+        productName: "Farm Cow Ghee",
+        productPrice: 494,
+        strikePrice: 520,
+        brandName: "Parsi Dairy Farm\n",
+        image: "https://www.bigbasket.com/media/uploads/p/s/40126129_2-parsi-dairy-farm-cow-ghee.jpg"
+    },
+    {
+        category: "foodgrains-oil-and-masala",
+        productName: "Sugar - Refined",
+        productPrice: 48.48,
+        strikePrice: 60,
+        brandName: "Madhur",
+        image: "https://www.bigbasket.com/media/uploads/bpi/mumbai/s/244096_1-madhur-sugar-refined.jpg"
+    },
+    {
+        category: "foodgrains-oil-and-masala",
+        productName: "Unpolished Toor Dal/Arhar Dal",
+        productPrice: 136,
+        strikePrice: 179,
+        brandName: "Tata Sampann",
+        image: "https://www.bigbasket.com/media/uploads/p/s/40000291_8-tata-sampann-unpolished-toor-dalarhar-dal.jpg"
+    },
+    {
+        category: "foodgrains-oil-and-masala",
+        productName: "Sun Lite - Sunflower Refined Oil",
+        productPrice: 152,
+        strikePrice: 180,
+        brandName: "Fortune",
+        image: "https://www.bigbasket.com/media/uploads/p/s/274145_14-fortune-sun-lite-sunflower-refined-oil.jpg"
+    },
+    {
+        category: "foodgrains-oil-and-masala",
+        productName: "Iodized",
+        productPrice: 21.21,
+        strikePrice: 24,
+        brandName: "Tata Salt",
+        image: "https://www.bigbasket.com/media/uploads/p/s/241600_5-tata-salt-iodized.jpg"
+    },
+    {
+        category: "foodgrains-oil-and-masala",
+        productName: "Gold - Pro Healthy Lifestyle Edible Oil\n",
+        productPrice: 545.14,
+        strikePrice: 630,
+        brandName: "Saffola",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1203529_5-saffola-gold-pro-healthy-lifestyle-edible-oil.jpg"
+    },
+    {
+        category: "foodgrains-oil-and-masala",
+        productName: "Poha/Avalakki/Aval/Chivda - Thick",
+        productPrice: 52,
+        strikePrice: 80,
+        brandName: "BB Royal",
+        image: "https://www.bigbasket.com/media/uploads/p/s/10000431_18-bb-royal-pohaavalakkiavalchivda-thick.jpg"
+    },
+    {
+        category: "foodgrains-oil-and-masala",
+        productName: "Oil - Extra Light 2 L Bottle + Durum Wheat Pasta Penne Rigate 500 g Pouch",
+        productPrice: 1344.35,
+        strikePrice: 2850.20,
+        brandName: "BORGESlive ",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1212929_1-borges-olive-oil-extra-light-2-l-bottle-durum-wheat-pasta-penne-rigate-500-g-pouch.jpg"
+    },
+    {
+        category: "foodgrains-oil-and-masala",
+        productName: "Select Sharbati Atta - 100% MP Whole Wheat, Rotis Stay Softer For Longer",
+        productPrice: 469,
+        strikePrice: 610,
+        brandName: "Aashirvaad",
+        image: "https://www.bigbasket.com/media/uploads/p/s/40236231_1-aashirvaad-select-sharbati-atta-100-mp-whole-wheat-rotis-stay-softer-for-longer.jpg"
+    },
+    {
+        category: "foodgrains-oil-and-masala",
+        productName: "Organic - Almond/Badam",
+        productPrice: 101,
+        strikePrice: 195,
+        brandName: "BB Royal",
+        image: "https://www.bigbasket.com/media/uploads/p/mm/40072510_14-bb-royal-organic-almondbadam.jpg"
+    },
+    {
+        category: "foodgrains-oil-and-masala",
+        productName: "Oil - Groundnut",
+        productPrice: 962,
+        strikePrice: 1175,
+        brandName: "Dhara",
+        image: "https://www.bigbasket.com/media/uploads/p/mm/134006_5-dhara-oil-groundnut.jpg"
+    },
+    {
+        category: "foodgrains-oil-and-masala",
+        productName: "Fortune Premium Kachi Ghani Pure Mustard Oil",
+        productPrice: 182,
+        strikePrice: 227,
+        brandName: "Fortune",
+        image: "https://www.bigbasket.com/media/uploads/p/s/276756_8-fortune-fortune-premium-kachi-ghani-pure-mustard-oil.jpg"
+    },
+    {
+        category: "foodgrains-oil-and-masala",
+        productName: "Lite - 15% Low Sodium Iodised Salt",
+        productPrice: 26.26,
+        strikePrice: 40,
+        brandName: "Tata Salt",
+        image: "https://www.bigbasket.com/media/uploads/p/mm/241601_6-tata-salt-lite-15-low-sodium-iodised-salt.jpg"
+    },
+    {
+        category: "foodgrains-oil-and-masala",
+        productName: "Organic - Cardamom Green/Hirvi Velchi",
+        productPrice: 299.50,
+        strikePrice: 599.50,
+        brandName: "BB Royal",
+        image: "https://www.bigbasket.com/media/uploads/p/mm/40203900_1-bb-royal-organic-cardamom-green.jpg"
+    },
+    {
+        category: "foodgrains-oil-and-masala",
+        productName: "Basmati Rice - Rozana Premium",
+        productPrice: 818,
+        strikePrice: 1020.20,
+        brandName: "BB Royal",
+        image: "https://www.bigbasket.com/media/uploads/p/mm/1211909_1-bb-royal-basmati-rice-rozana-premium.jpg"
+    },
+    {
+        category: "bakery-cakes-dairy",
+        productName: "Homogenised Toned Milk",
+        productPrice: 63.63,
+        strikePrice: 66,
+        brandName: "Amul",
+        image: "https://www.bigbasket.com/media/uploads/p/s/306926_4-amul-homogenised-toned-milk.jpg"
+    },
+    {
+        category: "bakery-cakes-dairy",
+        productName: "Whole Wheat Brown Bread With Bran",
+        productPrice: 42.75,
+        strikePrice: 45,
+        brandName: "THE BAKE SHOP",
+        image: "https://www.bigbasket.com/media/uploads/p/s/40082738_1-the-bake-shop-whole-wheat-brown-bread-with-bran.jpg"
+    },
+    {
+        category: "bakery-cakes-dairy",
+        productName: "Butter - Pasteurised",
+        productPrice: 236,
+        strikePrice: 245,
+        brandName: "Amul",
+        image: "https://www.bigbasket.com/media/uploads/p/s/104864_7-amul-butter-pasteurised.jpg"
+    },
+    {
+        category: "bakery-cakes-dairy",
+        productName: "Butter - White",
+        productPrice: 456,
+        strikePrice: 480,
+        brandName: "Parsi Dairy Farm",
+        image: "https://www.bigbasket.com/media/uploads/p/s/30009708_2-parsi-dairy-farm-butter-white.jpg"
+    },
+    {
+        category: "bakery-cakes-dairy",
+        productName: "Sandwich Bread - White, Chemical Free 400G + Eggs - Regular 6pcs",
+        productPrice: 84.46,
+        strikePrice: 105,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1204352_1-fresho-sandwich-bread-white-chemical-free-400g-eggs-regular-6pcs.jpg"
+    },
+    {
+        category: "bakery-cakes-dairy",
+        productName: "Ladi Pav - Whole Wheat",
+        productPrice: 38,
+        strikePrice: 40,
+        brandName: "THE BAKE SHOP",
+        image: "https://www.bigbasket.com/media/uploads/p/s/30001077_1-the-bake-shop-ladi-pav-whole-wheat.jpg"
+    },
+    {
+        category: "bakery-cakes-dairy",
+        productName: "THE BAKE SHOP\nBread - Whole wheat100% Atta with Multigrain Sliced",
+        productPrice: 61.75,
+        strikePrice: 65,
+        brandName: "THE BAKE SHOP",
+        image: "https://www.bigbasket.com/media/uploads/p/s/30001066_1-the-bake-shop-bread-whole-wheat100-atta-with-multigrain-sliced.jpg"
+    },
+    {
+        category: "bakery-cakes-dairy",
+        productName: "Kharis - Whole Wheat",
+        productPrice: 61.75,
+        strikePrice: 65,
+        brandName: "THE BAKE SHOP",
+        image: "https://www.bigbasket.com/media/uploads/p/s/30001084_2-the-bake-shop-kharis-whole-wheat.jpg"
+    },
+    {
+        category: "bakery-cakes-dairy",
+        productName: "Masti Dahi",
+        productPrice: 72.72,
+        strikePrice: 80,
+        brandName: "Amul",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1213630_1-amul-masti-dahi.jpg"
+    },
+    {
+        category: "bakery-cakes-dairy",
+        productName: "Bread - Whole Wheat, Chemical Free 400G + Eggs - Table Tray 30pcs",
+        productPrice: 252,
+        strikePrice: 315,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1204360_1-fresho-bread-whole-wheat-chemical-free-400g-eggs-table-tray-30pcs.jpg"
+    },
+    {
+        category: "bakery-cakes-dairy",
+        productName: "Cheese Slices",
+        productPrice: 73,
+        strikePrice: 76,
+        brandName: "Amul",
+        image: "https://www.bigbasket.com/media/uploads/p/s/104759_9-amul-cheese-slices.jpg"
+    },
+    {
+        category: "bakery-cakes-dairy",
+        productName: "Premium Dahi",
+        productPrice: 50,
+        strikePrice: 55,
+        brandName: "Amul",
+        image: "https://www.bigbasket.com/media/uploads/p/s/30007176_5-amul-premium-dahi.jpg"
+    },
+    {
+        category: "bakery-cakes-dairy",
+        productName: "Everyday Dairy Whitener - Milk Powder For Tea",
+        productPrice: 9.40,
+        strikePrice: 10,
+        brandName: "Nestle",
+        image: "https://www.bigbasket.com/media/uploads/p/s/40020214_9-nestle-everyday-dairy-whitener-milk-powder-for-tea.jpg"
+    },
+    {
+        category: "bakery-cakes-dairy",
+        productName: "Cashew Based Parmesan Cheese - Rich In Nutrients",
+        productPrice: 248,
+        strikePrice: 250,
+        brandName: "Goodmylk",
+        image: "https://www.bigbasket.com/media/uploads/p/mm/40238302_1-goodmylk-cashew-based-parmesan-cheese-rich-in-nutrients.jpg"
+    },
+    {
+        category: "bakery-cakes-dairy",
+        productName: "Toastea Premium Bake Rusk With Goodness Of Elaichi, Sooji & Wheat",
+        productPrice: 31.18,
+        strikePrice: 40,
+        brandName: "Britannia",
+        image: "https://www.bigbasket.com/media/uploads/p/mm/312568_18-britannia-toastea-premium-bake-rusk-with-goodness-of-elaichi-sooji-wheat.jpg"
+    },
+    {
+        category: "Snacks-and-branded-foods",
+        productName: "2-Minute Instant Noodles - Masala",
+        productPrice: 83.35,
+        strikePrice: 96.50,
+        brandName: "MAGGI",
+        image: "https://www.bigbasket.com/media/uploads/p/s/266109_18-maggi-2-minute-instant-noodles-masala.jpg"
+    },
+    {
+        category: "Snacks-and-branded-foods",
+        productName: "Frozen Green Peas",
+        productPrice: 99.50,
+        strikePrice: 135,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/40192104_2-fresho-frozen-green-peas.jpg"
+    },
+    {
+        category: "Snacks-and-branded-foods",
+        productName: "Good Day Cashew Cookies",
+        productPrice: 90.12,
+        strikePrice: 120,
+        brandName: "Britannia",
+        image: "https://www.bigbasket.com/media/uploads/p/s/40083744_6-britannia-good-day-cashew-cookies.jpg"
+    },
+    {
+        category: "Snacks-and-branded-foods",
+        productName: "Potato Chips - Indias Magic Masala",
+        productPrice: 65.62,
+        strikePrice: 100,
+        brandName: "Britannia",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1212516_4-lays-potato-chips-indias-magic-masala.jpg"
+    },
+    {
+        category: "Snacks-and-branded-foods",
+        productName: "Fresh Tomato Ketchup",
+        productPrice: 101.99,
+        strikePrice: 120,
+        brandName: "Kissan",
+        image: "https://www.bigbasket.com/media/uploads/p/s/40029538_33-kissan-fresh-tomato-ketchup.jpg"
+    },
+    {
+        category: "Snacks-and-branded-foods",
+        productName: "NutriChoice Digestive High Fibre Biscuits",
+        productPrice: 84.84,
+        strikePrice: 100,
+        brandName: "Britannia",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1206706_2-britannia-nutrichoice-digestive-high-fibre-biscuits.jpg"
+    },
+    {
+        category: "Snacks-and-branded-foods",
+        productName: "Namkeen - Bhujia Sev",
+        productPrice: 187.20,
+        strikePrice: 240,
+        brandName: "Haldirams",
+        image: "https://www.bigbasket.com/media/uploads/p/s/100022552_1-haldirams-namkeen-bhujia-sev.jpg"
+    },
+    {
+        category: "Snacks-and-branded-foods",
+        productName: "Oats Breakfast Cereal - Rich In Protein, Dietary Fibre, Nutritious, Easy To Cook",
+        productPrice: 200,
+        strikePrice: 273,
+        brandName: "Quaker",
+        image: "https://www.bigbasket.com/media/uploads/p/s/284405_13-quaker-oats-breakfast-cereal-rich-in-protein-dietary-fibre-nutritious-easy-to-cook.jpg"
+    },
+    {
+        category: "Snacks-and-branded-foods",
+        productName: "Hommade - Coconut Milk",
+        productPrice: 207,
+        strikePrice: 225,
+        brandName: "Dabur",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1205129_5-dabur-hommade-coconut-milk.jpg"
+    },
+    {
+        category: "Snacks-and-branded-foods",
+        productName: "Potato Chips - American Style Cream & Onion Flavour",
+        productPrice: 65.65,
+        strikePrice: 100,
+        brandName: "Lays",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1212514_5-lays-potato-chips-american-style-cream-onion-flavour.jpg"
+    },
+    {
+        category: "Snacks-and-branded-foods",
+        productName: "Namkeen - Bikaneri Bhujia",
+        productPrice: 290.99,
+        strikePrice: 300,
+        brandName: "Bikaji",
+        image: "https://www.bigbasket.com/media/uploads/p/s/30011826_7-bikaji-namkeen-bikaneri-bhujia.jpg"
+    },
+    {
+        category: "Snacks-and-branded-foods",
+        productName: "Nice Time - Sugar Showered Coconut Biscuits",
+        productPrice: 132.45,
+        strikePrice: 150,
+        brandName: "Britannia",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1203920_3-britannia-nice-time-sugar-showered-coconut-biscuits.jpg"
+    },
+    {
+        category: "Snacks-and-branded-foods",
+        productName: "Gluco Biscuits - Parle-G",
+        productPrice: 70.88,
+        strikePrice: 75,
+        brandName: "Parle",
+        image: "https://www.bigbasket.com/media/uploads/p/s/102102_4-parle-gluco-biscuits-parle-g.jpg"
+    },
+    {
+        category: "Snacks-and-branded-foods",
+        productName: "Britannia Little Hearts Classic - Sugar Sprinkled, Heart Shaped Biscuits",
+        productPrice: 51.23,
+        strikePrice: 60,
+        brandName: "Britannia",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1200143_10-britannia-britannia-little-hearts-classic-sugar-sprinkled-heart-shaped-biscuits.jpg"
+    },
+    {
+        category: "Snacks-and-branded-foods",
+        productName: "Dark Fantasy - Choco Fills",
+        productPrice: 374.22,
+        strikePrice: 450,
+        brandName: "Sunfeast",
+        image: "https://www.bigbasket.com/media/uploads/p/mm/1202647_3-sunfeast-dark-fantasy-choco-fills.jpg"
+    },
+    {
+        category: "eggs-meals-fish",
+        productName: "Eggs - Regular",
+        productPrice: 92.92,
+        strikePrice: 130,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1203477_2-fresho-eggs-regular.jpg"
+    },
+    {
+        category: "eggs-meals-fish",
+        productName: "Chicken Breast - Boneless, Antibiotic Residue-Free",
+        productPrice: 430,
+        strikePrice: 690,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/10001001_7-fresho-chicken-breast-boneless-antibiotic-residue-free.jpg"
+    },
+    {
+        category: "eggs-meals-fish",
+        productName: "Farm Eggs - Table Tray, Medium, Antibiotic Residue-Free",
+        productPrice: 216,
+        strikePrice: 275,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/150502_6-fresho-farm-eggs-table-tray-medium-antibiotic-residue-free.jpg"
+    },
+    {
+        category: "eggs-meals-fish",
+        productName: "Chicken Breast - Boneless",
+        productPrice: 137.75,
+        strikePrice: 145,
+        brandName: "Zorabian",
+        image: "https://www.bigbasket.com/media/uploads/p/s/30001413_5-zorabian-chicken-breast-boneless.jpg"
+    },
+    {
+        category: "eggs-meals-fish",
+        productName: "Fresho Chicken Curry Cut Without Skin 1 kg + Kara Coconut Milk - Classic 400 ml",
+        productPrice: 384.65,
+        strikePrice: 595,
+        brandName: "bb Combo",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1213732_1-bb-combo-fresho-chicken-curry-cut-without-skin-1-kg-kara-coconut-milk-classic-400-ml.jpg"
+    },
+    {
+        category: "eggs-meals-fish",
+        productName: "Chicken Curry Cut 1kg + Seer Fish Slice/Steaks 500 g",
+        productPrice: 991,
+        strikePrice: 1752,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1215095_1-fresho-chicken-curry-cut-1kg-seer-fish-slicesteaks-500-g.jpg"
+    },
+    {
+        category: "eggs-meals-fish",
+        productName: "Fresho Meat Chicken Curry Cut Without Skin 1kg + Everest Chicken Masala 100g",
+        productPrice: 331.20,
+        strikePrice: 539,
+        brandName: "bb Combo",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1202514_1-bb-combo-fresho-meat-chicken-curry-cut-without-skin-1kg-everest-chicken-masala-100g.jpg"
+    },
+    {
+        category: "eggs-meals-fish",
+        productName: "Fresho Chicken Breast Boneless 4-5 pcs 500g +Kara Coconut Milk UHT Classic 200ml",
+        productPrice: 332.15,
+        strikePrice: 425,
+        brandName: "bb Combo",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1213733_1-bb-combo-fresho-chicken-breast-boneless-4-5-pcs-500g-kara-coconut-milk-uht-classic-200ml.jpg"
+    },
+    {
+        category: "eggs-meals-fish",
+        productName: "Rohu Fish - Large, Curry Cut/Bengali Cut, Preservative Free, 12-15 pcs",
+        productPrice: 413.36,
+        strikePrice: 620,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/10000756_34-fresho-rohu-fish-large-curry-cutbengali-cut-preservative-free-12-15-pcs.jpg"
+    },
+    {
+        category: "eggs-meals-fish",
+        productName: "Desi Rohu Fish Steak - Pre Marinated, Ready To Cook",
+        productPrice: 269,
+        strikePrice: 763,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/s/40240474_4-fresho-desi-rohu-fish-steak-pre-marinated-ready-to-cook.jpg"
+    },
+    {
+        category: "eggs-meals-fish",
+        productName: "Chicken Leg - Without Skin, Antibiotic Residue-Free, 3-4 pcs",
+        productPrice: 325,
+        strikePrice: 435,
+        brandName: "Fresho",
+        image: "https://www.bigbasket.com/media/uploads/p/mm/10000912_9-fresho-chicken-leg-without-skin-antibiotic-residue-free-3-4-pcs.jpg"
+    },
+    {
+        category: "cleaning-household",
+        productName: "Disinfectant Toilet Cleaner Liquid, Original",
+        productPrice: 495,
+        strikePrice: 585,
+        brandName: "Harpic",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1207190_6-harpic-disinfectant-toilet-cleaner-liquid-original.jpg"
+    },
+    {
+        category: "cleaning-household",
+        productName: "Disinfectant Surface & Floor Cleaner Liquid, Citrus",
+        productPrice: 314,
+        strikePrice: 399,
+        brandName: "Lizol",
+        image: "https://www.bigbasket.com/media/uploads/p/s/249154_12-lizol-disinfectant-surface-floor-cleaner-liquid-citrus.jpg"
+    },
+    {
+        category: "cleaning-household",
+        productName: "Dishwash Liquid Gel - Lemon",
+        productPrice: 182,
+        strikePrice: 209,
+        brandName: "Vim",
+        image: "https://www.bigbasket.com/media/uploads/p/s/40001181_9-vim-dishwash-liquid-gel-lemon.jpg"
+    },
+    {
+        category: "cleaning-household",
+        productName: "Easy Wash Detergent Powder",
+        productPrice: 167,
+        strikePrice: 205,
+        brandName: "Surf Excel",
+        image: "https://www.bigbasket.com/media/uploads/p/s/266945_19-surf-excel-easy-wash-detergent-powder.jpg"
+    },
+    {
+        category: "cleaning-household",
+        productName: "Matic Liquid Detergent - Top Load",
+        productPrice: 595.57,
+        strikePrice: 700,
+        brandName: "Surf Excel",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1207310_6-surf-excel-matic-liquid-detergent-top-load.jpg"
+    },
+    {
+        category: "cleaning-household",
+        productName: "Disinfectant Bathroom Cleaner Liquid, Lemon",
+        productPrice: 300,
+        strikePrice: 378,
+        brandName: "Harpic",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1208843_4-harpic-disinfectant-bathroom-cleaner-liquid-lemon.jpg"
+    },
+    {
+        category: "cleaning-household",
+        productName: "Cleaning Lime Scale Salt",
+        productPrice: 150,
+        strikePrice: 156,
+        brandName: "Finish",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1201634_3-finish-cleaning-lime-scale-salt.jpg"
+    },
+    {
+        category: "cleaning-household",
+        productName: "Harpic Toilet Cleaner, Original 1 L + Lizol Surface Cleaner, Citrus 2 L",
+        productPrice: 479,
+        strikePrice: 568,
+        brandName: "bb Combo",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1208977_3-bb-combo-harpic-toilet-cleaner-original-1-l-lizol-surface-cleaner-citrus-2-l.jpg"
+    },
+    {
+        category: "cleaning-household",
+        productName: "Dishwash Liquid Gel - Lemon",
+        productPrice: 161.35,
+        strikePrice: 186,
+        brandName: "Vim",
+        image: "https://www.bigbasket.com/media/uploads/p/s/307195_18-vim-dishwash-liquid-gel-lemon.jpg"
+    },
+    {
+        category: "cleaning-household",
+        productName: "Pooja Oil",
+        productPrice: 93.25,
+        strikePrice: 100,
+        brandName: "Mangalmai",
+        image: "https://www.bigbasket.com/media/uploads/p/s/40080807_1-mangalmai-pooja-oil.jpg"
+    },
+    {
+        category: "cleaning-household",
+        productName: "After Wash Morning Fresh Fabric Conditioner",
+        productPrice: 400,
+        strikePrice: 480,
+        brandName: "Comfort",
+        image: "https://www.bigbasket.com/media/uploads/p/s/40130608_7-comfort-after-wash-morning-fresh-fabric-conditioner.jpg"
+    },
+    {
+        category: "cleaning-household",
+        productName: "Detergent Washing Powder - Matic Front Load",
+        productPrice: 191.88,
+        strikePrice: 1077,
+        brandName: "Ariel",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1214198_1-ariel-detergent-washing-powder-matic-front-load.jpg"
+    },
+    {
+        category: "",
+        productName: "Garbage Bags - Oxo Biodegradable Medium, Green, (19x21 Inches)",
+        productPrice: 185.25,
+        strikePrice: 195,
+        brandName: "BB Home",
+        image: "https://www.bigbasket.com/media/uploads/p/s/1212117_3-bb-home-garbage-bags-oxo-biodegradable-medium-green-19x21-inches.jpg"
+    }
+];
+
+
+    localStorage.setItem("basketProduct", JSON.stringify(product));
+
+    var FruitVeg = [{
+            category: "Fruit-and-vegetables",
+            productName: "Onion - Medium/Kanda- Madhyam",
+            productPrice: 32.32,
+            strikePrice: 45,
+            brandName: "Fresho",
+            image: "https://www.bigbasket.com/media/uploads/p/s/10000148_30-fresho-onion.jpg"
+        },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Tomato Hybrid/Tomato Sankarit",
+                productPrice: 36,
+                strikePrice: 45,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/10000201_15-fresho-tomato-hybrid.jpg"
+            },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Cauliflower (Medium)/Phul Kobi (Madhyam)",
+                productPrice: 45,
+                strikePrice: 50.20,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/10000074_19-fresho-cauliflower.jpg"
+            },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Ladies Finger/Bhendi",
+                productPrice: 21.21,
+                strikePrice: 40,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/10000143_14-fresho-ladies-finger.jpg"
+            },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Mushrooms - Button/Alambe-Batan",
+                productPrice: 39.39,
+                strikePrice: 57.50,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/10000273_16-fresho-mushrooms-button.jpg"
+            },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Capsicum Hybrid Green/Sankarit Dhobli Mirchi",
+                productPrice: 68.68,
+                strikePrice: 113,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/10000069_20-fresho-capsicum-green.jpg"
+            },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Cucumber/Kakdi- Hirvi",
+                productPrice: 44.44,
+                strikePrice: 65,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/10000103_16-fresho-cucumber.jpg"
+            },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Banana - Yelakki/Kele- Yelakki",
+                productPrice: 90,
+                strikePrice: 112,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/10000031_21-fresho-banana-yelakki.jpg"
+            },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Carrot English/Gajar English (Lal)",
+                productPrice: 119,
+                strikePrice: 140,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/10000271_13-fresho-carrot-ooty.jpg"
+            },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Lemon - Organically Grown",
+                productPrice: 90,
+                strikePrice: 112,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/50000526_6-fresho-lemon-organically-grown.jpg"
+            },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Beetroot - Grade A/Beet",
+                productPrice: 56,
+                strikePrice: 77.56,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/10000047_21-fresho-beetroot.jpg"
+            },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Tender Coconut - Medium",
+                productPrice: 41,
+                strikePrice: 51,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/40057966_2-fresho-tender-coconut-medium.jpg"
+            },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Potato - New Crop",
+                productPrice: 25,
+                strikePrice: 31,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/40048457_7-fresho-potato-new-crop.jpg"
+            },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Baby Apple Shimla",
+                productPrice: 179,
+                strikePrice: 223.19,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/40226802_1-fresho-baby-apple-shimla.jpg"
+            },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Coriander/Kothambir/Sambhar",
+                productPrice: 4.40,
+                strikePrice: 5.50,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/10000097_19-fresho-coriander-leaves.jpg"
+            },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Beans - French, Ring",
+                productPrice: 50.50,
+                strikePrice: 83.75,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/10000044_42-fresho-beans-french-ring.jpg"
+            },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Ginger - Organically Grown",
+                productPrice: 50.50,
+                strikePrice: 95.47,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/40029980_3-fresho-ginger-organically-grown.jpg"
+            },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Chilli - Hybrid",
+                productPrice: 137.15,
+                strikePrice: 171,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/mm/30000645_12-fresho-chilli-hybrid.jpg"
+            },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Radish White/Mula Pandhra",
+                productPrice: 36.61,
+                strikePrice: 61.21,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/mm/10000166_16-fresho-radish-white.jpg"
+            },
+            {
+                category: "Fruit-and-vegetables",
+                productName: "Sweet Corn",
+                productPrice: 45,
+                strikePrice: 56.12,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/mm/40004992_14-fresho-sweet-corn.jpg"
+            }]
+
+     var FoodOilAndMasala  = [{
+            category: "foodgrains-oil-and-masala",
+            productName: "Farm Cow Ghee",
+            productPrice: 494,
+            strikePrice: 520,
+            brandName: "Parsi Dairy Farm\n",
+            image: "https://www.bigbasket.com/media/uploads/p/s/40126129_2-parsi-dairy-farm-cow-ghee.jpg"
+        },
+            {
+                category: "foodgrains-oil-and-masala",
+                productName: "Sugar - Refined",
+                productPrice: 48.48,
+                strikePrice: 60,
+                brandName: "Madhur",
+                image: "https://www.bigbasket.com/media/uploads/bpi/mumbai/s/244096_1-madhur-sugar-refined.jpg"
+            },
+            {
+                category: "foodgrains-oil-and-masala",
+                productName: "Unpolished Toor Dal/Arhar Dal",
+                productPrice: 136,
+                strikePrice: 179,
+                brandName: "Tata Sampann",
+                image: "https://www.bigbasket.com/media/uploads/p/s/40000291_8-tata-sampann-unpolished-toor-dalarhar-dal.jpg"
+            },
+            {
+                category: "foodgrains-oil-and-masala",
+                productName: "Sun Lite - Sunflower Refined Oil",
+                productPrice: 152,
+                strikePrice: 180,
+                brandName: "Fortune",
+                image: "https://www.bigbasket.com/media/uploads/p/s/274145_14-fortune-sun-lite-sunflower-refined-oil.jpg"
+            },
+            {
+                category: "foodgrains-oil-and-masala",
+                productName: "Iodized",
+                productPrice: 21.21,
+                strikePrice: 24,
+                brandName: "Tata Salt",
+                image: "https://www.bigbasket.com/media/uploads/p/s/241600_5-tata-salt-iodized.jpg"
+            },
+            {
+                category: "foodgrains-oil-and-masala",
+                productName: "Gold - Pro Healthy Lifestyle Edible Oil\n",
+                productPrice: 545.14,
+                strikePrice: 630,
+                brandName: "Saffola",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1203529_5-saffola-gold-pro-healthy-lifestyle-edible-oil.jpg"
+            },
+            {
+                category: "foodgrains-oil-and-masala",
+                productName: "Poha/Avalakki/Aval/Chivda - Thick",
+                productPrice: 52,
+                strikePrice: 80,
+                brandName: "BB Royal",
+                image: "https://www.bigbasket.com/media/uploads/p/s/10000431_18-bb-royal-pohaavalakkiavalchivda-thick.jpg"
+            },
+            {
+                category: "foodgrains-oil-and-masala",
+                productName: "Oil - Extra Light 2 L Bottle + Durum Wheat Pasta Penne Rigate 500 g Pouch",
+                productPrice: 1344.35,
+                strikePrice: 2850.20,
+                brandName: "BORGESlive ",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1212929_1-borges-olive-oil-extra-light-2-l-bottle-durum-wheat-pasta-penne-rigate-500-g-pouch.jpg"
+            },
+            {
+                category: "foodgrains-oil-and-masala",
+                productName: "Select Sharbati Atta - 100% MP Whole Wheat, Rotis Stay Softer For Longer",
+                productPrice: 469,
+                strikePrice: 610,
+                brandName: "Aashirvaad",
+                image: "https://www.bigbasket.com/media/uploads/p/s/40236231_1-aashirvaad-select-sharbati-atta-100-mp-whole-wheat-rotis-stay-softer-for-longer.jpg"
+            },
+            {
+                category: "foodgrains-oil-and-masala",
+                productName: "Organic - Almond/Badam",
+                productPrice: 101,
+                strikePrice: 195,
+                brandName: "BB Royal",
+                image: "https://www.bigbasket.com/media/uploads/p/mm/40072510_14-bb-royal-organic-almondbadam.jpg"
+            },
+            {
+                category: "foodgrains-oil-and-masala",
+                productName: "Oil - Groundnut",
+                productPrice: 962,
+                strikePrice: 1175,
+                brandName: "Dhara",
+                image: "https://www.bigbasket.com/media/uploads/p/mm/134006_5-dhara-oil-groundnut.jpg"
+            },
+            {
+                category: "foodgrains-oil-and-masala",
+                productName: "Fortune Premium Kachi Ghani Pure Mustard Oil",
+                productPrice: 182,
+                strikePrice: 227,
+                brandName: "Fortune",
+                image: "https://www.bigbasket.com/media/uploads/p/s/276756_8-fortune-fortune-premium-kachi-ghani-pure-mustard-oil.jpg"
+            },
+            {
+                category: "foodgrains-oil-and-masala",
+                productName: "Lite - 15% Low Sodium Iodised Salt",
+                productPrice: 26.26,
+                strikePrice: 40,
+                brandName: "Tata Salt",
+                image: "https://www.bigbasket.com/media/uploads/p/mm/241601_6-tata-salt-lite-15-low-sodium-iodised-salt.jpg"
+            },
+            {
+                category: "foodgrains-oil-and-masala",
+                productName: "Organic - Cardamom Green/Hirvi Velchi",
+                productPrice: 299.50,
+                strikePrice: 599.50,
+                brandName: "BB Royal",
+                image: "https://www.bigbasket.com/media/uploads/p/mm/40203900_1-bb-royal-organic-cardamom-green.jpg"
+            },
+            {
+                category: "foodgrains-oil-and-masala",
+                productName: "Basmati Rice - Rozana Premium",
+                productPrice: 818,
+                strikePrice: 1020.20,
+                brandName: "BB Royal",
+                image: "https://www.bigbasket.com/media/uploads/p/mm/1211909_1-bb-royal-basmati-rice-rozana-premium.jpg"
+            },]
+
+    var bakeryCakesDairy = [{
+            category: "bakery-cakes-dairy",
+            productName: "Homogenised Toned Milk",
+            productPrice: 63.63,
+            strikePrice: 66,
+            brandName: "Amul",
+            image: "https://www.bigbasket.com/media/uploads/p/s/306926_4-amul-homogenised-toned-milk.jpg"
+        },
+            {
+                category: "bakery-cakes-dairy",
+                productName: "Whole Wheat Brown Bread With Bran",
+                productPrice: 42.75,
+                strikePrice: 45,
+                brandName: "THE BAKE SHOP",
+                image: "https://www.bigbasket.com/media/uploads/p/s/40082738_1-the-bake-shop-whole-wheat-brown-bread-with-bran.jpg"
+            },
+            {
+                category: "bakery-cakes-dairy",
+                productName: "Butter - Pasteurised",
+                productPrice: 236,
+                strikePrice: 245,
+                brandName: "Amul",
+                image: "https://www.bigbasket.com/media/uploads/p/s/104864_7-amul-butter-pasteurised.jpg"
+            },
+            {
+                category: "bakery-cakes-dairy",
+                productName: "Butter - White",
+                productPrice: 456,
+                strikePrice: 480,
+                brandName: "Parsi Dairy Farm",
+                image: "https://www.bigbasket.com/media/uploads/p/s/30009708_2-parsi-dairy-farm-butter-white.jpg"
+            },
+            {
+                category: "bakery-cakes-dairy",
+                productName: "Sandwich Bread - White, Chemical Free 400G + Eggs - Regular 6pcs",
+                productPrice: 84.46,
+                strikePrice: 105,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1204352_1-fresho-sandwich-bread-white-chemical-free-400g-eggs-regular-6pcs.jpg"
+            },
+            {
+                category: "bakery-cakes-dairy",
+                productName: "Ladi Pav - Whole Wheat",
+                productPrice: 38,
+                strikePrice: 40,
+                brandName: "THE BAKE SHOP",
+                image: "https://www.bigbasket.com/media/uploads/p/s/30001077_1-the-bake-shop-ladi-pav-whole-wheat.jpg"
+            },
+            {
+                category: "bakery-cakes-dairy",
+                productName: "THE BAKE SHOP\nBread - Whole wheat100% Atta with Multigrain Sliced",
+                productPrice: 61.75,
+                strikePrice: 65,
+                brandName: "THE BAKE SHOP",
+                image: "https://www.bigbasket.com/media/uploads/p/s/30001066_1-the-bake-shop-bread-whole-wheat100-atta-with-multigrain-sliced.jpg"
+            },
+            {
+                category: "bakery-cakes-dairy",
+                productName: "Kharis - Whole Wheat",
+                productPrice: 61.75,
+                strikePrice: 65,
+                brandName: "THE BAKE SHOP",
+                image: "https://www.bigbasket.com/media/uploads/p/s/30001084_2-the-bake-shop-kharis-whole-wheat.jpg"
+            },
+            {
+                category: "bakery-cakes-dairy",
+                productName: "Masti Dahi",
+                productPrice: 72.72,
+                strikePrice: 80,
+                brandName: "Amul",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1213630_1-amul-masti-dahi.jpg"
+            },
+            {
+                category: "bakery-cakes-dairy",
+                productName: "Bread - Whole Wheat, Chemical Free 400G + Eggs - Table Tray 30pcs",
+                productPrice: 252,
+                strikePrice: 315,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1204360_1-fresho-bread-whole-wheat-chemical-free-400g-eggs-table-tray-30pcs.jpg"
+            },
+            {
+                category: "bakery-cakes-dairy",
+                productName: "Cheese Slices",
+                productPrice: 73,
+                strikePrice: 76,
+                brandName: "Amul",
+                image: "https://www.bigbasket.com/media/uploads/p/s/104759_9-amul-cheese-slices.jpg"
+            },
+            {
+                category: "bakery-cakes-dairy",
+                productName: "Premium Dahi",
+                productPrice: 50,
+                strikePrice: 55,
+                brandName: "Amul",
+                image: "https://www.bigbasket.com/media/uploads/p/s/30007176_5-amul-premium-dahi.jpg"
+            },
+            {
+                category: "bakery-cakes-dairy",
+                productName: "Everyday Dairy Whitener - Milk Powder For Tea",
+                productPrice: 9.40,
+                strikePrice: 10,
+                brandName: "Nestle",
+                image: "https://www.bigbasket.com/media/uploads/p/s/40020214_9-nestle-everyday-dairy-whitener-milk-powder-for-tea.jpg"
+            },
+            {
+                category: "bakery-cakes-dairy",
+                productName: "Cashew Based Parmesan Cheese - Rich In Nutrients",
+                productPrice: 248,
+                strikePrice: 250,
+                brandName: "Goodmylk",
+                image: "https://www.bigbasket.com/media/uploads/p/mm/40238302_1-goodmylk-cashew-based-parmesan-cheese-rich-in-nutrients.jpg"
+            },
+            {
+                category: "bakery-cakes-dairy",
+                productName: "Toastea Premium Bake Rusk With Goodness Of Elaichi, Sooji & Wheat",
+                productPrice: 31.18,
+                strikePrice: 40,
+                brandName: "Britannia",
+                image: "https://www.bigbasket.com/media/uploads/p/mm/312568_18-britannia-toastea-premium-bake-rusk-with-goodness-of-elaichi-sooji-wheat.jpg"
+            }]
+
+    var snacksBrandedFood = [{
+            category: "Snacks-and-branded-foods",
+            productName: "2-Minute Instant Noodles - Masala",
+            productPrice: 83.35,
+            strikePrice: 96.50,
+            brandName: "MAGGI",
+            image: "https://www.bigbasket.com/media/uploads/p/s/266109_18-maggi-2-minute-instant-noodles-masala.jpg"
+        },
+            {
+                category: "Snacks-and-branded-foods",
+                productName: "Frozen Green Peas",
+                productPrice: 99.50,
+                strikePrice: 135,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/40192104_2-fresho-frozen-green-peas.jpg"
+            },
+            {
+                category: "Snacks-and-branded-foods",
+                productName: "Good Day Cashew Cookies",
+                productPrice: 90.12,
+                strikePrice: 120,
+                brandName: "Britannia",
+                image: "https://www.bigbasket.com/media/uploads/p/s/40083744_6-britannia-good-day-cashew-cookies.jpg"
+            },
+            {
+                category: "Snacks-and-branded-foods",
+                productName: "Potato Chips - Indias Magic Masala",
+                productPrice: 65.62,
+                strikePrice: 100,
+                brandName: "Britannia",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1212516_4-lays-potato-chips-indias-magic-masala.jpg"
+            },
+            {
+                category: "Snacks-and-branded-foods",
+                productName: "Fresh Tomato Ketchup",
+                productPrice: 101.99,
+                strikePrice: 120,
+                brandName: "Kissan",
+                image: "https://www.bigbasket.com/media/uploads/p/s/40029538_33-kissan-fresh-tomato-ketchup.jpg"
+            },
+            {
+                category: "Snacks-and-branded-foods",
+                productName: "NutriChoice Digestive High Fibre Biscuits",
+                productPrice: 84.84,
+                strikePrice: 100,
+                brandName: "Britannia",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1206706_2-britannia-nutrichoice-digestive-high-fibre-biscuits.jpg"
+            },
+            {
+                category: "Snacks-and-branded-foods",
+                productName: "Namkeen - Bhujia Sev",
+                productPrice: 187.20,
+                strikePrice: 240,
+                brandName: "Haldirams",
+                image: "https://www.bigbasket.com/media/uploads/p/s/100022552_1-haldirams-namkeen-bhujia-sev.jpg"
+            },
+            {
+                category: "Snacks-and-branded-foods",
+                productName: "Oats Breakfast Cereal - Rich In Protein, Dietary Fibre, Nutritious, Easy To Cook",
+                productPrice: 200,
+                strikePrice: 273,
+                brandName: "Quaker",
+                image: "https://www.bigbasket.com/media/uploads/p/s/284405_13-quaker-oats-breakfast-cereal-rich-in-protein-dietary-fibre-nutritious-easy-to-cook.jpg"
+            },
+            {
+                category: "Snacks-and-branded-foods",
+                productName: "Hommade - Coconut Milk",
+                productPrice: 207,
+                strikePrice: 225,
+                brandName: "Dabur",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1205129_5-dabur-hommade-coconut-milk.jpg"
+            },
+            {
+                category: "Snacks-and-branded-foods",
+                productName: "Potato Chips - American Style Cream & Onion Flavour",
+                productPrice: 65.65,
+                strikePrice: 100,
+                brandName: "Lays",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1212514_5-lays-potato-chips-american-style-cream-onion-flavour.jpg"
+            },
+            {
+                category: "Snacks-and-branded-foods",
+                productName: "Namkeen - Bikaneri Bhujia",
+                productPrice: 290.99,
+                strikePrice: 300,
+                brandName: "Bikaji",
+                image: "https://www.bigbasket.com/media/uploads/p/s/30011826_7-bikaji-namkeen-bikaneri-bhujia.jpg"
+            },
+            {
+                category: "Snacks-and-branded-foods",
+                productName: "Nice Time - Sugar Showered Coconut Biscuits",
+                productPrice: 132.45,
+                strikePrice: 150,
+                brandName: "Britannia",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1203920_3-britannia-nice-time-sugar-showered-coconut-biscuits.jpg"
+            },
+            {
+                category: "Snacks-and-branded-foods",
+                productName: "Gluco Biscuits - Parle-G",
+                productPrice: 70.88,
+                strikePrice: 75,
+                brandName: "Parle",
+                image: "https://www.bigbasket.com/media/uploads/p/s/102102_4-parle-gluco-biscuits-parle-g.jpg"
+            },
+            {
+                category: "Snacks-and-branded-foods",
+                productName: "Britannia Little Hearts Classic - Sugar Sprinkled, Heart Shaped Biscuits",
+                productPrice: 51.23,
+                strikePrice: 60,
+                brandName: "Britannia",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1200143_10-britannia-britannia-little-hearts-classic-sugar-sprinkled-heart-shaped-biscuits.jpg"
+            },
+            {
+                category: "Snacks-and-branded-foods",
+                productName: "Dark Fantasy - Choco Fills",
+                productPrice: 374.22,
+                strikePrice: 450,
+                brandName: "Sunfeast",
+                image: "https://www.bigbasket.com/media/uploads/p/mm/1202647_3-sunfeast-dark-fantasy-choco-fills.jpg"
+            }]
+
+    var eggMealFish = [{
+            category: "eggs-meals-fish",
+            productName: "Eggs - Regular",
+            productPrice: 92.92,
+            strikePrice: 130,
+            brandName: "Fresho",
+            image: "https://www.bigbasket.com/media/uploads/p/s/1203477_2-fresho-eggs-regular.jpg"
+        },
+            {
+                category: "eggs-meals-fish",
+                productName: "Chicken Breast - Boneless, Antibiotic Residue-Free",
+                productPrice: 430,
+                strikePrice: 690,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/10001001_7-fresho-chicken-breast-boneless-antibiotic-residue-free.jpg"
+            },
+            {
+                category: "eggs-meals-fish",
+                productName: "Farm Eggs - Table Tray, Medium, Antibiotic Residue-Free",
+                productPrice: 216,
+                strikePrice: 275,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/150502_6-fresho-farm-eggs-table-tray-medium-antibiotic-residue-free.jpg"
+            },
+            {
+                category: "eggs-meals-fish",
+                productName: "Chicken Breast - Boneless",
+                productPrice: 137.75,
+                strikePrice: 145,
+                brandName: "Zorabian",
+                image: "https://www.bigbasket.com/media/uploads/p/s/30001413_5-zorabian-chicken-breast-boneless.jpg"
+            },
+            {
+                category: "eggs-meals-fish",
+                productName: "Fresho Chicken Curry Cut Without Skin 1 kg + Kara Coconut Milk - Classic 400 ml",
+                productPrice: 384.65,
+                strikePrice: 595,
+                brandName: "bb Combo",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1213732_1-bb-combo-fresho-chicken-curry-cut-without-skin-1-kg-kara-coconut-milk-classic-400-ml.jpg"
+            },
+            {
+                category: "eggs-meals-fish",
+                productName: "Chicken Curry Cut 1kg + Seer Fish Slice/Steaks 500 g",
+                productPrice: 991,
+                strikePrice: 1752,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1215095_1-fresho-chicken-curry-cut-1kg-seer-fish-slicesteaks-500-g.jpg"
+            },
+            {
+                category: "eggs-meals-fish",
+                productName: "Fresho Meat Chicken Curry Cut Without Skin 1kg + Everest Chicken Masala 100g",
+                productPrice: 331.20,
+                strikePrice: 539,
+                brandName: "bb Combo",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1202514_1-bb-combo-fresho-meat-chicken-curry-cut-without-skin-1kg-everest-chicken-masala-100g.jpg"
+            },
+            {
+                category: "eggs-meals-fish",
+                productName: "Fresho Chicken Breast Boneless 4-5 pcs 500g +Kara Coconut Milk UHT Classic 200ml",
+                productPrice: 332.15,
+                strikePrice: 425,
+                brandName: "bb Combo",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1213733_1-bb-combo-fresho-chicken-breast-boneless-4-5-pcs-500g-kara-coconut-milk-uht-classic-200ml.jpg"
+            },
+            {
+                category: "eggs-meals-fish",
+                productName: "Rohu Fish - Large, Curry Cut/Bengali Cut, Preservative Free, 12-15 pcs",
+                productPrice: 413.36,
+                strikePrice: 620,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/10000756_34-fresho-rohu-fish-large-curry-cutbengali-cut-preservative-free-12-15-pcs.jpg"
+            },
+            {
+                category: "eggs-meals-fish",
+                productName: "Desi Rohu Fish Steak - Pre Marinated, Ready To Cook",
+                productPrice: 269,
+                strikePrice: 763,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/s/40240474_4-fresho-desi-rohu-fish-steak-pre-marinated-ready-to-cook.jpg"
+            },
+            {
+                category: "eggs-meals-fish",
+                productName: "Chicken Leg - Without Skin, Antibiotic Residue-Free, 3-4 pcs",
+                productPrice: 325,
+                strikePrice: 435,
+                brandName: "Fresho",
+                image: "https://www.bigbasket.com/media/uploads/p/mm/10000912_9-fresho-chicken-leg-without-skin-antibiotic-residue-free-3-4-pcs.jpg"
+            }]
+
+    var cleaningHousehold = [{
+            category: "cleaning-household",
+            productName: "Disinfectant Toilet Cleaner Liquid, Original",
+            productPrice: 495,
+            strikePrice: 585,
+            brandName: "Harpic",
+            image: "https://www.bigbasket.com/media/uploads/p/s/1207190_6-harpic-disinfectant-toilet-cleaner-liquid-original.jpg"
+        },
+            {
+                category: "cleaning-household",
+                productName: "Disinfectant Surface & Floor Cleaner Liquid, Citrus",
+                productPrice: 314,
+                strikePrice: 399,
+                brandName: "Lizol",
+                image: "https://www.bigbasket.com/media/uploads/p/s/249154_12-lizol-disinfectant-surface-floor-cleaner-liquid-citrus.jpg"
+            },
+            {
+                category: "cleaning-household",
+                productName: "Dishwash Liquid Gel - Lemon",
+                productPrice: 182,
+                strikePrice: 209,
+                brandName: "Vim",
+                image: "https://www.bigbasket.com/media/uploads/p/s/40001181_9-vim-dishwash-liquid-gel-lemon.jpg"
+            },
+            {
+                category: "cleaning-household",
+                productName: "Easy Wash Detergent Powder",
+                productPrice: 167,
+                strikePrice: 205,
+                brandName: "Surf Excel",
+                image: "https://www.bigbasket.com/media/uploads/p/s/266945_19-surf-excel-easy-wash-detergent-powder.jpg"
+            },
+            {
+                category: "cleaning-household",
+                productName: "Matic Liquid Detergent - Top Load",
+                productPrice: 595.57,
+                strikePrice: 700,
+                brandName: "Surf Excel",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1207310_6-surf-excel-matic-liquid-detergent-top-load.jpg"
+            },
+            {
+                category: "cleaning-household",
+                productName: "Disinfectant Bathroom Cleaner Liquid, Lemon",
+                productPrice: 300,
+                strikePrice: 378,
+                brandName: "Harpic",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1208843_4-harpic-disinfectant-bathroom-cleaner-liquid-lemon.jpg"
+            },
+            {
+                category: "cleaning-household",
+                productName: "Cleaning Lime Scale Salt",
+                productPrice: 150,
+                strikePrice: 156,
+                brandName: "Finish",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1201634_3-finish-cleaning-lime-scale-salt.jpg"
+            },
+            {
+                category: "cleaning-household",
+                productName: "Harpic Toilet Cleaner, Original 1 L + Lizol Surface Cleaner, Citrus 2 L",
+                productPrice: 479,
+                strikePrice: 568,
+                brandName: "bb Combo",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1208977_3-bb-combo-harpic-toilet-cleaner-original-1-l-lizol-surface-cleaner-citrus-2-l.jpg"
+            },
+            {
+                category: "cleaning-household",
+                productName: "Dishwash Liquid Gel - Lemon",
+                productPrice: 161.35,
+                strikePrice: 186,
+                brandName: "Vim",
+                image: "https://www.bigbasket.com/media/uploads/p/s/307195_18-vim-dishwash-liquid-gel-lemon.jpg"
+            },
+            {
+                category: "cleaning-household",
+                productName: "Pooja Oil",
+                productPrice: 93.25,
+                strikePrice: 100,
+                brandName: "Mangalmai",
+                image: "https://www.bigbasket.com/media/uploads/p/s/40080807_1-mangalmai-pooja-oil.jpg"
+            },
+            {
+                category: "cleaning-household",
+                productName: "After Wash Morning Fresh Fabric Conditioner",
+                productPrice: 400,
+                strikePrice: 480,
+                brandName: "Comfort",
+                image: "https://www.bigbasket.com/media/uploads/p/s/40130608_7-comfort-after-wash-morning-fresh-fabric-conditioner.jpg"
+            },
+            {
+                category: "cleaning-household",
+                productName: "Detergent Washing Powder - Matic Front Load",
+                productPrice: 191.88,
+                strikePrice: 1077,
+                brandName: "Ariel",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1214198_1-ariel-detergent-washing-powder-matic-front-load.jpg"
+            },
+            {
+                category: "cleaning-household",
+                productName: "Garbage Bags - Oxo Biodegradable Medium, Green, (19x21 Inches)",
+                productPrice: 185.25,
+                strikePrice: 195,
+                brandName: "BB Home",
+                image: "https://www.bigbasket.com/media/uploads/p/s/1212117_3-bb-home-garbage-bags-oxo-biodegradable-medium-green-19x21-inches.jpg"
+            }]
+
+</script>
