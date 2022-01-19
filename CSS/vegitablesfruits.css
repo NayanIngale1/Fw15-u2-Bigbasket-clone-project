@@ -101,7 +101,7 @@ body
 }
 /*all-product-heading-end*/
 
-/*grid-container-start*/
+/*------------------grid-container-start-------------------*/
 #gridcontainer
 {
     border: 1px solid;
@@ -147,6 +147,12 @@ body
     width: 99%;
     height: 120px;
 }
+.product-image-border
+{
+    border: 1px solid;
+    width: 100%;
+    height: 100%;
+}
 .veg-color-tag
 {
     border: 1px solid;
@@ -162,6 +168,13 @@ body
     border-radius: 50%;
     background-color: rgb(2,145,53);
 }
+.brand-product-name-border
+{
+    border: 1px solid;
+    margin: 0px;
+    margin-top: 5px;
+    width: fit-content;
+}
 .qty-mrp-container
 {
     border: 1px solid;
@@ -176,51 +189,6 @@ body
     margin-top: 0px;
     padding: 5px;
     display: flex;
-}
-.standart-delivery-box
-{
-    border: 1px solid;
-    width: 93.5%;
-    padding: 5px;
-    display: flex;
-}
-.standart-delivery-cart
-{
-    border: 1px solid;
-    width: 20%;
-    height: 20px;
-}
-.qty-box
-{
-    border: 1px solid;
-    width: 93.5%;
-    padding: 5px;
-    display: flex;
-    justify-content: space-between;
-}
-.qty-entry-box
-{
-    border: 1px solid;
-    width: 20%;
-}
-.add-to-cart-box
-{
-    border: 1px solid;
-    width: 50%;
-}
-.add-to-cart-button
-{
-    width: 100%;
-    height: 31px;
-    font-size: 10px;
-    font-weight: bold;
-}
-.brand-product-name-border
-{
-    border: 1px solid;
-    margin: 0px;
-    margin-top: 5px;
-    width: fit-content;
 }
 .mrp-border
 {
@@ -248,12 +216,33 @@ body
     margin-left: 4px;
     margin-bottom: 0px;
 }
+.standart-delivery-box
+{
+    border: 1px solid;
+    width: 93.5%;
+    padding: 5px;
+    display: flex;
+}
+.standart-delivery-cart
+{
+    border: 1px solid;
+    width: 20%;
+    height: 20px;
+}
 .standard-delivery-border
 {
     border: 1px solid;
     margin: 0px;
     font-size: 12px;
     margin-left: 2px;
+}
+.qty-box
+{
+    border: 1px solid;
+    width: 93.5%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 .qty-border
 {
@@ -262,13 +251,31 @@ body
     margin-right: 2px;
     margin-top: 5px;
 }
-.all-product-image-border
+.qty-entry-box
 {
     border: 1px solid;
-    width: 100%;
-    height: 100%;
+    width: 20%;
 }
-.product-image-border
+.qty-input-box
+{
+    width: 80%;
+    height: 25px;
+    text-align: center;
+}
+.add-to-cart-box
+{
+    border: 1px solid;
+    width: 50%;
+}
+.add-to-cart-button
+{
+    width: 100%;
+    height: 31px;
+    font-size: 10px;
+    font-weight: bold;
+}
+/*------------------grid-container-end--------------------*/
+.all-product-image-border
 {
     border: 1px solid;
     width: 100%;
@@ -277,12 +284,6 @@ body
 #sorting-border
 {
     padding: 5px;
-}
-.qty-input-box
-{
-    width: 80%;
-    height: 25px;
-    text-align: center;
 }
 .all-product-heading-image-tag
 {
