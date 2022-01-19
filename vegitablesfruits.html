@@ -6,30 +6,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="CSS/vegitablesfruits.css">
 </head>
 <body>
-    <div id = "box1"></div>
-    <div id = "box2">
-       <div class = "box3" id = "box3" onclick="box3()">Fresho Immunity</div>
-       <div class = "box3" onclick="box4()">Fresho Strawberry</div>
-       <div class = "box3" onclick="box5()">USA Pear</div>
-       <div class = "box3" onclick="box6()">Fresh Orange</div>
-       <div class = "box3" onclick="box7()">Fresh Fruits</div>
-       <div class = "box3" onclick="box8()">Fresho Veggies</div>
-       <div class = "box3" onclick="box9()">Fresho Leafy</div>
-       <div class = "box3" id = "box4" onclick="box10()">New Arrivals</div>
-    </div>
-    <div id = "box5"></div>
-    <div id = "box6">
-        <div id = "box7"></div>
-        <!-- second div-->
-        <div id = "box8">
-            <div id = "box9">
-                <div id = "box10">
-                    <h2 class = "head1">Fruits & Vegetables</h2>
-                    <h2 class = "head1">12</h2>
+    <!--------------------------Fresh offer banner start---------------------------->
+    
+    <div id = "bannerphoto"></div>
+
+    <!--------------------------Fresh offer banner End---------------------------->
+
+    <!--------------------------Container start------------------------------->
+   
+    <div id = "container">
+   
+    <!--------------------------Container start------------------------------->
+
+        <!-----------------------Left side box start-------------------------->
+        <!-----------------------Left side box start-------------------------->
+
+        <div id = "leftsidebox">
+            <!-------------------Category-Container start---------------------->
+
+            <div id = "left-box-category">Category</div>
+            <div id = "category-container">
+                <p id = "fruitsvegitables">Fruits & Vegetables</p>
+                <div id = "all-category">
+                    <a class = "All-category-link" href="">Cuts & Sprouts</a>
+                    <a class = "All-category-link" href="">Exotic Fruits & Veggies</a>
+                    <a class = "All-category-link" href="">Flower Bouquets, Bunches</a>
+                    <a class = "All-category-link" href="">Fresh Fruits</a>
+                    <a class = "All-category-link" href="">Fresh Vegetables</a>
+                    <a class = "All-category-link" href="">Herbs & Seasonings</a>
+                    <a class = "All-category-link" href="">Organic Fruits & Vegetables</a>
                 </div>
-                <div id = "box11">
+            </div>
+
+            <!--------------------Category-Container start----------------->
+
+            <!-------------------------Brand-Container-start----------------------->
+
+            <div id = "left-box-category">Brand</div>
+            <div id = "Brand-container">
+                <div id = "Each-Brand">
+                    <label><input onchange="fresho()" type="checkbox" value = "fresho" id="checkbox-fresho">Fresho</label>
+                    <label><input onchange="bbcombo()" type="checkbox" value = "bb combo" id="checkbox-bb-combo">BB Combo</label>
+                </div>
+            </div>
+
+            <!------------------Brand-Container-end----------------------------->
+
+            <!-----------------Price-Filter-Start-------------------------------->
+
+            <div id = "left-box-category">Price</div>
+            <div id = "Price-container">
+                <div id = "Each-Price">
+                    <label><input onchange="LessthanRs20()" type="checkbox" value = "LessthanRs20" id="LessthanRs20">Less than Rs 20</label>
+                    <label><input onchange="BetweenRs21toRs50()" type="checkbox" value = "BetweenRs21toRs50" id="BetweenRs21toRs50">Between Rs 21 to Rs 50</label>
+                    <label><input onchange="BetweenRs51toRs100()" type="checkbox" value = "BetweenRs51toRs100" id="BetweenRs51toRs100">Between Rs 51 to Rs 100</label>
+                    <label><input onchange="BetweenRs101toRs200()" type="checkbox" value = "BetweenRs101toRs200" id="BetweenRs101toRs200">Between Rs 101 to Rs 200</label>
+                    <label><input onchange="BetweenRs201toRs500()" type="checkbox" value = "BetweenRs201toRs500" id = "BetweenRs201toRs500">Between Rs 201 to Rs 500</label>
+                </div>
+            </div>
+
+            <!---------------------Price-Filter-End--------------------------------------->
+
+            <!-----------------Discount-Filter-Start-------------------------------->
+
+            <div id = "left-box-category">Discount</div>
+            <div id = "Discount-container">
+                <div id = "Each-Discount">
+                    <label><input onchange="Between_15_25()" type="checkbox" value = "Between_15_25" id="Between_15_25">Between 15% - 25%</label>
+                    <label><input onchange="Morethan25()" type="checkbox" value = "Morethan25" id="Morethan25">More than 25%</label>
+                </div>
+            </div>
+
+            <!-----------------Discount-Filter-End-------------------------------->
+
+        </div>
+
+        <!------------------------------Left side box end-------------------------->
+        <!------------------------------Left side box end-------------------------->
+        
+        <!------------------------------Right side box start----------------------->
+        <!------------------------------Right side box start----------------------->
+        <div id = "rightbox">
+            <div id = "fruit-vegitales-heading-container">
+                <div id = "heading-container-child">
+                    <h2 class = "fruit-vegitales-heading">Fruits & Vegetables</h2>
+                    <h2 class = "fruit-vegitales-heading">12</h2>
+                </div>
+                <div id = "sorting-border">
                     <select id="select1" onchange="sorting()">
                         <option value="">Popularity</option>
                         <option value="low">Price - Low to High</option>
@@ -41,13 +107,17 @@
                     </select>
                 </div>
             </div>
-            <div id = "box12">
-                <div id = "box13"></div>
-                <p id = "para1">ALL PRODUCT</p>
+            <div id = "all-product-border">
+                <div id = "all-product-image-border"></div>
+                <p id = "all-product-content-border">ALL PRODUCT</p>
             </div>
             <!-- all boxes map to box14-->
-            <div id = "box14"></div>
+            <div id = "gridcontainer"></div>
         </div>
+        <!------------------------------Right side box End----------------------->
+        <!------------------------------Right side box End----------------------->
     </div>
 </body>
 </html>
+
+<script src="JS/vegitablesfruits.js"></script>
