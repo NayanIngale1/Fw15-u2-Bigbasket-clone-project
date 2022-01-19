@@ -197,10 +197,15 @@ image3.setAttribute("src","https://www.bbassets.com/static/v2498/custPage/build/
 document.querySelector("#all-product-image-border").append(image3);
 
 //----------------All Product Photo End----------//
+
+
+
+
+//---------------------------start----------------
 var array =
 [
     {
-        OFF : 20, 
+        OFF : 20,
         Brand: "BB-Combo",
         Date: "Standard Delivery : 23 Jan",
         Link: "https://www.bigbasket.com/media/uploads/p/s/10000150_19-fresho-onion.jpg",
@@ -275,122 +280,123 @@ var array =
 
 
 var cart = JSON.parse(localStorage.getItem("cart_data"))||[];
+
 category_page(array);
 function category_page(array)
 {
     document.querySelector("#gridcontainer").innerHTML = "";
     array.map(function(element,index)
     {
-        var box15 = document.createElement("div");
-        box15.setAttribute("class","each-element-container");
+        var ElementBox = document.createElement("div");
+            ElementBox.setAttribute("class","each-element-container");
 
-        var box16 = document.createElement("div");
-        box16.setAttribute("class","percentage-box");
+            var PercentageBox = document.createElement("div");
+            PercentageBox.setAttribute("class","percentage-box");
 
-        var para1 = document.createElement("p");
-        para1.setAttribute("class","percentage-content-box");
-        para1.textContent = `GET ${element.OFF} % OFF`
+            var Percentage = document.createElement("p");
+            Percentage.setAttribute("class","percentage-content-box");
+            Percentage.textContent = `GET ${element.OFF} % OFF`
 
-        var box17 = document.createElement("div");
-        box17.setAttribute("class","percentage-color");
+            var PercentageColor = document.createElement("div");
+            PercentageColor.setAttribute("class","percentage-color");
 
-        var box18 = document.createElement("div");
-        box18.setAttribute("class","product-photo");
+            var ProductPhotoDiv = document.createElement("div");
+            ProductPhotoDiv.setAttribute("class","product-photo");
 
-        var image4 = document.createElement("img");
-        image4.setAttribute("class","product-image-border");
-        image4.setAttribute("src",element.Link);
+            var ProductImage = document.createElement("img");
+            ProductImage.setAttribute("class","product-image-border");
+            ProductImage.setAttribute("src",element.Link);
 
-        var box19 = document.createElement("div");
-        box19.setAttribute("class","veg-color-tag");
+            var VegTag = document.createElement("div");
+            VegTag.setAttribute("class","veg-color-tag");
 
-        var box20 = document.createElement("div");
-        box20.setAttribute("class","veg-color-tag-border");
+            var VegTagColor = document.createElement("div");
+            VegTagColor.setAttribute("class","veg-color-tag-border");
 
-        var para2 = document.createElement("p");
-        para2.setAttribute("class","brand-product-name-border");
-        para2.textContent = element.Brand;
+            var BrandName = document.createElement("p");
+            BrandName.setAttribute("class","brand-product-name-border");
+            BrandName.textContent = element.Brand;
 
-        var para3 = document.createElement("p");
-        para3.setAttribute("class","brand-product-name-border");
-        para3.textContent = element.productName;
+            var ProductNames = document.createElement("p");
+            ProductNames.setAttribute("class","brand-product-name-border");
+            ProductNames.textContent = element.productName;
 
-        var box21 = document.createElement("div");
-        box21.setAttribute("class","qty-mrp-container");
+            var QtyMrpContainer = document.createElement("div");
+            QtyMrpContainer.setAttribute("class","qty-mrp-container");
 
-        var box22 = document.createElement("div");
-        box22.setAttribute("class","mrp-container");
+            var MrpBox = document.createElement("div");
+            MrpBox.setAttribute("class","mrp-container");
 
-        var para4 = document.createElement("p");
-        para4.setAttribute("class","mrp-border");
-        para4.textContent = "MRP:";
+            var MrpName = document.createElement("p");
+            MrpName.setAttribute("class","mrp-border");
+            MrpName.textContent = "MRP:";
 
-        var para5 = document.createElement("p");
-        para5.setAttribute("class","strick-price-border");
-        para5.textContent = "Rs"+element.StrikePrice;
+            var StrickPrice = document.createElement("p");
+            StrickPrice.setAttribute("class","strick-price-border");
+            StrickPrice.textContent = "Rs"+element.StrikePrice;
 
-        var para6 = document.createElement("p");
-        para6.setAttribute("class","product-price-border");
-        para6.textContent = "RS:"+element.productprice;
+            var ProductValue = document.createElement("p");
+            ProductValue.setAttribute("class","product-price-border");
+            ProductValue.textContent = "RS:"+element.productprice;
 
-        var box23 = document.createElement("div");
-        box23.setAttribute("class","standart-delivery-box");
+            var StandardContainer = document.createElement("div");
+            StandardContainer.setAttribute("class","standart-delivery-box");
 
-        var box24 = document.createElement("div");
-        box24.setAttribute("class","standart-delivery-cart");
+            var StandardIcon = document.createElement("div");
+            StandardIcon.setAttribute("class","standart-delivery-cart");
 
-        var para7 = document.createElement("p");
-        para7.setAttribute("class","standard-delivery-border");
-        para7.textContent = element.Date;
+            var StandardContent = document.createElement("p");
+            StandardContent.setAttribute("class","standard-delivery-border");
+            StandardContent.textContent = element.Date;
 
-        var image5 = document.createElement("img");
-        image5.setAttribute("class","standard-delivery-image-tag");
-        image5.setAttribute("src","https://www.bbassets.com/static/v2498/custPage/build/content/img/standard-del.svg");
+            var StandardImage = document.createElement("img");
+            StandardImage.setAttribute("class","standard-delivery-image-tag");
+            StandardImage.setAttribute("src","https://www.bbassets.com/static/v2498/custPage/build/content/img/standard-del.svg");
 
-        var box25 = document.createElement("div");
-        box25.setAttribute("class","qty-box");
+            var QtyContainer = document.createElement("div");
+            QtyContainer.setAttribute("class","qty-box");
 
-        var para8 = document.createElement("p");
-        para8.setAttribute("class","qty-border");
-        para8.textContent = "QTY";
+            var QtyText = document.createElement("p");
+            QtyText.setAttribute("class","qty-border");
+            QtyText.textContent = "QTY";
 
-        var box26 = document.createElement("div");
-        box26.setAttribute("class","qty-entry-box");
+            var QtyEntryBox = document.createElement("div");
+            QtyEntryBox.setAttribute("class","qty-entry-box");
 
-        var input1 = document.createElement("input");
-        input1.setAttribute("class","qty-input-box");
-        input1.type = "text";
+            var InputBox = document.createElement("input");
+            InputBox.setAttribute("class","qty-input-box");
+            InputBox.type = "text";
 
-        var box27 = document.createElement("div");
-        box27.setAttribute("class","add-to-cart-box");
+            var AddToCartBox = document.createElement("div");
+            AddToCartBox.setAttribute("class","add-to-cart-box");
 
-        var button1 = document.createElement("button");
-        button1.textContent = "Add To Cart";
-        button1.setAttribute("class","add-to-cart-button")
-        button1.addEventListener("click",function()
-        {
-            addtocart(input1.value,element);
-        })
+            var AddToCartBtn = document.createElement("button");
+            AddToCartBtn.textContent = "Add To Cart";
+            AddToCartBtn.setAttribute("class","add-to-cart-button")
+            AddToCartBtn.addEventListener("click",function()
+            {
+                addtocart(InputBox.value,element);
+            })
 
-        box26.append(input1);
-        box27.append(button1);
-        box25.append(para8,box26,box27);
-        box24.append(image5);
-        box23.append(box24,para7);
-        box22.append(para4,para5,para6);
-        box21.append(box22,box23,box25);
-        box19.append(box20);
-        box18.append(image4);
-        box16.append(para1,box17);
-        box15.append(box16,box18,box19,para2,para3,box21);
-        document.querySelector("#gridcontainer").append(box15);
-    });
-}
-function addtocart(input1,element)
-{
-    var qty = input1;
-    var total = input1*element.productprice;
-    var object1 =
+            QtyEntryBox.append(InputBox);
+            AddToCartBox.append(AddToCartBtn);
+            QtyContainer.append(QtyText,QtyEntryBox,AddToCartBox);
+            StandardIcon.append(StandardImage);
+            StandardContainer.append(StandardIcon,StandardContent);
+            MrpBox.append(MrpName,StrickPrice,ProductValue);
+            QtyMrpContainer.append(MrpBox,StandardContainer,QtyContainer);
+            VegTag.append(VegTagColor);
+            ProductPhotoDiv.append(ProductImage);
+            PercentageBox.append(Percentage,PercentageColor);
+            ElementBox.append(PercentageBox,ProductPhotoDiv,VegTag,BrandName,ProductNames,QtyMrpContainer);
+            document.querySelector("#gridcontainer").append(ElementBox);
+        });
+    }
+    function addtocart(InputBox,element)
+    {
+        var qty = InputBox;
+        var total = InputBox*element.productprice;
+        var object1 =
     {
         OFF : element.OFF,
         Brand: element.Brand,
@@ -408,6 +414,7 @@ function addtocart(input1,element)
     console.log(cart);
     alert(`Your ${object1.productName} successfully added with ${object1.quantity} quantity Thank You`);
 }
+//----------------------------------------End--------------------------------------------------
 function sorting()
 {
     var value2 = document.querySelector("#select1").value;
