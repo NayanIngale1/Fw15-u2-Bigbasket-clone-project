@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snaks And Branded Foods</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/styleForCategories.css">
+</head>
+<body>
+    <!-----------------------------------Nav Bar starts------------------------------------>
+    <div id="out-nav">
+        <div id="navbar">
+            <div id="logo">
+                <img src="logo.png" alt="">
+            </div>
+            <div id="box">
+                <div id="nav-top">
+                    <div><img src="callpng.png" alt=""></i>1860 123 1000</div>
+                    <div>Nashik</div>
+                    <div><img src="loginphoro.png" alt="">login/signup</div>
+                </div>
+                <div id="nav-mid">
+                    <div id="search">
+                        <input type="text" placeholder="Search for products...">
+                        <img src="searchbtn.png" alt="" id="search-prod">
+                    </div>
+                    <div>
+                        <div id="basket-cart">
+                            <img src="basket.png" alt=""><span id="basket-items"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-----------------------------------Nav Bar ends------------------------->
+<!----------------------------  slider starts  ---------------------------------------->
+<div id="main-container">
+
+   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">Tasties Nachos</li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1">Snacks Offers</li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2">Tasties Laddoo</li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3">Tasties Sauces</li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100"
+                    src="https://www.bigbasket.com/media/uploads/banner_images/L2-CXPL13755-1200x300-25thdec.jpg"
+                    alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100"
+                    src="https://www.bigbasket.com/media/uploads/banner_images/CXTT4178_DT_1200x300_25thdec21.jpg"
+                    alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100"
+                    src="https://www.bigbasket.com/media/uploads/banner_images/L1_CXPL13373_1200x300_25thdec.jpg"
+                    alt="Third slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100"
+                    src="https://www.bigbasket.com/media/uploads/banner_images/L1_CXPL13368_1200x300_25thdec.jpg"
+                    alt="fourth slide">
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------  slider Ends -------------------------------------->
+
+   <!-----------------------Left side box start-------------------------->
+    <div id="container">
+        <div id="leftsidebox">
+            <!-------------------Category-Container start---------------------->
+    
+            <div id="left-box-category">Category</div>
+            <div id="category-container">
+                <p id="fruitsvegitables">Snacks & Branded FoodsBakery, Cakes & Dairy</p>
+                <div id="all-category">
+                    <a class="All-category-link" href="">Fruits & Vegetables</a>
+                    <a class="All-category-link" href="">Foodgrains, Oil & Masala</a>
+                    <a class="All-category-link" href="">Bakery, Cakes & Dairy</a>
+                    <a class="All-category-link" href="">Beauty & Hygiene</a>
+                    <a class="All-category-link" href="">Cleaning & Household</a>
+                    <a class="All-category-link" href="">Eggs, Meat & Fish</a>
+                    <a class="All-category-link" href="">Gourmet & World Food</a>
+                    <a class="All-category-link" href="">Baby Care</a>
+                    <a class="All-category-link" href="">View All</a>
+                </div>
+            </div>
+    
+            <!--------------------Category-Container start----------------->
+    
+            <!-------------------------Brand-Container-start----------------------->
+    
+            <div id="left-box-category">Brand</div>
+            <div id="Brand-container">
+                <div id="Each-Brand">
+                    <label><input onchange="fresho()" type="checkbox" value="fresho" id="checkbox-fresho">Fresho</label>
+                    <label><input onchange="bbcombo()" type="checkbox" value="bb combo" id="checkbox-bb-combo">BB Combo</label>
+                </div>
+            </div>
+    
+            <!------------------Brand-Container-end----------------------------->
+    
+            <!-----------------Price-Filter-Start-------------------------------->
+    
+            <div id="left-box-category">Price</div>
+            <div id="Price-container">
+                <div id="Each-Price">
+                    <label><input onchange="LessthanRs20()" type="checkbox" value="LessthanRs20" id="LessthanRs20">Less
+                        than Rs 20</label>
+                    <label><input onchange="BetweenRs21toRs50()" type="checkbox" value="BetweenRs21toRs50"
+                            id="BetweenRs21toRs50">Between Rs 21 to Rs 50</label>
+                    <label><input onchange="BetweenRs51toRs100()" type="checkbox" value="BetweenRs51toRs100"
+                            id="BetweenRs51toRs100">Between Rs 51 to Rs 100</label>
+                    <label><input onchange="BetweenRs101toRs200()" type="checkbox" value="BetweenRs101toRs200"
+                            id="BetweenRs101toRs200">Between Rs 101 to Rs 200</label>
+                    <label><input onchange="BetweenRs201toRs500()" type="checkbox" value="BetweenRs201toRs500"
+                            id="BetweenRs201toRs500">Between Rs 201 to Rs 500</label>
+                </div>
+            </div>
+    
+            <!---------------------Price-Filter-End--------------------------------------->
+    
+            <!-----------------Discount-Filter-Start-------------------------------->
+    
+            <div id="left-box-category">Discount</div>
+            <div id="Discount-container">
+                <div id="Each-Discount">
+                    <label><input onchange="Between_15_25()" type="checkbox" value="Between_15_25"
+                            id="Between_15_25">Between 15% - 25%</label>
+                    <label><input onchange="Morethan25()" type="checkbox" value="Morethan25" id="Morethan25">More than 25%</label>
+                </div>
+            </div>
+    
+            <!-----------------Discount-Filter-End-------------------------------->
+    
+        </div>
+    
+        <!------------------------------Left side box end-------------------------->
+        <!------------------------------Right side box start----------------------->
+        <div id="rightbox">
+            <div id="fruit-vegitales-heading-container">
+                <div id="heading-container-child">
+                    <h2 class="fruit-vegitales-heading">Snacks & Branded FoodsBakery, Cakes & Dairy</h2>
+                    <h2 class="fruit-vegitales-heading" id="totalItems"></h2>
+                </div>
+                <div id="sorting-border">
+                    <select id="select1" onchange="sorting()">
+                        <option value="">Popularity</option>
+                        <option value="low">Price - Low to High</option>
+                        <option value="high">Price - High to Low</option>
+                        <option value="char">Alphabetical</option>
+                        <option value="savinghigh">Rupee Saving - High to Low</option>
+                        <option value="savinglow">Rupee Saving - Low to High</option>
+                        <option value="offhigh">% Off - High to Low</option>
+                    </select>
+                </div>
+            </div>
+            <div id="all-product-border">
+                <div id="all-product-image-border"></div>
+                <p id="all-product-content-border">ALL PRODUCT</p>
+            </div>
+            <!-- all boxes map to box14-->
+            <div id="gridcontainer"></div>
+        </div>
+        <!------------------------------Right side box End----------------------->
+    </div>
+     
+    <!------------------------ About section ----------------->
+    
+    <div id="about">
+        <h3>bigbasket – online grocery store</h3>
+        <p>Did you ever imagine that the freshest of fruits and vegetables, top quality pulses and food grains, dairy
+            products and
+            hundreds of branded items could be handpicked and delivered to your home, all at the click of a button? India’s
+            first
+            comprehensive online megastore, bigbasket.com, brings a whopping 20000+ products with more than 1000 brands, to
+            over 4
+            million happy customers. From household cleaning products to beauty and makeup, bigbasket has everything you
+            need for
+            your daily needs. bigbasket.com is convenience personified We’ve taken away all the stress associated with
+            shopping for
+            daily essentials, and you can now order all your household products and even buy groceries online without
+            travelling
+            long distances or standing in serpentine queues. Add to this the convenience of finding all your requirements at
+            one
+            single source, along with great savings, and you will realize that bigbasket- India’s largest online
+            supermarket, has
+            revolutionized the way India shops for groceries. Online grocery shopping has never been easier. Need things
+            fresh?
+            Whether it’s fruits and vegetables or dairy and meat, we have this covered as well! Get fresh eggs, meat, fish
+            and more
+            online at your convenience. Hassle-free Home Delivery options <br><br>
+            We deliver to 25 cities across India and maintain excellent delivery times, ensuring that all your products from
+            groceries to snacks branded foods reach you in time. <br>
+        <ul>
+            <li>Slotted Delivery: Pick the most convenient delivery slot to have your grocery delivered. From early morning
+                delivery for
+                early birds, to late-night delivery for people who work the late shift, bigbasket caters to every schedule.
+            </li>
+            <li>Express Delivery: This super useful service can be availed by customers in cities like Bangalore, Mumbai,
+                Pune, Chennai,
+                Kolkata, Hyderabad and Delhi-NCR in which we deliver your orders to your doorstep in 90 Minutes.</li>
+            <li>BB Specialty stores: Missed out on buying that essential item from your favorite neighborhood store for
+                tonight’s party?
+                We’ll deliver it for you! From bakery, sweets and meat to flowers and chocolates, we deliver your order in
+                90 minutes,
+                through a special arrangement with a nearby specialty store, verified by us.</li>
+        </ul>
+        </p>
+        <span id="more-text">
+            <h3>India’s biggest Online Supermarket</h3>
+            <p>bigbasket.com believes in providing the highest level of customer service and is continuously innovating to
+                meet
+                customer expectations. Our On-time Guarantee is one such assurance where we refund 10% of the bill value if
+                the delivery
+                is delayed. For all your order values above Rs. 1000, we provide free delivery. A wide range of imported and
+                gourmet
+                products are available through our express delivery and slotted delivery service. If you ever find an item
+                missing on
+                delivery or want to return a product, you can report it to us within 48 hours for a ‘no-questions-asked’
+                refund. <br><br> Best quality products for our quality-conscious customers. <br><br>bigbasket.com is
+                synonymous with superior quality and continues to strive for higher levels of customer trust and
+                confidence, by taking feedback and giving our customers what they want. We have added the convenience of
+                pre-cut fruits
+                in our Fresho range. If it’s a product category you’re looking to shop from, we’ve made it convenient for
+                you to access
+                all products in a section easily. For instance, if you’re looking for beverages, you can order from a long
+                list of
+                beverages that include cool drinks, hot teas, fruit juices and more. <br> <br> We are proud to be associated
+                closely with the farmers from whom we source our fresh products. Most of our farm-fresh
+                products are sourced directly from farmers, which not only ensures the best prices and freshest products for
+                our
+                customers but also helps the farmers get better prices. With more than 80 Organic Fruits and Vegetables and
+                a wide range
+                of organic staples, bigbasket has the largest range in the organic products category. <br><br>When it comes
+                to payment, we have made it easy for our customers can pay through multiple payment channels like Credit
+                and Debit cards, Internet Banking, e-wallets and Sodexo passes or simply pay Cash on Delivery (COD).The
+                convenience of
+                shopping for home and daily needs, while not compromising on quality, has made bigbasket.com the online
+                supermarket of
+                choice for thousands of happy customers across India.</p>
+        </span>
+        <button id="read-more-btn">Read More..</button>
+    </div>
+    
+    <!------------------------ Footter ----------------->
+    <div class="footer">
+        <div id="footer-bigbasket">
+            <li>bigbasket</li>
+            <li>About us</li>
+            <li>In News</li>
+            <li>Green bigbasket</li>
+            <li>Privacy Policy</li>
+            <li>Affiliate</li>
+            <li>Terms and Conditions</li>
+            <li>Careers At bigbasket</li>
+            <li>bb Instant</li>
+            <li>bb Daily</li>
+            <li>bb Blog</li>
+        </div>
+        <div id="footer-help">
+            <li>Help</li>
+            <li>FAQs</li>
+            <li>Contact Us</li>
+            <li>bb Wallet FAQs</li>
+            <li>bb Wallet T&Cs</li>
+            <li>Vendor Connect</li>
+            <li>E-Invoice Compliance for bigbasket Vendors</li>
+        </div>
+        <div id="footer-download-app">
+            <li>Download Our App</li>
+            <img id="download-img"
+                src="https://www.bbassets.com/static/v2498/custPage/build/content/img/Google-App-store-icon.png" alt="">
+            <img id="download-img"
+                src="https://www.bbassets.com/static/v2498/custPage/build/content/img/Apple-App-store-icon.png" alt="">
+        </div>
+        <div id="footer-contact">
+            <li>Get Social With Us</li>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-pinterest"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-instagram-square"></i>
+        </div>
+    </div>
+    
+    <div class="footer-end">
+        <div>
+            <div class="ft-div">
+                <h1>POPULAR CATEGORIES:</h1>
+            </div>
+            <div>
+                Washing Powders, Milk, Tea, Liquid Soaps & Bars, Toor Dal, Ghee, Washing Bars, Other Fruits, Butter & Cream,
+                Basmati
+                Rice, Cheese, Fresh Chicken, Toothpaste, Toilet Cleaners, Glucose, Marie & Milk Biscuits,
+            </div>
+        </div>
+        <div>
+            <div class="ft-div">
+                <h1>POPULAR BRANDS:</h1>
+            </div>
+            <div>
+                Fresho, BB Royal, Surf Excel, Amul, Nestle , Saffola, Britannia, Harpic, Lizol, Colgate, Dettol, Dabur, Tata
+                I Shakti,
+                Dhara , Fresho Meats, Parle, Real, Tropicana, Kissan, danone,
+            </div>
+        </div>
+        <div>
+            <div class="ft-div">
+                <h1>CITIES WE SERVE:</h1>
+            </div>
+            <div>
+                Bangalore, Hyderabad, Mumbai, Pune, Chennai, Delhi, Mysore, Madurai, Coimbatore, Vijayawada-Guntur, Kolkata,
+                Ahmedabad-Gandhinagar, Nashik, Lucknow-Kanpur, Gurgaon, Vadodara, Visakhapatnam, Surat, Nagpur, Patna,
+                Indore,
+                Chandigarh Tricity, Jaipur, Bhopal, Noida-Ghaziabad, Kochi, Krishna District, Bhubaneshwar-Cuttack,
+                Guwahati,
+            </div>
+        </div>
+        <div>
+            <div class="ft-div">
+                <h1>PAYMENT OPTIONS:</h1>
+            </div>
+            <div>
+                CASH ON DELIVERY
+                <div>
+                    <img src="https://www.bbassets.com/static/v2498/custPage/build/content/img/footersprite.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    
+</div>
+</body>
+</html>
+<script src="JS/snacksAndBrandedFood.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/2c83fae971.js" crossorigin="anonymous"></script>
