@@ -1,0 +1,243 @@
+
+body
+{
+    background-color: rgb(255,255,255);
+    padding: 10px;
+}
+/*-----------------------Container start-----------------------------*/
+#container
+{
+    border: 1px solid green;
+    width: 90vw;
+    padding: .4vw;
+    margin: auto;
+    margin-top: 4vw;
+    display: flex;
+}
+/*-----------------------Container End--------------------------------*/
+/*----------------------left side box start---------------------------*/
+#leftsidebox
+{
+    border: 1px solid blue;
+    padding: .5vw;
+    width: 26%;
+}
+/*--------------------------Category-Container start------------- */
+#left-box-category:hover
+{
+    font-size: 1.8vw;
+}
+#left-box-category
+{
+   border-bottom: .2vw solid orange;
+   width: fit-content;
+   font-size: 1.5vw;
+}
+#category-container
+{
+    border: .1vw solid;
+    padding: .4vw;
+    padding-left: 0px;
+    margin-top: 0px;
+}
+#fruitsvegitables
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: fit-content;
+    font-size: 1.4vw;
+}
+#all-category
+{
+    border: 1px solid;
+    margin-left: 1.8vw;
+    padding: .4vw;
+    padding-left: 0px;
+    display: grid;
+    grid-gap: .4vw;
+}
+.All-category-link
+{
+    border: 1px solid;
+    text-decoration: none;
+    font-size: 1.1vw;
+}
+/*--------------------------Category-Container End----------------------*/
+/*-----------------------left side box End----------------------------*/
+
+/*-----------------------right side box start-------------------------*/
+
+#rightbox
+{
+    border: 1px solid brown;
+    padding: .5vw;
+    width: 74%;
+    display: flex;
+    grid-gap: .5vw;
+}
+#imagebox
+{
+    border: 1px solid;
+    width: 50%;
+    height: 32vw;
+}
+.Product-Image
+{
+    width: 99.5%;
+    height: 92%;
+    border: 1px solid;
+}
+#VegTagIconBox
+{
+    border: 1px solid;
+    padding: .2vw;
+    width: 3.7%;
+    height: 3.5%;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#VegTagIcon
+{
+    border: px solid;
+    width: 78%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: green;
+}
+/*--------------------Right-Right Side box start--------------*/
+
+#ProductDetailsBox
+{
+    border: 1px solid;
+    width: 50%;
+    padding: .4vw;
+}
+#BrandBox
+{
+    border-bottom: 1px solid;
+    width: fit-content;
+    font-size: .9vw;
+}
+#BrandBox:hover
+{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border: 0px;
+}
+#BrandProductNameWeight
+{
+    border: 1px solid;
+    margin-top: .5vw;
+    width: fit-content;
+    font-size: 1.4vw;
+}
+#MrpStrickPricePriceBox
+{
+    border: 1px solid;
+    margin-top: .5vw;
+    display: flex;
+    grid-gap: .4vw;
+}
+#Mrp
+{
+    border: 1px solid;
+    width: fit-content;
+    font-size: .9vw;
+    display: flex;
+    align-items: center;
+}
+#StrickPrice
+{
+    border: 1px solid;
+    width: fit-content;
+    font-size: .9vw;
+    text-decoration: line-through;
+    display: flex;
+    align-items: center;
+}
+#Price
+{
+    border: 1px solid;
+    width: fit-content;
+    font-size: 1.4vw;
+    font-weight: bold;
+}
+#SavingOff
+{
+    border: 1px solid;
+    width: fit-content;
+    font-size: .9vw;
+    display: flex;
+    align-items: center;
+}
+#TaxContent
+{
+    border: 1px solid;
+    width: fit-content;
+    font-size: .8vw;
+    display: flex;
+    align-items: center;
+}
+#QtyAddToCartBox
+{
+    border: 1px solid;
+    margin-top: .5vw;
+    display: flex;
+    grid-gap: .5vw;
+}
+#QtyInputBox
+{
+    border: 1px solid;
+    width: 9%;
+    height: 2.7vw;
+    border-radius: .4vw;
+    text-align: center;
+    font-size: 1vw;
+}
+#AddToCartButton
+{
+    border-width: .1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-size: 1.1vw;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    border-radius: .4vw;
+}
+#SaveButoon
+{
+    border-width: .1vw;
+    background-color: white;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-size: 1.1vw;
+    border-radius: .4vw;
+}
+#DeliveryBox
+{
+    border: 1px solid;
+    margin-top: 2vw;
+    display: flex;
+    grid-gap: .5vw;
+}
+#DeliveryImage
+{
+    width: 5%;
+}
+#DeliveryContent
+{
+    font-size: 1vw;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.TotalQtyAmount
+{
+    border: 1px solid;
+    margin-top: .5vw;
+    width: fit-content;
+    font-size: 2vw;
+}
+/*------------------------Right side box End--------------------------*/
