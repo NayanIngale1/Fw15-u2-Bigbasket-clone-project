@@ -5,27 +5,200 @@ body {
   font-family: "Outfit";
   font-weight: 300;
   box-sizing: border-box;
+  background-color: #fff;
 }
+img {
+  cursor: pointer;
+}
+
+/*--------------------------- nav bar css----------------------------------  */
+#out-nav {
+  width: 100vw;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.11) 0px 2px 8px;
+}
+#navbar {
+  width: 80vw;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1vw;
+}
+#nav-top {
+  /* height: 5vh; */
+  width: 65vw;
+  display: flex;
+  justify-content: flex-end;
+  /* border: 0.5px solid gray; */
+}
+#nav-top img {
+  height: 1vw;
+}
+#logo img {
+  width: 13vw;
+  cursor: pointer;
+}
+#box {
+  width: 65vw;
+  /* border: 1px solid red; */
+}
+#nav-top > div {
+  margin: 0px 2%;
+  padding: 3px;
+  cursor: pointer;
+}
+#nav-top > div:hover {
+  color: rgb(132, 194, 37);
+}
+#nav-mid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4vw;
+  /* border: 1px solid black; */
+}
+#search {
+  width: 50vw;
+  display: flex;
+}
+#search > img {
+  height: 2.5vw;
+  outline: 1px solid rgb(132, 194, 37);
+  cursor: pointer;
+}
+#nav-mid input {
+  width: 35vw;
+  outline: 1px solid rgb(132, 194, 37);
+  cursor: pointer;
+  height: 2.5vw;
+  padding: 1vw;
+}
+#basket-cart {
+  display: flex;
+  padding: 0.5vw;
+  max-height: 4vw;
+  cursor: pointer;
+  font-weight: 500;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(230, 230, 230);
+}
+#basket-cart img {
+  height: 3vw;
+}
+
+/*----------------------------------------- nav bar css ends----------------------------------------------------------- */
+
+/* ---------------------------------  Selcct category CSS End ----------------------------------------------- */
+
+#select-category {
+  width: 80vw;
+  max-height: 3vw;
+  margin: 0px auto;
+  margin-top: 6.5vw;
+  display: flex;
+  justify-content: start;
+  border: 0.5px solid rgb(221, 221, 221);
+  font-size: 1vw;
+}
+#select-category img {
+  height: 1vw;
+}
+.dropdown {
+  position: relative;
+  background-color: rgb(132, 194, 37);
+  min-width: 20vw;
+  font-weight: 600;
+  display: inline block;
+  align-items: center;
+  cursor: pointer;
+  line-height: auto;
+  justify-content: space-between;
+}
+.dropbtn {
+  text-align: center;
+  color: white;
+  margin: 2px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5vw 1vw;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  width: 170%;
+  padding: 2px 10px;
+  background-color: #ffffff;
+  border: 1px solid rgb(216, 216, 216);
+  color: gray;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.dropdown-content a:hover {
+  color: black;
+  font-weight: 600;
+  background-color: rgb(230, 230, 230);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#offer-set {
+  width: 7vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  align-items: center;
+}
+#offer-set p {
+  text-align: center;
+  color: black;
+  margin: 2px;
+}
+#offer-set:hover {
+  background-color: rgb(132, 194, 37);
+}
+
+/* ---------------------------------  Selcct category CSS End ----------------------------------------------- */
+
 #container {
-  width: 80%;
+  width: 80vw;
   margin: 0% auto;
 }
 #banner-img {
   width: 100%;
   /* margin: 2rem auto; */
 }
+
+/* ----------------------------------------------- Home Page Slider CSS------------------------------------------ */
+
+#carouselExampleIndicators {
+  z-index: 0;
+}
 .carousel-indicators li {
   margin: 0;
-  width: 110px;
-  height: 60px;
-  padding: 5px 10px;
+  width: 8vw;
+  height: 3.5vw;
+  padding: 0.5vw 1vw;
+  font-size: 1.1vw;
   text-align: center;
   color: rgb(36, 33, 33);
   line-height: 120%;
   text-indent: 0px;
+  cursor: pointer;
 }
 .carousel-indicators .active {
-  border-bottom: 4px solid green;
+  border-bottom: 0.4vw solid green;
 }
 .carousel-indicators li::first-line {
   font-weight: bold;
@@ -33,54 +206,276 @@ body {
 .carousel-indicators {
   margin-bottom: -0.7%;
 }
-#navbar {
-  height: 100px;
-  width: 100%;
-}
+
+/* ----------------------------------------------- Buttons below slides------------------------------------------ */
 #btn-below-slide {
-  height: 60px;
+  height: 4vw;
   margin: 2rem auto;
   padding: 0px;
   overflow: hidden;
   display: flex;
+  justify-content: space-between;
   flex-flow: row nowrap;
 }
 #btn-below-slide img {
   margin: 0px 1px;
   display: block;
 }
+/* -----------------------------------------------Slideing Basket CSS----------------------------------------- */
 #my-sliding-basket {
-  border-radius: 3px;
-  padding: 15px 0;
+  /* border-radius: 3px; */
+  padding: 10px 0;
   margin: 0 auto;
-  background-color: #fff;
+  /* background-color: rgb(53, 53, 53); */
 }
 .card-heading {
   color: rgb(68, 68, 68);
   text-align: center;
   font-size: 1.5rem;
-  margin: 5px;
+  margin: 0px;
   border-bottom: 1px solid rgba(128, 128, 128, 0.514);
 }
+
+.sliding-shop {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 0px;
+  /* padding: 2vw; */
+}
+.slide-btn {
+  position: absolute;
+  top: 12vw;
+  font-size: 5vw;
+  font-weight: 800;
+  color: gray;
+  border: 1px solid rgba(128, 128, 128, 0.37);
+  left: 0.5%;
+  cursor: pointer;
+  z-index: 1;
+}
+.slide-btn:nth-of-type(2) {
+  left: 98%;
+  text-align: right;
+}
+
+#cardSlider {
+  /* width: 80vw; */
+  margin: 0px;
+  padding: 0.5vw;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: left;
+  overflow-x: auto;
+  /* position: relative; */
+}
+#cardSlider::-webkit-scrollbar {
+  visibility: hidden;
+}
+.card {
+  min-width: 16vw;
+  position: relative;
+  left: 0;
+  margin: 0px 0.5vw;
+  padding: 0.5vw;
+  border: 1px solid rgba(158, 158, 158, 0.37);
+  border-radius: 0.5vw;
+  transition: 0.5s;
+}
+.card:hover{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.discount {
+  padding: 0.5vw;
+  display: flex;
+  justify-content: right;
+  
+  box-shadow: rgba(68, 72, 77, 0.226) 0px 2px 5px 1px;
+}
+.get-off {
+  margin: 0px;
+  font-size: 0.8vw;
+  /* border: 1px solid; */
+}
+.red-dot {
+  /* border: 1px dotted; */
+  width: 1vw;
+  height: 1vw;
+  margin-left: 2px;
+  border-radius: 50%;
+  background-color: rgb(238, 22, 22);
+}
+.product-photo {
+  /* border: 1px solid; */
+  margin-top: 0.5vw;
+  width: 99%;
+  /* height: 120px; */
+}
+.product-image {
+  /* border:1px solid saddlebrown; */
+  margin: 0 10%;
+  width: 80%;
+  /* position: relative; */
+}
+.veg-tag-border {
+  border: 1px solid green;
+  width: 1vw;
+  padding: 1px;
+  position: absolute;
+  margin-top: 12vw;
+}
+.veg-color-tag {
+  /* border: 2px solid; */
+  margin: auto;
+  width: 0.8vw;
+  height: 0.8vw;
+  border-radius: 50%;
+  background-color: rgb(2, 145, 53);
+}
+.brandName {
+  /* border: 1px solid; */
+  margin: 0px;
+  font-size: 0.8vw;
+  color: gray;
+  margin-top: 0.5vw;
+  width: fit-content;
+}
+.product-name {
+  /* border: 1px solid; */
+  font-size: 1.1vw;
+  margin: 0px;
+  margin-top: 0.5vw;
+  width: fit-content;
+}
+.note {
+  margin: 0.2vw auto;
+  color: rgba(128, 128, 128, 0.753);
+  font-size: 1vw;
+  width: 50%;
+  /* border: 1px solid grey; */
+}
+.qty-mrp-container {
+  /* border: 1px solid; */
+  width: 95%;
+  background-color: rgba(180, 180, 180, 0.116);
+  margin: auto;
+  margin-top: 0.5vw;
+  padding: 0.5vw;
+}
+.mrp-container {
+  /* border: 1px solid; */
+  /* margin-top: 0px; */
+  /* padding:0.2vw; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.mrp-border {
+  /* border: 1px solid; */
+  margin: 0.2vw;
+  font-size: 0.8vw;
+  margin-bottom: 0px;
+}
+.strick-price {
+  /* border: 1px solid ; */
+  margin: 0.2vw;
+  font-size: 1vw;
+  color: rgb(201, 201, 201);
+  text-decoration: line-through;
+}
+.product-price {
+  margin: 0.2vw;
+  font-size: 1.1vw;
+  margin-left: 0.4vw;
+  margin-bottom: 0px;
+}
+.standart-delivery-box {
+  /* border: 1px solid; */
+  width: 100%;
+  /* padding: 0.5vw; */
+  display: flex;
+  align-items: center;
+}
+.truckBox {
+  /* border: 1px solid; */
+  width: 2vw;
+  /* height: 20px; */
+}
+.delivery-date {
+  /* border: 1px solid; */
+  text-align: center;
+  padding: 0px 0.5vw;
+  font-size: 0.9vw;
+  margin: 0px;
+}
+.qty-div {
+  /* border: 1px solid; */
+  width: 100%;
+  padding: 0.2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.qty-border {
+  /* border: 1px solid; */
+  margin: 0px;
+  padding: 0.4vw;
+  font-size: 0.6vw;
+}
+.qty-box {
+  /* border: 1px solid; */
+  display: flex;
+  align-items: center;
+  height: 1.5vw;
+  border: 1px solid rgb(179, 179, 179);
+  border-radius: 0.3vw;
+  width: 40%;
+  background-color: rgb(228, 228, 228);
+}
+.qty-input {
+  width: 100%;
+  font-size: 1vw;
+  outline: 1px solid rgb(132, 194, 37);
+  text-align: center;
+}
+.add-to-cart-box {
+  /* border: 1px solid; */
+  margin: auto;
+  width: 50%;
+}
+.add-to-cart-button {
+  width: 100%;
+  height: 2vw;
+  font-size: 0.8vw;
+  font-weight: 500;
+  border: none;
+  background-color: rgb(255, 187, 60);
+  border-radius: 0.5vw;
+}
+.add-to-cart-button:hover {
+  background-color: rgb(255, 212, 131);
+}
+
+/* ------------------------------------------------- Offer Card css-------------------------------------------------- */
 #bank-offers,
 #top-offers,
 .item-shower {
   border-radius: 3px;
-  padding: 15px 0;
-  margin: 15px auto;
+  padding: 1.5vw;
+  margin: 1.5vw auto;
 }
 .offer-banner {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1.5rem;
-  padding: 10px 0px;
+  padding: 1vw 0px;
 }
 .items {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr;
   grid-gap: 1rem;
-  padding: 10px 0px;
+  padding: 1vw 0px;
 }
 
 .offer-banner img,
@@ -92,14 +487,14 @@ body {
 }
 .offer-banner img:hover,
 .items img:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 10px;
+  box-shadow: rgba(0, 0, 0, 0.664) 0px 1px 10px;
 }
-
+/* ----------------------------------------------- category Display CSS------------------------------------------ */
 .category-display {
-  margin: 15px;
+  margin: 1vw;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-gap: 10px;
+  grid-gap: 1vw;
   grid-template-areas:
     "i1 i1 i1 i1 i1 i1 i2 i2 i2 i4 i4 i4"
     "i1 i1 i1 i1 i1 i1 i2 i2 i2 i4 i4 i4"
@@ -130,65 +525,107 @@ body {
 
 .cat-display {
   border-radius: 3px;
-  padding: 15px 0;
-  margin: 15px auto;
+  padding: 1vw 0;
+  margin: 1vw auto;
 }
 
-#about{
-    border: 1px solid gray;
-    padding: 15px;
-    text-align: justify;
-}
 
-#read-more-btn{
-    outline:rgba(128, 128, 128, 0.514);
-    border: 1px solid silver;
-    padding: 5px 10px;
-}
-#read-more-btn:hover{
-    background-color: silver;
-}
-#more-text{
+
+
+/* ----------------------------------------------- media queries for medium screen ------------------------------------------ */
+@media only screen and (max-width: 991px) {
+  .offer-banner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5vw;
+    padding: 0.5vw 0px;
+  }
+  .category-display {
+    margin: 1vw;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1vw;
+    grid-template-areas:
+      "i1 i1 i1 i1 i1 i1 i1 i1 i2 i2 i2 i2"
+      "i1 i1 i1 i1 i1 i1 i1 i1 i2 i2 i2 i2"
+      "i1 i1 i1 i1 i1 i1 i1 i1 i3 i3 i3 i3"
+      "i1 i1 i1 i1 i1 i1 i1 i1 i3 i3 i3 i3";
+  }
+  .category-display #img4,
+  .category-display #img5 {
     display: none;
+  }
+  .items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 1rem;
+    padding: 1vw 0px;
+  }
+  .items img:nth-child(5),
+  .items img:nth-child(6) {
+    display: none;
+  }
+   .card{
+    min-width: 20vw;
+  }
 }
-.footer{
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid gray;
-}
-.footer li{
-   list-style: none;
-}
-.footer li:nth-child(1){
-    color: rgb(132,194,37);
-    font-size: 1.1em;
-}
-.footer li:hover{
-    color: rgb(132,194,37) ;
-    cursor: pointer;
-}
-.footer-end > div {
-    display: flex;
-    padding: 2rem;
-}
-.footer-end > div h1{
-    font-size: 1em;
-    font-weight: 300;
-    color:rgb(132,194,37);
-}
-.ft-div{
-    width: 20%;
-}
-.ft-div ~ div{
-    width: 70%;
-    display: flex;
-}
-#download-img{
-    display: block;
-    margin: 0.5rem;
-}
-.footer-contact div {
-    size: 30px;
-    border: 1px solid red;
+
+/* ----------------------------------------------- media queries for small screen ------------------------------------------ */
+
+@media only screen and (max-width: 500px) {
+  /* #navbar{
+    width: 100vw;
+  } */
+  #navbar,
+  #container,
+  #select-category {
+    width: 90vw;
+  }
+  .offer-banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5vw;
+    padding: 0.5vw 0px;
+  }
+  .category-display {
+    margin: 1vw;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1vw;
+    grid-template-areas:
+      "i1 i1 i1 i1 i1 i1 i1 i1 i1 i1 i1 i1"
+      "i1 i1 i1 i1 i1 i1 i1 i1 i1 i1 i1 i1"
+      "i2 i2 i2 i2 i2 i2 i3 i3 i3 i3 i3 i3"
+      "i2 i2 i2 i2 i2 i2 i3 i3 i3 i3 i3 i3";
+  }
+  .category-display #img4,
+  .category-display #img5 {
+    display: none;
+  }
+  .items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 1rem;
+    padding: 1vw 0px;
+  }
+  .items img:nth-child(5),
+  .items img:nth-child(6),
+  .items img:nth-child(4),
+  .items img:nth-child(3) {
+    display: none;
+  }
+  #about,
+  .footer,
+  .footer li,
+  .footer-end {
+    font-size: 3vw;
+  }
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card{
+    min-width: 20vw;
+  }
 }
