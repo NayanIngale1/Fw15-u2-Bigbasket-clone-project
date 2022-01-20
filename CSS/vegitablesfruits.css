@@ -1,376 +1,532 @@
 
-body
+.carousel-indicators li 
 {
-    background-color: rgb(255,255,255);
-    padding: 10px;
-}
-/*----------------------Fresh offer banner start--------------------*/
-#bannerphoto
-{
-    border: 1px solid;
-    width: 90%;
-    height: 70px;
-    margin: auto;
-    margin-top: 25px;
-}
-.bannerphoto
-{
-    width: 100%;
-    height: 100%;
-}
-/*-----------------------Fresh offer banner End----------------------*/
-
-/*-----------------------Container start-----------------------------*/
-#container
-{
-    border: 1px solid green;
-    width: 90%;
-    padding: 5px;
-    margin: auto;
-    margin-top: 25px;
-    display: flex;
-}
-/*-----------------------Container End--------------------------------*/
-
-/*----------------------left side box start---------------------------*/
-#leftsidebox
-{
-    border: 1px solid blue;
-    padding: 5px;
-    width: 26%;
-}
-/*-----------------------left side box End----------------------------*/
-#rightbox
-{
-    border: 1px solid ;
-    padding: 5px;
-    width: 74%;
-}
-/*-----------------fruit-vegitales-heading-container-Start-----------*/
-#fruit-vegitales-heading-container
-{
-    border: 1px solid;
-    padding: 5px;
-    display: flex;
-    justify-content: space-between;
-}
-#heading-container-child
-{
-    border: 1px solid;
-    padding: 5px;
-    width: 30%;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    display: flex;
-}
-.fruit-vegitales-heading
-{
-    margin: auto;
-    border: 1px solid;
-}
-/*-------------------fruit-vegitales-heading-container-End----------*/
-
-/*------------sorting-start-----------------*/
-#sorting-border/*sorting-border*/
-{
-    border: 1px solid;
-    height: fit-content;
-}
-/*----------sorting-end----------*/
-
-/*all-product-heading-start*/
-#all-product-border
-{
-    border: 1px solid;
-    width: 20%;
-    margin-top: 10px;
-    display: flex;
-    padding: 5px;
-}
-#all-product-image-border
-{
-    border: 1px solid;
-    width: 20%;
-}
-#all-product-content-border
-{
-    border: 1px solid;
-    width: fit-content;
-    margin: 0px;
-    margin-left: 5px;
-}
-/*all-product-heading-end*/
-
-/*------------------grid-container-start-------------------*/
-#gridcontainer
-{
-    border: 1px solid;
-    width: 98.5%;
-    padding: 5px;
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap: 10px;
-}
-.each-element-container
-{
-    border: 1px solid;
-    padding: 5px;
-}
-.percentage-box
-{
-    border: 1px solid;
-    padding: 5px;
-    display: flex;
-    justify-content: right;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-}
-.percentage-content-box
-{
-    margin: 0px;
-    font-size: 10px;
-    border: 1px solid;
-}
-.percentage-color
-{
-    border: 1px dotted;
-    width: 10px;
-    height: 10px;
-    margin-left: 2px;
-    border-radius: 50%;
-    background-color: rgb(225,86,90);
-}
-.product-photo
-{
-    border: 1px solid;
-    margin-top: 5px;
-    width: 99%;
-    height: 120px;
-}
-.product-image-border
-{
-    border: 1px solid;
-    width: 100%;
-    height: 100%;
-}
-.veg-color-tag
-{
-    border: 1px solid;
-    width: 12px;
-    padding: 2px;
-    margin-top: 2px;
-}
-.veg-color-tag-border
-{
-    border: 1px solid;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgb(2,145,53);
-}
-.brand-product-name-border
-{
-    border: 1px solid;
-    margin: 0px;
-    margin-top: 5px;
-    width: fit-content;
-}
-.qty-mrp-container
-{
-    border: 1px solid;
-    width: 93.5%;
-    margin-top: 5px;
-    padding: 5px;
-}
-.mrp-container
-{
-    border: 1px solid;
-    width: 93.5%;
-    margin-top: 0px;
-    padding: 5px;
-    display: flex;
-}
-.mrp-border
-{
-    border: 1px solid;
-    margin: 0px;
-    font-size: 10px;
-    margin-top: 2px;
-    margin-bottom: 0px;
-}
-.strick-price-border
-{
-    border: 1px solid;
-    margin: 0px;
-    font-size: 10px;
-    margin-left: 2px;
-    margin-top: 2px;
-    margin-bottom: 0px;
-    text-decoration: line-through;
-}
-.product-price-border
-{
-    border: 1px solid;
-    margin: 0px;
-    font-size: 15px;
-    margin-left: 4px;
-    margin-bottom: 0px;
-}
-.standart-delivery-box
-{
-    border: 1px solid;
-    width: 93.5%;
-    padding: 5px;
-    display: flex;
-}
-.standart-delivery-cart
-{
-    border: 1px solid;
-    width: 20%;
-    height: 20px;
-}
-.standard-delivery-border
-{
-    border: 1px solid;
-    margin: 0px;
-    font-size: 12px;
-    margin-left: 2px;
-}
-.qty-box
-{
-    border: 1px solid;
-    width: 93.5%;
-    padding: 5px;
-    display: flex;
-    justify-content: space-between;
-}
-.qty-border
-{
-    border: 1px solid;
-    margin: 0px;
-    margin-right: 2px;
-    margin-top: 5px;
-}
-.qty-entry-box
-{
-    border: 1px solid;
-    width: 20%;
-}
-.qty-input-box
-{
-    width: 80%;
-    height: 25px;
+    margin: 0;
+    width: 110px;
+    height: 60px;
+    padding: 5px 10px;
     text-align: center;
+    color: rgb(36, 33, 33);
+    line-height: 120%;
+    text-indent: 0px;
 }
-.add-to-cart-box
+.carousel-indicators .active 
 {
-    border: 1px solid;
-    width: 50%;
+    border-bottom: 4px solid green;
 }
-.add-to-cart-button
+.carousel-indicators li::first-line 
 {
-    width: 100%;
-    height: 31px;
-    font-size: 10px;
     font-weight: bold;
 }
-/*------------------grid-container-end--------------------*/
-.all-product-image-border
+.carousel-indicators 
 {
-    border: 1px solid;
-    width: 100%;
-    height: 100%;
+    margin-bottom: -0.7%;
 }
-#sorting-border
-{
-    padding: 5px;
-}
-.all-product-heading-image-tag
-{
-    border : 1px solid;
-}
-#left-box-category
-{
-   border-bottom: 2px solid orange;
-   width: fit-content;
-   font-size: 20px;
-}
-/*--------------------------Category-Container start------------- */
-#left-box-category:hover
-{
-    font-size: 22px;
-}
-#category-container
-{
-    border: .1px solid;
-    padding: 5px;
-    padding-left: 0px;
-    margin-top: 0px;
-}
-#fruitsvegitables
-{
-    margin-top: auto;
-    margin-bottom: auto;
-    width: fit-content;
-}
-#all-category
-{
-    border: 1px solid;
-    margin-left: 15px;
-    padding: 5px;
-    padding-left: 0px;
-    display: grid;
-    grid-gap: 10px;
-}
-.All-category-link
-{
-    border: 1px solid;
-    text-decoration: none;
-}
-/*--------------------------Category-Container End----------------------*/
+    body
+    {
+        background-color: rgb(255,255,255);
+        padding: 10px;
+    }
+    /*----------------------Fresh offer banner start--------------------*/
+    #bannerphoto
+    {
+        border: 1px solid;
+        width: 95vw;
+        height: 70px;
+        margin: auto;
+        margin-top: 25px;
+    }
+    .bannerphoto
+    {
+        width: 100%;
+        height: 100%;
+    }
+    /*-----------------------Fresh offer banner End----------------------*/
+    
+    /*-----------------------Container start-----------------------------*/
+    #container
+    {
+        border: 1px solid green;
+        width: 94vw;
+        padding: .4vw;
+        margin: auto;
+        margin-top: 4vw;
+        display: flex;
+    }
+    /*-----------------------Container End--------------------------------*/
+    
+    /*----------------------left side box start---------------------------*/
+    #leftsidebox
+    {
+        border: 1px solid blue;
+        padding: .5vw;
+        width: 26%;
+    }
+    /*-----------------------left side box End----------------------------*/
+    #rightbox
+    {
+        border: 1px solid brown;
+        padding: .5vw;
+        width: 74%;
+    }
+    /*-----------------fruit-vegitales-heading-container-Start-----------*/
+    #fruit-vegitales-heading-container
+    {
+        border: 1px solid;
+        padding: .5vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    #heading-container-child
+    {
+        border: 1px solid;
+        padding: .1vw;
+        width: fit-content;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        display: flex;
+    }
+    .fruit-vegitales-heading
+    {
+        margin: auto;
+        border: 1px solid;
+        font-size: 2vw;
+    }
+    /*-------------------fruit-vegitales-heading-container-End----------*/
+    
+    /*------------sorting-start-----------------*/
+    #sorting-border/*sorting-border*/
+    {
+        border: 1px solid;
+        padding: 0vw;
+        width: 15vw;
+        height: 2.5vw;
+        display: flex;
+    }
+    #select1
+    {
+        width: 100%;
+        height: 100%;
+        font-size: 1vw;
+    }
+    /*----------sorting-end----------*/
+    
+    /*--------all-product-heading-start-----------*/
+    #all-product-border
+    {
+        border-bottom: .2vw solid orange;
+        width: fit-content;
+        margin-top: .5vw;
+        height: 3vw;
+        display: flex;
+        padding: .4vw;
+    }
+    #all-product-border:hover,#all-product-image-border:hover,#all-product-content-border:hover
+    {
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    }
+    #all-product-image-border
+    {
+        border: 1px solid;
+        width: 2.1vw;
+        height: 2.2vw;
+        display: flex;
+    }
+    .all-product-image-border
+    {
+        border: 1px solid;
+        width: 100%;
+        height: 100%;
+    }
+    #all-product-content-border
+    {
+        border: 1px solid;
+        width: fit-content;
+        margin: 0px;
+        margin-left: 5px;
+        font-size: 1vw;
+        font-weight: bold;
+    }
+    /*------------------all-product-heading-end-----------------*/
 
-/*---------------------------Brand-Container-start----------------------*/
-#Brand-container
-{
-    border: .1px solid;
-    padding: 5px;
-    padding-left: 0px;
-}
-#Each-Brand
-{
-    border: 1px solid;
-    padding: 5px;
-    display: grid;
-    grid-gap: 5px;
-}
-/*-----------------------------Brand-Container-Start-----------------------*/
-#Price-container
-{
-    border: .1px solid;
-    padding: 5px;
-    padding-left: 0px;
-}
-#Each-Price
-{
-    border: 1px solid;
-    padding: 5px;
-    display: grid;
-    grid-gap: 5px;
-}
-/*----------------------------Brand-Container-End--------------------------*/
+    /*grid-container-start*/
+    #gridcontainer
+    {
+        border: .1vw solid;
+        width: 100%;
+        padding: .4vw;
+        margin-top: 0vw;
+        padding-top: 1.5vw;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);/*17.7vw 17.7vw 17.7vw 17.7vw;*/
+        grid-gap: .09vw;
+    }
+    .each-element-container
+    {
+        border: 1px solid;
+        padding: .3vw;
+    }
+    .each-element-container:hover
+    {
+        border: .1vw solid burlywood;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    }
+    .percentage-box
+    {
+        border: 1px solid;
+        padding: .3vw;
+        display: flex;
+        justify-content: right;
+        box-shadow: rgb(7, 23, 39) 0px 20px 30px -10px;
+    }
+    .percentage-content-box
+    {
+        margin: 0px;
+        font-size: .8vw;
+        border: 1px solid;
+    }
+    .percentage-color
+    {
+        border: 1px dotted;
+        width: .8vw;
+        height: .8vw;
+        margin-left: .5vw;
+        border-radius: 50%;
+        margin-top: .2vw;
+        background-color: green;
+    }
+    .product-photo
+    {
+        border: 1px solid;
+        margin-top: .4vw;
+        width: 100%;
+        height: 15vw;
+    }
+    .brand-product-name-border
+    {
+        border: 1px solid;
+        margin: 0px;
+        margin-top: 0px;
+        width: fit-content;
+        font-size: 1.1vw;
+    }
+    .QtyPieceBox
+    {
+        border: 1px solid;
+        margin: auto;
+        width: fit-content;
+        height: fit-content;
+    }
+    .Qty-Piece
+    {
+        margin: auto;
+        font-size: 1vw;
+        border: 0px solid;
+    }
+    /*
+    .veg-color-tag
+    {
+        border: 1px solid;
+        width: 12px;
+        padding: 2px;
+        margin-top: 2px;
+    }
+    .veg-color-tag-border
+    {
+        border: 1px solid;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgb(2,145,53);
+    }
+    */
+    .qty-mrp-container
+    {
+        border: 1px solid;
+        width: 100%;/*100%*/
+        margin-top: 0px;
+        padding: 5px;
+    }
+    .mrp-container
+    {
+        border: 1px solid;
+        width: 100%;
+        margin-top: 0px;
+        padding: .4vw;
+        display: flex;
+    }
+    .mrp-border
+    {
+        border: 1px solid;
+        margin: 0px;
+        font-size: .7vw;
+        margin-top: .2vw;
+        margin-bottom: 0px;
+        height: fit-content;
+    }
+    .strick-price-border
+    {
+        border: 1px solid;
+        margin: 0px;
+        font-size: .7vw;
+        margin-left: .2vw;
+        margin-top: .2vw;
+        margin-bottom: 0px;
+        height: fit-content;
+        text-decoration: line-through;
+    }
+    .product-price-border
+    {
+        border: 1px solid;
+        margin: 0px;
+        font-size: 1vw;
+        margin-left: .3vw;
+        margin-bottom: 0vw;
+        height: fit-content;
+    }
+    .standard-delivery-box
+    {
+        border: 1px solid;
+        width: 100%;
+        padding: .4vw;
+        display: flex;
+    }
+    .standard-delivery-cart
+    {
+        border: 1px solid;
+        width: 2.5vw;
+        height: 2vw;
+        display: flex;
+    }
+    .standard-delivery-image-tag
+    {
+        width: 100%;
+        height: 100%;
+    }
+    .standard-delivery-border
+    {
+        border: 1px solid;
+        margin: 0px;
+        font-size: .8vw;
+        margin-left: .2vw;
+    }
+    .qty-box
+    {
+        border: 1px solid;
+        width: 100%;
+        padding: .4vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .qty-border
+    {
+        border: 1px solid;
+        margin: 0px;
+        font-size: 1.35vw;
+        margin-right: 0vw;
+        margin-top: 0vw;
+        height: fit-content;
+    }
+    .qty-entry-box
+    {
+        border: 1px solid;
+        width: 2.4vw;
+        height: 2.4vw;
+        display: flex;
+    }
+    .qty-input-box
+    {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .add-to-cart-box
+    {
+        border: 1px solid;
+        width: 7vw;
+        height: 2.4vw;
+        display: flex;
+    }
+    .add-to-cart-button
+    {
+        width: 100%;
+        height: 100%;
+        font-size: .7vw;
+        font-weight: bold;
+    }
+    .product-image-border
+    {
+        border: 1px solid;
+        width: 100%;
+        height: 100%;
+    }
+    .all-product-heading-image-tag
+    {
+        border : 1px solid;
+    }
+    #left-box-category
+    {
+       border-bottom: .2vw solid orange;
+       width: fit-content;
+       font-size: 1.5vw;
+    }
+    /*--------------------------Category-Container start------------- */
+    #left-box-category:hover
+    {
+        font-size: 1.8vw;
+    }
+    #category-container
+    {
+        border: .1vw solid;
+        padding: .4vw;
+        padding-left: 0px;
+        margin-top: 0px;
+    }
+    #fruitsvegitables
+    {
+        margin-top: auto;
+        margin-bottom: auto;
+        width: fit-content;
+        font-size: 1.4vw;
+    }
+    #all-category
+    {
+        border: 1px solid;
+        margin-left: 1.8vw;
+        padding: .4vw;
+        padding-left: 0px;
+        display: grid;
+        grid-gap: .4vw;
+    }
+    .All-category-link
+    {
+        border: 1px solid;
+        text-decoration: none;
+        font-size: 1.1vw;
+    }
+    /*--------------------------Category-Container End----------------------*/
+    
+    /*---------------------------Brand-Container-start----------------------*/
+    #Brand-container
+    {
+        border: .1px solid;
+        padding: .4vw;
+        padding-left: 0px;
+    }
+    #Each-Brand
+    {
+        border: 1px solid;
+        padding: .4vw;
+        display: grid;
+        grid-gap: -2vw;
+        font-size: 1.1vw;
+        height: fit-content;
+    }
+    /*-----------------------------Brand-Container-Start-----------------------*/
+    #Price-container
+    {
+        border: .1px solid;
+        padding: .4vw;
+        padding-left: 0px;
+    }
+    #Each-Price
+    {
+        border: 1px solid;
+        padding: .4vw;
+        display: grid;
+        grid-gap: -2vw;
+        font-size: 1.1vw;
+        height: fit-content;
+    }
+    /*----------------------------Brand-Container-End--------------------------*/
+   
+    /*----------------------------Price-Filter-Start---------------------------*/
+    #Discount-container
+    {
+        border: .1px solid;
+        padding: .4vw;
+        padding-left: 0px;
+    }
+    #Each-Discount
+    {
+        border: 1px solid;
+        padding: .4vw;
+        display: grid;
+        grid-gap: -2vw;
+        font-size: 1.1vw;
+    }
+    /*------------------------------Price-Filter-End---------------------------*/
+    /*---------------related-search-container-start------------*/
+    #related-search-container
+    {
+        border: 1px solid;
+        margin: auto;
+        margin-top: 2vw;
+        padding: 2vw;
+        width: 92vw;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+    #related-search-heading
+    {
+        border: 1px solid;
+        width: fit-content;
+        font-size: 1.5vw;
+    }
+    #search-content
+    {
+        border: 1px solid;
+        margin-top: .4vw;
+        padding: 1vw;
+        display: flex;
+    }
+    .search-element
+    {
+        border-right: 1px solid;
+        width: fit-content;
+        padding: .1vw;
+        font-size: 1.2vw;
+    }
+    /*------------------related-search-container-end-----------------*/
 
-/*----------------------------Price-Filter-Start---------------------------*/
-#Discount-container
-{
-    border: .1px solid;
-    padding: 5px;
-    padding-left: 0px;
-}
-#Each-Discount
-{
-    border: 1px solid;
-    padding: 5px;
-    display: grid;
-    grid-gap: 5px;
-}
-/*------------------------------Price-Filter-End---------------------------*/
+    /*-----------------related-search-container-2-start--------------*/
+    #related-search-container-2
+    {
+        border: 1px solid;
+        margin: auto;
+        padding: 2vw;
+        width: 92vw;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+    #related-search-heading-2
+    {
+        border: 1px solid;
+        width: fit-content;
+        font-size: 1.5vw;
+    }
+    #search-content-2
+    {
+        border: 1px solid;
+        margin-top: .4vw;
+        padding: .8vw;
+        display: flex;
+        font-size: 0vw;
+    }
+    #below-content
+    {
+        text-align: justify;
+        font-size: 1vw;
+    }
+    .related-search-heading
+    {
+        border: 1px solid;
+        width: fit-content;
+        margin-top: .4vw;
+        font-size: 1.5vw;
+    }
+    .related-search-heading-4
+    {
+        border: 1px solid;
+        width: fit-content;
+        margin-top: .4vw;
+        font-size: 2vw;
+    }
