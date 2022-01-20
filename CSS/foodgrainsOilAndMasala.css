@@ -12,9 +12,9 @@
         width:80vw;
         margin: auto;
     }
-    img ,label,input{
-  cursor: pointer;
-}
+    img ,input,label{
+        cursor: pointer;
+    }
 
 /*--------------------------- nav bar css----------------------------------  */
 #out-nav {
@@ -178,25 +178,24 @@
     padding: .4vw;
     padding-left: 0px;
     margin-top: 0px;
-}
-#fruitsvegitables
-{
-   margin-top: auto;
-    margin-bottom: auto;
-    width: fit-content;
-    font-size: 1vw;
-    font-weight: 600;
-}
-#all-category
-{
-    /* border: 1px solid; */
-   margin-left: 1vw;
-    /* padding: .4vw; */
-    /* padding-left: 0px; */
-    display: grid;
-    grid-gap: .4vw;
-}
-    
+    }
+    #fruitsvegitables
+    {
+        margin-top: auto;
+        margin-bottom: auto;
+        width: fit-content;
+        font-size: 1vw;
+        font-weight: 600;;
+    }
+    #all-category
+    {
+        /* border: 1px solid; */
+        margin-left: 1vw;
+        padding: .4vw;
+        padding-left: 0px;
+        display: grid;
+        grid-gap: .4vw;
+    }
     #all-category a{
            /* border: 1px solid; */
         text-decoration: none;
@@ -229,7 +228,7 @@
     #Price-container
     {
         /* border: .1px solid; */
-        padding: .4vw;
+        padding: .2vw;
         padding-left: 0px;
     }
     #Each-Price
@@ -371,7 +370,7 @@
 .card:hover
 {
     /* background-color: rgba(222, 184, 135, 0.315); */
-    box-shadow: rgba(0, 0, 0, 0.459) 0px 5px 7px;
+    box-shadow: rgba(0, 0, 0, 0.534) 0px 6px 10px;
 }
 .discount{
     padding: 0.5vw;
