@@ -8,22 +8,66 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/bigbasket.css">
-    
        
 </head>
 <body>
     <div id="main-container">
         <!-----------------------------------Nav Bar starts------------------------------------>
-        <div id="navbar">
-
+        <div id="out-nav">
+            <div id="navbar">
+                <div id="logo">
+                    <img src="/images/logo.png" alt="">
+                </div>
+                <div id="box">
+                    <div id="nav-top">
+                        <div><img src="/images/callpng.png" alt=""></i>1860 123 1000</div>
+                        <div>Nashik</div>
+                        <div><img src="/images/loginphoro.png" alt="">login/signup</div>    
+                    </div>
+                    <div id="nav-mid">
+                        <div id="search">
+                            <input type="text" placeholder="Search for products...">
+                            <img src="/images/searchbtn.png" alt="" id="search-prod">
+                        </div>
+                        <div>
+                            <div id="basket-cart">
+                                <img src="./images/basket.png" alt=""> My Basket
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-
-
-
-
+        </div>
         <!-----------------------------------Nav Bar ends------------------------->
-        
+
+
+        <!--------------------------------- choose category section start--------------->
+        <div id="select-category">
+                <div class="dropdown">
+                    <div class="dropbtn">SHOP BY CATEGORY <img src="/images/dropdownpng.png" alt=""> </div>
+                    <div class="dropdown-content">
+                           <a href="">Fruits & Vegetables</a>
+                           <a href="">Foodgrains, Oil & Masala</a>
+                           <a href="">Bakery, Cakes & Dairy
+                           <a href="">Beverages</a>
+                           <a href="">Snacks & Branded Foods
+                           <a href="">Beauty & Hygiene</a>
+                           <a href="">Cleaning & Household</a>
+                           <a href="">Kitchen, Garden & Pets</a>
+                           <a href="">Eggs, Meat & Fish</a>
+                           <a href="">Gourmet & World Food</a>
+                           <a href="">Baby Care</a>
+                           <a href="">View All</a>
+                    </div>
+                </div>
+                
+            <div id="offer-set">
+                <img src="/images/offer.png" alt="">
+                <p>OFFERS</p>
+            </div>
+        </div>
+        <!--------------------------------- choose category section ends--------------->
 
 
         <!---------------------------- Home pag slider starts  ---------------------------------------->
@@ -66,11 +110,16 @@
 
             <div id="my-sliding-basket">
                 <h2 class="card-heading">My Smart Basket</h2>
+
                 <div class="sliding-shop">
-                    <div class="card"></div>
+                    <span class="slide-btn">&#139;</span>
+                    <span class="slide-btn">&#155;</span>
+                    <div id="cardSlider">
+                        <!---------------data inserted from js --------------------->
+                    </div>
                 </div>
             </div>
-        
+          
             <!-------------------Sliding shoping display ends ---------------->
             <!--   banner  -->
             <img id="banner-img" src="https://www.bigbasket.com/media/uploads/banner_images/hp_cmc_hardinsasta_mumbai_400_180122.jpeg" alt="">
