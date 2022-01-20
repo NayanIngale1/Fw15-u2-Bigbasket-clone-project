@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/629044acfa.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        #quantity {
+            display: inline-block;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+        }
+
+
+
+        #cartLength {
+            color: gray;
+            font-family: sans-serif;
+        }
+
+        #totalPrice {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #checkOutSection {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+        }
+
+        #chekOutButtnDiv {
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: flex-end;
+
+        }
+
+        #chekOutButtnDiv>button {
+            background-color: rgb(252, 226, 123);
+            padding: 20px;
+            color: gray;
+            /* font: 400 14px/16px Lato, sans-serif; */
+            width: 250px;
+            border-radius: 4px;
+            border: none;
+            box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+
+        }
+
+        #td5::before {
+            /* a { */
+            content: "Rs.";
+
+        }
+
+        #td9::before {
+            /* a { */
+            content: "Rs.";
+
+        }
+
+        thead {
+            color: white;
+        }
+        .pink{
+            height: 30px;
+            width: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div id="cartLength">
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <table class="table">
+                <thead class="bg-secondary ">
+                    <tr>
+                        <th scope="col">item Deiscription</th>
+                        <th scope="col">Unit Price</th>
+                        <th scope="col">quantity</th>
+                        <th scope="col">Sub Total</th>
+                        <th scope="col" style="background-color: #b9ac56;">Saving</th>
+                        <!-- <th scope="col"></th> -->
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+
+    <div class="container mt-5">
+        <hr>
+        <!-- flex-sm-row justify-content-sm-between  -->
+        <div class="row justify-content-between ">
+            <div class="col">
+                <div
+                    class=" h-100 d-flex flex-row justify-content-between   flex-md-column justify-content-md-around ">
+                    <div>
+                        <button
+                            class="shadow-sm rounded border border-success p-2 d-flex align-items-center justify-content-between "><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-basket" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z" />
+                            </svg> Empty basket</button>
+                    </div>
+                    <div>
+                        <button class="shadow-sm rounded border border-success p-1">CONTINUE SHOPPING</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div id="totalPrice"> 
+                        
+                                
+                                <div class="w-50 d-flex justify-content-between align-items-center ">
+                                    <h3>TOTAL</h3>
+                                    <h3 id="showingTotal"></h3>
+                                </div>
+                            
+                            <div  class="d-flex flex-column align-items-center border-left p-2 " >
+                                <img src="https://www.bbassets.com/static/v2500/uiv2/css/images/your_saved_icon.png"
+                                    alt="" class="pink">
+                                <p style="color: #e76a78;">you  saved! </p>
+                                <p id="show-saving" style="color: #e76a78;"></p>
+                            </div>
+                            
+
+                        </div>
+                        <hr>
+                        <div id="checkOutSection">
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+<script>
+    var arr = []
+
+
+    var cartData = JSON.parse(localStorage.getItem("cartDatass"))
+    showCart(cartData)
+    function showCart(cartData) {
+        document.querySelector("tbody").textContent = ""
+
+        cartData.map((item, index) => {
+            var tr = document.createElement("tr")
+
+
+
+            var td3 = document.createElement("td")
+            var p = document.createElement("p")
+            p.textContent = item.brand
+            var p2 = document.createElement("p")
+            p2.textContent = item.pdtinformation
+
+            td3.append(p, p2)
+
+            var span = document.createElement("span")
+            span.textContent = "1"
+
+            var td4 = document.createElement("td")
+            var div = document.createElement("div")
+            div.setAttribute("id", "quantity")
+            var button1 = document.createElement("button")
+            button1.setAttribute("class", "btn btn-outline-success")
+            button1.setAttribute("id", "buttonN")
+            button1.innerHTML = '<i class="fa fa-minus" aria-hidden="true"></i>'
+            button1.addEventListener("click", function () {
+                changeQuantity(-1, span.textContent)
+            })
+
+
+
+            var button2 = document.createElement("button")
+            button2.setAttribute("class", "btn btn-outline-success")
+            button2.innerHTML = '<i class="fa fa-plus" aria-hidden="true"></i>'
+
+            button2.addEventListener("click", function () {
+                changeQuantity(1, span.textContent)
+            })
+            div.append(button1, span, button2)
+
+            td4.append(div)
+
+
+
+            var td5 = document.createElement("td")
+            td5.setAttribute("id", "td5")
+
+            td5.textContent = item.price//total price
+
+
+            var td6 = document.createElement("td")
+            var rsDiv = document.createElement("div")
+            var p3 = document.createElement("p")
+            var p3span = document.createElement("span")
+            rsDiv.style.display = "flex"
+            p3span.textContent = "Rs."
+            p3.textContent = item.price
+            rsDiv.append(p3span, p3)
+
+            var p4 = document.createElement("p")
+            p4.style.textDecoration = "line-through	"
+            p4.style.fontSize = "13px"
+
+            p4.textContent = "Rs." + item.strikedoffprice
+            td6.append(rsDiv, p4)
+
+
+
+            function changeQuantity(k, q) {
+                if (k == -1) {
+
+                    span.textContent = Number(span.textContent) + (-1)
+                    td5.textContent = (td5.textContent - p3.textContent).toFixed(2)
+                    item.totalPrice = Number(td5.textContent)
+                    if (span.textContent == 0) {
+                        button1.disabled = "true";
+
+
+                        location.reload()
+                    }
+
+
+
+
+                }
+                if (k == 1) {
+                    span.textContent = Number(span.textContent) + 1
+                    td5.textContent = (p3.textContent * span.textContent).toFixed(2)
+                    item.totalPrice = Number(td5.textContent)
+
+
+
+
+
+                }
+                var total = cartData.reduce((accumalator, cv) => {
+                    return accumalator + cv.totalPrice
+                }, 0)
+                console.log(total)
+                showPrice(total)
+
+
+            }
+
+            var td8 = document.createElement("td")
+            var button = document.createElement("button")
+            button.addEventListener("click", function () {
+                deleteItem(index)
+            })
+            button.setAttribute("class", "btn btn-outline-danger")
+            button.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>'
+            td8.append(button)
+            var td9 = document.createElement("td")
+            td9.setAttribute("id", "td9")
+            td9.textContent = item.strikedoffprice - item.price
+            arr.push(td9.textContent)
+            td9.style.color = "red"
+            tr.append(td3, td6, td4, td5, td9, td8)
+            document.querySelector("tbody").append(tr)
+
+
+
+
+        })
+    }
+    var total = cartData.reduce((accumalator, cv) => {
+        return accumalator + cv.totalPrice
+    }, 0)
+    console.log(Object.keys(cartData).length)
+    var h1 = document.createElement("h1")
+    h1.textContent = `Your Basket (${Object.keys(cartData).length} items)`
+    document.querySelector("#cartLength").append(h1)
+
+    // var h2 = document.createElement("h2")
+    // h2.textContent = "TOTAL "
+    var chekOutButtnDiv = document.createElement("div")
+    chekOutButtnDiv.setAttribute("id", "chekOutButtnDiv")
+    var checkout = document.createElement("button")
+    // checkout.textContent="CHECKOUT"
+    checkout.addEventListener("click", function () {
+        window.location.href = "checkout.html"
+        localStorage.setItem("totalAmount", total)
+
+    })
+    checkout.innerHTML = "CHECKOUT" + " " + '<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>'
+
+
+    var hr = document.createElement("hr")
+    var span = document.createElement("H3")
+    var pchkout2 = document.createElement("p")
+    pchkout2.textContent = `* For this order: Accepted food coupon is Rs.${total}`
+
+    var pchkout3 = document.createElement("p")
+    pchkout3.textContent = `** Actual delivery charges computed at checkout time`
+
+    span.textContent = `Rs.${total}`
+
+    function showPrice(val) {
+        span.textContent = `Rs.${val}`
+        pchkout2.textContent = `* For this order: Accepted food coupon is Rs.${val}`
+
+        checkout.innerHTML = "CHECKOUT" + " " + '<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>'
+
+        checkout.addEventListener("click", function () {
+            window.location.href = "checkout.html"
+            localStorage.setItem("totalAmount", val)
+        })
+    }
+    function deleteItem(index) {
+        console.log(index)
+
+        cartData.splice(index, 1)
+        localStorage.setItem("cartDatass", JSON.stringify(cartData))
+
+
+        showCart(cartData)
+        location.reload()
+    }
+    document.querySelector("#showingTotal").append(span) //totalprice
+
+    chekOutButtnDiv.append(checkout)
+    document.querySelector("#checkOutSection").append(pchkout2, chekOutButtnDiv, pchkout3)
+    var k = arr.map(Number).reduce((acc, cur) => {
+        return acc + cur
+    }, 0)
+ document.querySelector("#show-saving").textContent="Rs."+k
+    console.log("MMMMMMMMMM", k)
+</script>
