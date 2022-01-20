@@ -90,6 +90,7 @@ img {
   height: 3vw;
 }
 
+
 /*----------------------------------------- nav bar css ends----------------------------------------------------------- */
 
 /* ---------------------------------  Selcct category CSS End ----------------------------------------------- */
@@ -527,6 +528,73 @@ img {
   border-radius: 3px;
   padding: 1vw 0;
   margin: 1vw auto;
+}
+
+/* ----------------------------------------------- About Section CSS------------------------------------------ */
+#about {
+  border: 1px solid gray;
+  padding: 1.5vw;
+  text-align: justify;
+}
+
+#read-more-btn {
+  outline: rgba(128, 128, 128, 0.514);
+  border: 1px solid silver;
+  padding: 0.5vw 1vw;
+}
+#read-more-btn:hover {
+  background-color: silver;
+}
+#more-text {
+  display: none;
+}
+
+/* ----------------------------------------------- Footer CSS------------------------------------------ */
+.footer {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 8vw;
+  border-bottom: 1px solid gray;
+}
+.footer li {
+  list-style: none;
+}
+.footer li:nth-child(1) {
+  color: rgb(132, 194, 37);
+  font-size: 1.1em;
+}
+.footer li:hover {
+  color: rgb(132, 194, 37);
+  cursor: pointer;
+}
+.footer-end > div {
+  display: flex;
+  padding: 2rem;
+}
+.footer-end > div h1 {
+  font-size: 1em;
+  font-weight: 300;
+  color: rgb(132, 194, 37);
+}
+.ft-div {
+  width: 20vw;
+}
+.ft-div ~ div {
+  width: 70vw;
+  display: flex;
+}
+#download-img {
+  display: block;
+  margin: 0.5rem;
+  height: 5vw;
+}
+.footer-contact div {
+  size: 3vw;
+  border: 1px solid red;
+}
+.footer-end img {
+  width: 40vw;
 }
 
 
