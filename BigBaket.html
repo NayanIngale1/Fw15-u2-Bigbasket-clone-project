@@ -16,22 +16,22 @@
         <div id="out-nav">
             <div id="navbar">
                 <div id="logo">
-                    <img src="/images/logo.png" alt="">
+                    <img src="logo.png" alt="">
                 </div>
                 <div id="box">
                     <div id="nav-top">
-                        <div><img src="/images/callpng.png" alt=""></i>1860 123 1000</div>
+                        <div><img src="callpng.png" alt=""></i>1860 123 1000</div>
                         <div>Nashik</div>
-                        <div><img src="/images/loginphoro.png" alt="">login/signup</div>    
+                        <div><img src="loginphoro.png" alt="">login/signup</div>    
                     </div>
                     <div id="nav-mid">
                         <div id="search">
                             <input type="text" placeholder="Search for products...">
-                            <img src="/images/searchbtn.png" alt="" id="search-prod">
+                            <img src="searchbtn.png" alt="" id="search-prod">
                         </div>
                         <div>
                             <div id="basket-cart">
-                                <img src="./images/basket.png" alt=""> My Basket
+                                <img src="basket.png" alt=""><span id="basket-items"></span>
                             </div>
                         </div>
                     </div>
@@ -45,11 +45,11 @@
         <!--------------------------------- choose category section start--------------->
         <div id="select-category">
                 <div class="dropdown">
-                    <div class="dropbtn">SHOP BY CATEGORY <img src="/images/dropdownpng.png" alt=""> </div>
+                    <div class="dropbtn">SHOP BY CATEGORY <img src="dropdownpng.png" alt=""> </div>
                     <div class="dropdown-content">
                            <a href="">Fruits & Vegetables</a>
                            <a href="">Foodgrains, Oil & Masala</a>
-                           <a href="">Bakery, Cakes & Dairy
+                           <a href="">Bakery, Cakes & Dairy</a>
                            <a href="">Beverages</a>
                            <a href="">Snacks & Branded Foods
                            <a href="">Beauty & Hygiene</a>
@@ -63,7 +63,7 @@
                 </div>
                 
             <div id="offer-set">
-                <img src="/images/offer.png" alt="">
+                <img src="offer.png" alt="">
                 <p>OFFERS</p>
             </div>
         </div>
@@ -98,12 +98,12 @@
         <!---------------------------- Home pag slider Ends -------------------------------------->
         <div id="container">
             <div id="btn-below-slide">
-                <img src="images/hp_button_m_01.png" alt="">
-                <img src="images/hp_button_m_02.png" alt="">
-                <img src="images/hp_button_m_03.png" alt="">
-                <img src="images/hp_button_m_04.png" alt="">
-                <img src="images/hp_button_m_05.png" alt="">
-                <img src="images/hp_button_m_06.png" alt="">
+                <img src="projectImages/hp_button_m_01.png" alt="">
+                <img src="projectImages/hp_button_m_02.png" alt="">
+                <img src="projectImages/hp_button_m_03.png" alt="">
+                <img src="projectImages/hp_button_m_04.png" alt="">
+                <img src="projectImages/hp_button_m_05.png" alt="">
+                <img src="projectImages/hp_button_m_06.png" alt="">
             </div>
 
             <!------------------------ Sliding shoping display start  ---------------->
@@ -140,7 +140,11 @@
             <div id="my-sliding-basket">
                 <h2 class="card-heading">Best Sellers</h2>
                 <div class="sliding-shop">
-                    <div class="card"></div>
+                    <span class="slide-btn">&#139;</span>
+                    <span class="slide-btn">&#155;</span>
+                    <div id="cardSlider">
+                        <!---------------data inserted from js --------------------->
+                    </div>
                 </div>
             </div>
             

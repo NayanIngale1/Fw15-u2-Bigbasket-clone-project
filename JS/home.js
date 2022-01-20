@@ -36,6 +36,9 @@ function newFunction() {
       if (l > 4) {
         l = 4;
       }
+      if (l == nayan.length ) {
+        l = 0;
+      }
     }
   });
 
@@ -61,90 +64,27 @@ function newFunction() {
   });
 
 
- var cart = JSON.parse(localStorage.getItem("cart_data")) || [];
+    var cartArr = JSON.parse(localStorage.getItem("cartData")) || [];
+    var FruitVegArr = JSON.parse(localStorage.getItem("vegData"))
+    var OneProduct = [];
 
-  var array = [
-    {
-      OFF: 20,
-      Brand: "BB-Combo",
-      Date: "Standard Delivery : 23 Jan",
-      Link: "https://www.bigbasket.com/media/uploads/p/s/10000150_19-fresho-onion.jpg",
-      StrikePrice: "281.25",
-      productName: "Onion",
-      productprice: "191.90",
-    },
-    {
-      OFF: "51",
-      Brand: "Fresho",
-      Date: "Standard Delivery : 23 Jan",
-      Link: "https://www.bigbasket.com/media/uploads/p/s/10000204_16-fresho-tomato-local.jpg",
-      StrikePrice: "20",
-      productName: "Tomato-Local",
-      productprice: "13.13",
-    },
-    {
-      OFF: "31",
-      Brand: "Fresho",
-      Date: "Standard Delivery : 23 Jan",
-      Link: "https://www.bigbasket.com/media/uploads/p/s/10000159_25-fresho-potato.jpg",
-      StrikePrice: "40",
-      productName: "Potato",
-      productprice: "28.28",
-    },
-    {
-      OFF: "41",
-      Brand: "Fresho",
-      Date: "Standard Delivery : 23 Jan",
-      Link: "https://www.bigbasket.com/media/uploads/p/s/10000201_15-fresho-tomato-hybrid.jpg",
-      StrikePrice: "22.73",
-      productName: "Tomato-Hybrid",
-      productprice: "18.18",
-    },
-    {
-      OFF: "51",
-      Brand: "Fresho",
-      Date: "Standard Delivery : 23 Jan",
-      Link: "https://www.bigbasket.com/media/uploads/p/s/10000144_13-fresho-ladies-finger.jpg",
-      StrikePrice: "42.02",
-      productName: "Ladies Finger",
-      productprice: "34.34",
-    },
-    {
-      OFF: "61",
-      Brand: "Fresho",
-      Date: "Standard Delivery : 23 Jan",
-      Link: "https://www.bigbasket.com/media/uploads/p/s/10000071_14-fresho-carrot-orange.jpg",
-      StrikePrice: "37.88",
-      productName: "Carrot-Orange",
-      productprice: "30.30",
-    },
-    {
-      OFF: "32",
-      Brand: "Fresho",
-      Date: "Standard Delivery : 23 Jan",
-      Link: "https://www.bigbasket.com/media/uploads/p/s/10000103_16-fresho-cucumber.jpg",
-      StrikePrice: "17.50",
-      productName: "Cucumber",
-      productprice: "12.12",
-    },
-    {
-      OFF: "35",
-      Brand: "Fresho",
-      Date: "Standard Delivery : 23 Jan",
-      Link: "https://www.bigbasket.com/media/uploads/p/s/10000098_9-fresho-coriander-leaves.jpg",
-      StrikePrice: "21.88",
-      productName: "Coriander Leaves",
-      productprice: "10.10",
-    },
-  ];
+    document.getElementById("basket-items").innerHTML = `My Basket <br><b> ${cartArr.length} Items.</b>`
 
-  displayProduct(array);
-  function displayProduct(array) {
+
+
+  displayProduct(FruitVegArr);
+  function displayProduct(FruitVegArr) {
     document.querySelector("#cardSlider").innerHTML = "";
 
-    array.map(function (element, index) {
+    FruitVegArr.map(function (element, _index) {
       var card = document.createElement("div");
       card.setAttribute("class", "card");
+
+      for (var i = 0; i < cartArr.length; i++) {
+          if (element.productName == cartArr[i].productName) {
+               card.style.backgroundColor = "rgba(222, 184, 135, 0.212)";
+            }
+        }
 
       var discount = document.createElement("div");
       discount.setAttribute("class", "discount");
@@ -161,7 +101,15 @@ function newFunction() {
 
       var prod = document.createElement("img");
       prod.setAttribute("class", "product-image");
-      prod.setAttribute("src", element.Link);
+      prod.setAttribute("src", element.image);
+
+      prod.addEventListener("click", function () {
+      console.log(element);
+      OneProduct.push(element);
+      // console.log(OneProduct);
+      localStorage.setItem("productDetail", JSON.stringify(OneProduct));
+      window.location.href = "Product-Details.html";
+      });
 
       var vegBorder = document.createElement("div");
       vegBorder.setAttribute("class", "veg-tag-border");
@@ -251,15 +199,7 @@ function newFunction() {
       vegBorder.append(vegSymbol);
       prodimg.append(prod);
       discount.append(getOff, redDot);
-      card.append(
-        discount,
-        prodimg,
-        vegBorder,
-        brand,
-        prodName,
-        note,
-        priceDetail
-      );
+      card.append(discount, prodimg,vegBorder ,brand,prodName,note,priceDetail);
       document.querySelector("#cardSlider").append(card);
     });
   }
@@ -281,16 +221,16 @@ function newFunction() {
                 OFF: element.OFF,
                 Brand: element.Brand,
                 Date: element.Date,
-                Link: element.Link,
+                Link: element.image,
                 StrikePrice: element.StrikePrice,
                 productName: element.productName,
                 productprice: element.productprice,
                 quantity: qty,
                 totalPrice: total,
             };
-            cart.push(object1);
-
-            // localStorage.setItem("cart_data", JSON.stringify(cart));
+            cartArr.push(object1);
+            window.location.reload();
+            localStorage.setItem("cartData", JSON.stringify(cartArr));
             // console.log(cart);
             alert(`Your ${object1.productName} successfully added with ${object1.quantity} quantity. Thank You !`);
         }
