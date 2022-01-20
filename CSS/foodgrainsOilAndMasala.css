@@ -477,7 +477,7 @@
     /* border: 1px solid ; */
     margin: 0.2vw;
     font-size: 1vw; 
-    color: rgb(201, 201, 201);
+    color: gray;
     text-decoration: line-through;
 }
 .product-price
@@ -486,6 +486,7 @@
     font-size: 1.1vw;
     margin-left: 0.4vw;
     margin-bottom: 0px;
+    font-weight: 500;;
 }
 .standart-delivery-box
 {
