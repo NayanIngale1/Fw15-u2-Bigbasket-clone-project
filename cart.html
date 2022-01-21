@@ -13,6 +13,16 @@
 
     <title>Hello, world!</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Montserrat:wght@300;400;500;700&family=Roboto:wght@100&display=swap');
+
+        * {
+            font-family: 'Dongle', sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+
+        }
+
         #quantity {
             display: inline-block;
             display: flex;
@@ -147,7 +157,7 @@
                             </svg> Empty basket</button>
                     </div>
                     <div>
-                        <button class="shadow-sm rounded border border-success p-1">CONTINUE SHOPPING</button>
+                        <button class="shadow-sm rounded border border-success p-1" onclick="window.location.href='index.html'">CONTINUE SHOPPING</button>
                     </div>
                 </div>
 
@@ -159,7 +169,7 @@
 
 
                             <div class="w-50 d-flex justify-content-between align-items-center ">
-                                <h3>TOTAL</h3>
+                                <h3 class="font-weight-bold ">TOTAL</h3>
                                 <h3 id="showingTotal"></h3>
                             </div>
 
@@ -268,8 +278,8 @@
             td5.setAttribute("id", "td5")
 
             // td5.textContent = item.totalPrice//total price
-            td5.textContent = item.quantity*item.productprice//total price
-           
+            td5.textContent = item.quantity * item.productprice//total price
+
             // showPrice(item.quantity*item.productprice)
 
             var td6 = document.createElement("td")
@@ -354,7 +364,7 @@
             button.setAttribute("class", "btn btn-outline-danger")
             button.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>'
             td8.append(button)
-          
+
 
 
 
@@ -370,18 +380,18 @@
 
 
             function deleteItem(index) {
-               
-             
+
+
 
                 cartData.splice(index, 1)
                 localStorage.setItem("cartData", JSON.stringify(cartData))
                 // td5.textContent = item.totalPrice
                 showCart(cartData)
-               
+
 
                 location.reload()
 
-                
+
                 // td5.textContent = item.price*quantity
 
             }
@@ -396,8 +406,9 @@
     }
     console.log(cartData, "fghnjmuygtvbhjn")
     var total = cartData.reduce((accumalator, cv) => {
-        return accumalator + (cv.productprice*cv.quantity)
+        return accumalator + (cv.productprice * cv.quantity)
     }, 0)
+
     console.log(Object.keys(cartData).length)
     var h1 = document.createElement("h1")
     h1.textContent = `Your Basket (${Object.keys(cartData).length} items)`
@@ -421,6 +432,7 @@
 
     var hr = document.createElement("hr")
     var span = document.createElement("H3")
+    span.style.fontWeight = "bold"
     var pchkout2 = document.createElement("p")
     pchkout2.textContent = `* For this order: Accepted food coupon is Rs.${total}`
 
@@ -459,8 +471,16 @@
         let confirmAction = confirm("Are you surewant to clear the cart")
         if (confirmAction) {
             localStorage.removeItem("cartData");
+            cartData=[]
+            showCart(cartData)
+            span.textContent ="Rs."+0
+            document.querySelector("#show-saving").textContent=0
 
-            location.reload()
+            document.querySelector("#clrCart").style.visibility="hidden"
+            document.querySelector("#checkOutSection").style.display="none"
+            h1.textContent = `Your Basket is Empty😒`
+            document.querySelector("#cartLength").append(h1)
+            // location.reload()
             // console.log
 
         }
