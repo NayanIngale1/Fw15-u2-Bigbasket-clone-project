@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=Licorice&family=Outfit:wght@300;400&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit";
+  font-weight: 300;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+img,
+label,
+input {
+  cursor: pointer;
+}
+
+/*--------------------------- nav bar css----------------------------------  */
+#out-nav {
+  width: 100vw;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.11) 0px 2px 8px;
+}
+#navbar {
+  width: 80vw;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1vw;
+}
+#nav-top {
+  /* height: 5vh; */
+  width: 65vw;
+  display: flex;
+  justify-content: flex-end;
+  /* border: 0.5px solid gray; */
+}
+#nav-top img {
+  height: 1vw;
+}
+#logo img {
+  width: 13vw;
+  cursor: pointer;
+}
+#box {
+  width: 65vw;
+  /* border: 1px solid red; */
+}
+#nav-top > div {
+  margin: 0px 2%;
+  padding: 3px;
+  cursor: pointer;
+}
+#nav-top > div:hover {
+  color: rgb(132, 194, 37);
+}
+#nav-mid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4vw;
+  /* border: 1px solid black; */
+}
+#search {
+  width: 50vw;
+  /* height: 50%; */
+  display: flex;
+  align-items: center;
+}
+#search > img {
+  height: 2.5vw;
+  outline: 1px solid rgb(132, 194, 37);
+  cursor: pointer;
+}
+#nav-mid input {
+  height: 1vw;
+  width: 35vw;
+  outline: 1px solid rgb(132, 194, 37);
+  cursor: pointer;
+  font-size: 100%;
+  padding: 0.5vw;
+}
+#basket-cart {
+  display: flex;
+  padding: 0.5vw;
+  max-height: 4vw;
+  cursor: pointer;
+  font-weight: 500;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(230, 230, 230);
+}
+#basket-cart img {
+  height: 3vw;
+}
+
+/*----------------------------------------- nav bar css ends----------------------------------------------------------- */
+/*-----------------------Container start-----------------------------*/
+#container {
+  /* border: 1px solid green; */
+  width: 85vw;
+  /* padding: .4vw; */
+  margin: auto;
+  margin-top: 10vw;
+  display: flex;
+}
+/*-----------------------Container End--------------------------------*/
+/*----------------------left side box start---------------------------*/
+#leftsidebox {
+  /* border: 1px solid blue; */
+  padding: 0.5vw;
+  width: 20%;
+}
+/*--------------------------Category-Container start------------- */
+#left-box-category {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  padding: 0.2vw;
+  font-size: 1.5vw;
+}
+#category-container {
+  /* border: .1vw solid; */
+  border-bottom: 1px solid rgba(128, 128, 128, 0.514);
+  padding: 0.4vw;
+  padding-left: 0px;
+  margin-top: 0px;
+}
+#fruitsvegitables {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: fit-content;
+  font-size: 1.4vw;
+}
+#all-category {
+  /* border: 1px solid; */
+  margin-left: 1.8vw;
+  padding: 0.4vw;
+  padding-left: 0px;
+  display: grid;
+  grid-gap: 0.4vw;
+}
+#all-category > a {
+  /* border: 1px solid; */
+  text-decoration: none;
+  color: rgb(71, 71, 71);
+  font-size: 1vw;
+}
+#all-category > a:hover {
+  color: rgb(132, 194, 37);
+}
+/*--------------------------Category-Container End----------------------*/
+/*-----------------------left side box End----------------------------*/
+
+/*-----------------------right side box start-------------------------*/
+
+#rightbox {
+  /* border: 1px solid brown; */
+  border-left: 1px solid rgba(128, 128, 128, 0.5);
+  padding: 0.5vw;
+  width: 75%;
+  display: flex;
+  grid-gap: 0.5vw;
+  min-height: 35vw;
+}
+#imagebox {
+  /* border: 1px solid; */
+  width: 55%;
+  height: 32vw;
+  position: relative;
+}
+#smallImage {
+  width: 5vw;
+  height: 5vw;
+  /* border: 1px solid red; */
+  position: absolute;
+  margin-top: 30vw;
+  margin-left: 10vw;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+}
+#smallImage > img {
+  width: 100%;
+  height: 100%;
+}
+.Product-Image {
+  width: 99.5%;
+  height: 92%;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+}
+#VegTagIconBox {
+  border: 1px solid;
+  padding: 0.2vw;
+  width: 3.7%;
+  height: 3.5%;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#VegTagIcon {
+  /* border: px solid; */
+  width: 78%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: green;
+}
+/*--------------------Right-Right Side box start--------------*/
+
+#ProductDetailsBox {
+  /* border: 1px solid; */
+  width: 50%;
+  padding: 0.4vw;
+}
+#BrandBox {
+  /* border-bottom: 1px solid; */
+  width: fit-content;
+  font-size: 1vw;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  color: gray;
+}
+
+#BrandProductNameWeight {
+  /* border: 1px solid; */
+  margin-top: 0.5vw;
+  width: fit-content;
+  font-size: 1.4vw;
+}
+#MrpStrickPricePriceBox {
+  /* border: 1px solid; */
+  margin-top: 0.5vw;
+  display: flex;
+  grid-gap: 0.4vw;
+}
+#Mrp {
+  /* border: 1px solid; */
+  width: fit-content;
+  font-size: 0.9vw;
+  display: flex;
+  align-items: center;
+}
+#StrickPrice {
+  /* border: 1px solid; */
+  width: fit-content;
+  font-size: 0.9vw;
+  text-decoration: line-through;
+  display: flex;
+  align-items: center;
+}
+#Price {
+  /* border: 1px solid; */
+  width: fit-content;
+  font-size: 1.4vw;
+  font-weight: bold;
+}
+#SavingOff {
+  /* border: 1px solid; */
+  width: fit-content;
+  font-size: 0.9vw;
+  display: flex;
+  align-items: center;
+}
+#TaxContent {
+  /* border: 1px solid; */
+  width: fit-content;
+  font-size: 0.8vw;
+  display: flex;
+  align-items: center;
+}
+#QtyAddToCartBox {
+  /* border: 1px solid; */
+  margin-top: 0.5vw;
+  display: flex;
+  grid-gap: 0.5vw;
+}
+#QtyInputBox {
+  /* border: 1px solid; */
+  width: 9%;
+  height: 2.7vw;
+  outline: none;
+  border: 1px solid rgba(128, 128, 128, 0.514);
+  border-radius: 0.4vw;
+  text-align: center;
+  font-size: 1vw;
+}
+#AddToCartButton {
+  border-width: 0.1vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  font-size: 1.1vw;
+  background-color: rgb(132, 194, 37);
+  border: 1px solid rgba(128, 128, 128, 0.514);
+  color: white;
+  font-weight: bold;
+  border-radius: 0.4vw;
+}
+#SaveButoon {
+  border-width: 0.1vw;
+  background-color: white;
+  border: 1px solid rgba(128, 128, 128, 0.514);
+  padding-left: 2vw;
+  padding-right: 2vw;
+  font-size: 1.1vw;
+  border-radius: 0.4vw;
+}
+#DeliveryBox {
+  /* border: 1px solid; */
+  margin-top: 2vw;
+  display: flex;
+  grid-gap: 0.5vw;
+}
+#DeliveryImage {
+  width: 5%;
+}
+#DeliveryContent {
+  font-size: 1vw;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.TotalQtyAmount {
+  /* border: 1px solid; */
+  margin-top: 0.5vw;
+  width: fit-content;
+  font-size: 2vw;
+}
+/*------------------------Right side box End--------------------------*/
+
+/* ----------------------------------------------- About Section CSS------------------------------------------ */
+#about {
+  border: 1px solid gray;
+  padding: 1.5vw;
+  text-align: justify;
+  width: 80vw;
+  margin: 2vw auto;
+}
+
+#read-more-btn {
+  outline: rgba(128, 128, 128, 0.514);
+  border: 1px solid silver;
+  padding: 0.5vw 1vw;
+}
+#read-more-btn:hover {
+  background-color: silver;
+}
+#more-text {
+  display: none;
+}
+
+/* ----------------------------------------------- Footer CSS------------------------------------------ */
+.footer {
+  width: 80vw;
+  margin: auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 8vw;
+  border-bottom: 1px solid gray;
+}
+.footer li {
+  list-style: none;
+}
+.footer li:nth-child(1) {
+  color: rgb(132, 194, 37);
+  font-size: 1.1em;
+}
+.footer li:hover {
+  color: rgb(132, 194, 37);
+  cursor: pointer;
+}
+.footer-end > div {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  padding: 2rem;
+}
+.footer-end > div h1 {
+  font-size: 1em;
+  font-weight: 300;
+  color: rgb(132, 194, 37);
+}
+.ft-div {
+  width: 20vw;
+}
+.ft-div ~ div {
+  width: 70vw;
+  display: flex;
+}
+#download-img {
+  display: block;
+  margin: 0.5rem;
+  height: 5vw;
+}
+.footer-contact div {
+  size: 3vw;
+  border: 1px solid red;
+}
+.footer-end img {
+  width: 40vw;
+}
+
+@media only screen and (max-width: 768px) {
+  #container {
+    width: 70vw;
+    /* margin: auto; */
+  }
+  #rightbox {
+    display: block;
+  }
+  #smallImage {
+    display: none;
+  }
+  #imagebox,
+  #ProductDetailsBox {
+    width: 100%;
+  }
+
+  #about,
+  .footer,
+  .footer li,
+  .footer-end {
+    font-size: 3vw;
+  }
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

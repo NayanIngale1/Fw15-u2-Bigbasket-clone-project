@@ -419,10 +419,10 @@
 {
     /* border: 2px solid; */
     margin: auto;
-    width: 0.8vw;
-    height: 0.8vw;
+    width: 0.7vw;
+    height: 0.7vw;
     border-radius: 50%;
-    background-color: rgb(2,145,53);
+    background-color: rgb(255, 0, 0);
 }
 .brandName
 {
