@@ -2,22 +2,19 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins";
+  font-family: "Outfit";
   font-weight: 300;
   box-sizing: border-box;
-  background-color: rgba(131, 194, 37, 0.295);
+  background-color: rgba(131, 194, 37, 0.281);
 }
 
-#main-container {
-  width: 80vw;
-  margin: auto;
-}
+
 img {
   cursor: pointer;
 }
 
 .bblogo {
-  width: 8vw;
+  width: 40%;
   margin: 0 auto;
   /* border: 1px solid red; */
   padding: 0px;
@@ -29,40 +26,24 @@ img {
   width: 100%;
   margin: 0px;
 }
-/* ----------------------------------------------login Css---------------------------------------------------- */
-#login-container {
-  width: 25vw;
+
+/* -------------------------- otp-container-------------------- */
+#otp-container {
+  width: 20%;
   border: 1px solid #f3f3f3;
+  background-color: white;
   border-radius: 20px;
-  margin: 2vw auto 0 auto;
-  background-color: #fff;
-  padding: 2vw;
+  margin: 30px auto;
+  padding: 20px;
   box-shadow: rgba(43, 63, 13, 0.397) 0px 5px 6px -3px,
     rgba(48, 71, 13, 0.418) 0px 4px 6px -2px;
 }
-
-/* #login-container>div:nth-child(2) {
-    height: 2px;
-    box-shadow: rgba(17, 17, 26, 0.541) 0px 1px 0px;
-    margin-bottom: 1vw;
-} */
-
-#login-container > span {
-  /* margin-top: 2vw ; */
-  line-height: 1vw;
-  font-size: 0.9vw;
+#otp-container > span {
+  font-size: 12px;
 }
-
-#login-container > span > a {
-  margin: 0;
-  font-weight: normal;
-  text-decoration: underline;
-}
-
 h1 {
   margin-top: 0px;
   padding: 0px;
-  font-size: 2vw;
   color: rgb(132, 194, 37);
 }
 
@@ -96,24 +77,25 @@ input {
   cursor: pointer;
   font-weight: 600;
 }
-p {
-  border: 1px solid red;
-  font-size: 0.3;
+u {
+  color: rgba(0, 130, 130, 0.884);
+  font-weight: 600;
+  letter-spacing: 1px;
 }
-label {
-  font-size: 1.5vw;
-  margin-top: 1vw;
+@media only screen and (max-width: 1283px) {
+  #otp-container {
+    width: 30%;
+    min-width: 300px;
+  }
 }
-
 @media only screen and (max-width: 768px) {
-  #login-container {
-    min-width: 40vw;
+  #otp-container {
+    min-width: 300px;
     width: 50%;
   }
 }
-@media only screen and (max-width: 400px) {
-  #login-container {
-    min-width: 80vw;
-    width: 50%;
+@media only screen and (max-width: 380px) {
+  #otp-container {
+    width: 70%;
   }
 }

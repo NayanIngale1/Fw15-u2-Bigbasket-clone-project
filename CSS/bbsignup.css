@@ -5,7 +5,7 @@ body {
   font-family: "Outfit";
   font-weight: 300;
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: rgba(131, 194, 37, 0.281);
 }
 
 #main-container {
@@ -32,8 +32,9 @@ img {
 /* ------------------------------------Css for signup container----------------------------------------- */
 #signup-container {
   width: 25%;
-  border: 1px solid rgb(132, 194, 37);
-  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+  background-color: #fff;
   margin: 30px auto;
   padding: 20px;
   box-shadow: rgba(43, 63, 13, 0.397) 0px 5px 6px -3px,
