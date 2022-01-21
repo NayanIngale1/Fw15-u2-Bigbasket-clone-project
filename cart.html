@@ -202,7 +202,7 @@
     var arr2 = []
 
 
-    var cartData = JSON.parse(localStorage.getItem("cartDatass"))
+    var cartData = JSON.parse(localStorage.getItem("cartData"))
     showCart(cartData)
     function showCart(cartData) {
         document.querySelector("tbody").textContent = ""
@@ -214,14 +214,14 @@
 
             var td3 = document.createElement("td")
             var p = document.createElement("p")
-            p.textContent = item.brand
+            p.textContent = item.Brand
             var p2 = document.createElement("p")
-            p2.textContent = item.pdtinformation
+            p2.textContent = item.productName
 
             td3.append(p, p2)
 
             var span = document.createElement("span")
-            span.textContent = "1"
+            span.textContent = item.quantity
 
             var td4 = document.createElement("td")
             var div = document.createElement("div")
@@ -253,7 +253,7 @@
             td5.setAttribute("id", "td5")
             // var rsDiv=document.createElement("div")
 
-            td5.textContent = item.price//total price
+            td5.textContent = item.totalPrice//total price
 
 
             var td6 = document.createElement("td")
@@ -262,7 +262,7 @@
             var p3span = document.createElement("span")
             rsDiv.style.display = "flex"
             p3span.textContent = "Rs."
-            p3.textContent = item.price
+            p3.textContent = item.productprice
             rsDiv.append(p3span, p3)
 
             var p4 = document.createElement("p")
@@ -270,7 +270,7 @@
             p4.style.textDecoration = "line-through	"
             p4.style.fontSize = "13px"
 
-            p4.textContent = "Rs." + item.strikedoffprice
+            p4.textContent = "Rs." + item.StrikePrice
             td6.append(rsDiv, p4)
 
 
@@ -287,7 +287,7 @@
 
 
                         location.reload()
-                        item.totalPrice = item.price
+                        item.totalPrice = item.productprice
                     }
 
 
@@ -318,22 +318,21 @@
             var td8 = document.createElement("td")
             var button = document.createElement("button")
             button.addEventListener("click", function () {
-                deleteItem(index,)
+                deleteItem(index)
             })
             button.setAttribute("class", "btn btn-outline-danger")
             button.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>'
             td8.append(button)
             var td9 = document.createElement("td")
             td9.setAttribute("id", "td9")
-            td9.textContent = item.strikedoffprice - item.price
+            td9.textContent = item.StrikePrice - item.productprice
             arr.push(td9.textContent)
             td9.style.color = "red"
             var td2 = document.createElement("td")
             td2.setAttribute("id", "td2")
-            td2.textContent = item.strikedoffprice
+            td2.textContent = item.StrikePrice
             // ------------------------------------------append to table------------------------------------------------------------
-            tr.append(td3, td2, td6, td4, td5, td9, td8)
-            document.querySelector("tbody").append(tr)
+          
 
             function deleteItem(index) {
                 console.log(index)
@@ -341,13 +340,16 @@
 
 
                 cartData.splice(index, 1)
-                localStorage.setItem("cartDatass", JSON.stringify(cartData))
-
+                localStorage.setItem("cartData", JSON.stringify(cartData))
+                // td5.textContent = item.totalPrice
                 showCart(cartData)
 
                 location.reload()
+                // td5.textContent = item.price*quantity
 
             }
+            tr.append(td3, td2, td6, td4, td5, td9, td8)
+            document.querySelector("tbody").append(tr)
 
 
         })
@@ -368,8 +370,10 @@
     // checkout.textContent="CHECKOUT"
     checkout.addEventListener("click", function () {
         window.location.href = "checkout.html"
+        // ------------------------------------------TOTAL AMOUNT LOCAL STORAGE-----------------------------------------------------------------------------------------------------------------
+        
         localStorage.setItem("totalAmount", total)
-
+// ------------------------------------------------------------------------------------------------------------------------------------------------------
     })
     checkout.innerHTML = "CHECKOUT" + " " + '<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>'
 
@@ -409,7 +413,7 @@
         // e.preventDefault()
         let confirmAction = confirm("Are you sure to clear the cart")
         if (confirmAction) {
-            localStorage.removeItem("cartDatass");
+            localStorage.removeItem("cartData");
 
             location.reload()
             // console.log
