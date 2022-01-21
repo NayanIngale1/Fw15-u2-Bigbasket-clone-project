@@ -63,7 +63,7 @@ function displayProduct(eggMealFish) {
       OneProduct.push(element);
       // console.log(OneProduct);
       localStorage.setItem("productDetail", JSON.stringify(OneProduct));
-      window.location.href = "Product-Details.html";
+      window.location.href = "ProductDetails.html";
     });
     //------------------------------go toProduct-Details--End-------------------------//
     var vegBorder = document.createElement("div");
@@ -80,9 +80,6 @@ function displayProduct(eggMealFish) {
     prodName.setAttribute("class", "product-name");
     prodName.textContent = element.productName;
 
-    var PriceAsPerQtyPiece = document.createElement("p");
-    PriceAsPerQtyPiece.setAttribute("class", "Qty-Piece");
-    PriceAsPerQtyPiece.textContent = element.QtyPiece;
 
     // var note = document.createElement("div")
     // note.textContent = "price for 1Kg"
@@ -163,7 +160,6 @@ function displayProduct(eggMealFish) {
       vegBorder,
       brand,
       prodName,
-      PriceAsPerQtyPiece,
       priceDetail
     );
 

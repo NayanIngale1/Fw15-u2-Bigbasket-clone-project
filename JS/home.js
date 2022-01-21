@@ -104,11 +104,11 @@ function newFunction() {
       prod.setAttribute("src", element.image);
 
       prod.addEventListener("click", function () {
-      console.log(element);
+      // console.log(element);
       OneProduct.push(element);
       // console.log(OneProduct);
       localStorage.setItem("productDetail", JSON.stringify(OneProduct));
-      window.location.href = "Product-Details.html";
+      window.location.href = "ProductDetails.html";
       });
 
       var vegBorder = document.createElement("div");

@@ -57,7 +57,7 @@ function displayProduct(FruitVegArr) {
       OneProduct.push(element);
       // console.log(OneProduct);
       localStorage.setItem("productDetail", JSON.stringify(OneProduct));
-      window.location.href = "Product-Details.html";
+      window.location.href = "ProductDetails.html";
     });
     //------------------------------go toProduct-Details--End-------------------------//
     var vegBorder = document.createElement("div");
