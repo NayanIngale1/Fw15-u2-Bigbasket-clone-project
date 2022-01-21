@@ -237,7 +237,7 @@
             button1.setAttribute("id", "buttonN")
             button1.innerHTML = '<i class="fa fa-minus" aria-hidden="true"></i>'
             var kkk = (item.StrikePrice - item.productprice) * span.textContent
-            
+
             button1.addEventListener("click", function () {
                 changeQuantity(-1, span.textContent)
             })
@@ -267,9 +267,10 @@
             var td5 = document.createElement("td")
             td5.setAttribute("id", "td5")
 
-            td5.textContent = item.totalPrice//total price
+            // td5.textContent = item.totalPrice//total price
+            td5.textContent = item.quantity*item.productprice//total price
            
-
+            // showPrice(item.quantity*item.productprice)
 
             var td6 = document.createElement("td")
             var rsDiv = document.createElement("div")
@@ -290,9 +291,7 @@
 
                     span.textContent = Number(span.textContent) + (-1)
                     td5.textContent = (td5.textContent - p3.textContent).toFixed(2)
-                    console.log(Number(td5.textContent), ';-;-;=;;;;')
                     item.totalPrice = Number(td5.textContent)
-                    console.log(kkk, "kkkkkkkkkkkkkkkk")
 
 
                     // item.totalPrice = Number(td5.textContent)
@@ -318,7 +317,6 @@
                     td5.textContent = (p3.textContent * span.textContent).toFixed(2)
                     console.log(Number(td5.textContent), ';;;;;;;')
 
-                    console.log(kkk, "kkkkkkkkkkkkkkkk")
 
 
 
@@ -372,17 +370,18 @@
 
 
             function deleteItem(index) {
-
+               
+             
 
                 cartData.splice(index, 1)
                 localStorage.setItem("cartData", JSON.stringify(cartData))
                 // td5.textContent = item.totalPrice
                 showCart(cartData)
-
+               
 
                 location.reload()
 
-
+                
                 // td5.textContent = item.price*quantity
 
             }
@@ -397,7 +396,7 @@
     }
     console.log(cartData, "fghnjmuygtvbhjn")
     var total = cartData.reduce((accumalator, cv) => {
-        return accumalator + cv.totalPrice
+        return accumalator + (cv.productprice*cv.quantity)
     }, 0)
     console.log(Object.keys(cartData).length)
     var h1 = document.createElement("h1")
@@ -470,5 +469,4 @@
 
 
     }
-    console.log(sss, 'ddddddddddd')
 </script>
