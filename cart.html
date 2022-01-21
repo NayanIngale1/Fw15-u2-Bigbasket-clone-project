@@ -74,8 +74,12 @@
 
         #td2::before {
             /* a { */
-            content: "Rs.";
+            content: "MRP.";
 
+        }
+
+        #show-saving::before {
+            content: "Rs.";
         }
 
         thead {
@@ -86,15 +90,16 @@
             height: 30px;
             width: 30px;
         }
+
         /* #clrCart{
             visibility: hidden;
         } */
     </style>
 </head>
 
-<body>
+<body class="">
 
-    <div class="container">
+    <div class="container ">
         <div class="row">
             <div id="cartLength">
 
@@ -107,7 +112,7 @@
                 <thead class="bg-secondary ">
                     <tr>
                         <th scope="col">item Deiscription</th>
-                        <th scope="col">MRP</th>
+                        <th scope="col">Orginal Price</th>
                         <th scope="col">Unit Price</th>
                         <th scope="col">quantity</th>
                         <th scope="col">Sub Total</th>
@@ -198,9 +203,8 @@
 </html>
 
 <script>
-    var arr = []
     var arr2 = []
-
+    var savingSum = 0
 
     var cartData = JSON.parse(localStorage.getItem("cartData"))
     showCart(cartData)
@@ -208,6 +212,8 @@
         document.querySelector("tbody").textContent = ""
 
         cartData.map((item, index) => {
+
+            // ar2r.push((item.StrikePrice-item.productprice)*item.quantity)
             var tr = document.createElement("tr")
 
 
@@ -230,9 +236,18 @@
             button1.setAttribute("class", "btn btn-outline-success")
             button1.setAttribute("id", "buttonN")
             button1.innerHTML = '<i class="fa fa-minus" aria-hidden="true"></i>'
+            var kkk = (item.StrikePrice - item.productprice) * span.textContent
+            
             button1.addEventListener("click", function () {
                 changeQuantity(-1, span.textContent)
             })
+            // ----------------------------------------------saving show
+            var td9 = document.createElement("td")
+            td9.textContent = (item.StrikePrice - item.productprice) * item.quantity
+            savingSum = savingSum + (Number(td9.textContent))
+            // updateSaving( td9.textContent)
+
+
 
 
 
@@ -251,9 +266,9 @@
 
             var td5 = document.createElement("td")
             td5.setAttribute("id", "td5")
-            // var rsDiv=document.createElement("div")
 
             td5.textContent = item.totalPrice//total price
+           
 
 
             var td6 = document.createElement("td")
@@ -265,13 +280,8 @@
             p3.textContent = item.productprice
             rsDiv.append(p3span, p3)
 
-            var p4 = document.createElement("p")
-            // p4.textContent ="Rs."+ item.strikedoffprice
-            p4.style.textDecoration = "line-through	"
-            p4.style.fontSize = "13px"
 
-            p4.textContent = "Rs." + item.StrikePrice
-            td6.append(rsDiv, p4)
+            td6.append(rsDiv)
 
 
 
@@ -282,13 +292,22 @@
                     td5.textContent = (td5.textContent - p3.textContent).toFixed(2)
                     console.log(Number(td5.textContent), ';-;-;=;;;;')
                     item.totalPrice = Number(td5.textContent)
+                    console.log(kkk, "kkkkkkkkkkkkkkkk")
+
+
+                    // item.totalPrice = Number(td5.textContent)
                     if (span.textContent == 0) {
                         button1.disabled = "true";
 
 
                         location.reload()
-                        item.totalPrice = item.productprice
+                        // item.totalPrice = item.productprice
                     }
+
+                    td9.textContent = (item.StrikePrice - item.productprice) * span.textContent
+                    console.log("update saving -1", td9.textContent)
+
+                    updateSaving(-(item.StrikePrice - item.productprice))
 
 
 
@@ -298,23 +317,37 @@
                     span.textContent = Number(span.textContent) + 1
                     td5.textContent = (p3.textContent * span.textContent).toFixed(2)
                     console.log(Number(td5.textContent), ';;;;;;;')
+
+                    console.log(kkk, "kkkkkkkkkkkkkkkk")
+
+
+
+
                     item.totalPrice = Number(td5.textContent)
+                    td9.textContent = (item.StrikePrice - item.productprice) * span.textContent
+                    console.log("update saving 1", td9.textContent)
+                    updateSaving(item.StrikePrice - item.productprice)
+
+
+
+
 
 
 
 
 
                 }
+                item.totalPrice = Number(td5.textContent)
                 var total = cartData.reduce((accumalator, cv) => {
                     return accumalator + cv.totalPrice
                 }, 0)
                 console.log(total)
-
                 showPrice(total)
+                // updateSaving(updateSaving)
+
 
 
             }
-
             var td8 = document.createElement("td")
             var button = document.createElement("button")
             button.addEventListener("click", function () {
@@ -323,20 +356,22 @@
             button.setAttribute("class", "btn btn-outline-danger")
             button.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>'
             td8.append(button)
-            var td9 = document.createElement("td")
+          
+
+
+
             td9.setAttribute("id", "td9")
-            td9.textContent = item.StrikePrice - item.productprice
-            arr.push(td9.textContent)
+
+
             td9.style.color = "red"
             var td2 = document.createElement("td")
+            td2.style.textDecoration = "line-through"
             td2.setAttribute("id", "td2")
             td2.textContent = item.StrikePrice
             // ------------------------------------------append to table------------------------------------------------------------
-          
+
 
             function deleteItem(index) {
-                console.log(index)
-
 
 
                 cartData.splice(index, 1)
@@ -344,16 +379,23 @@
                 // td5.textContent = item.totalPrice
                 showCart(cartData)
 
+
                 location.reload()
+
+
                 // td5.textContent = item.price*quantity
 
             }
             tr.append(td3, td2, td6, td4, td5, td9, td8)
             document.querySelector("tbody").append(tr)
+            arr2.push(cartData[index].totalPrice)
+            console.log(item.productprice * item.quantity, "dddd")
 
 
         })
+
     }
+    console.log(cartData, "fghnjmuygtvbhjn")
     var total = cartData.reduce((accumalator, cv) => {
         return accumalator + cv.totalPrice
     }, 0)
@@ -371,9 +413,9 @@
     checkout.addEventListener("click", function () {
         window.location.href = "checkout.html"
         // ------------------------------------------TOTAL AMOUNT LOCAL STORAGE-----------------------------------------------------------------------------------------------------------------
-        
+
         localStorage.setItem("totalAmount", total)
-// ------------------------------------------------------------------------------------------------------------------------------------------------------
+        // ------------------------------------------------------------------------------------------------------------------------------------------------------
     })
     checkout.innerHTML = "CHECKOUT" + " " + '<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>'
 
@@ -399,19 +441,23 @@
             localStorage.setItem("totalAmount", val)
         })
     }
-
     document.querySelector("#showingTotal").append(span) //totalprice
 
     chekOutButtnDiv.append(checkout)
     document.querySelector("#checkOutSection").append(pchkout2, chekOutButtnDiv, pchkout3)
-    var k = arr.map(Number).reduce((acc, cur) => {
-        return acc + cur
-    }, 0)
-    document.querySelector("#show-saving").textContent = "Rs." + k
+
+
+    document.querySelector("#show-saving").textContent = savingSum
+    function updateSaving(k) {
+
+        document.querySelector("#show-saving").textContent = Number(k) + savingSum
+        savingSum = Number(document.querySelector("#show-saving").textContent)
+    }
+
 
     function clearTheCart() {
         // e.preventDefault()
-        let confirmAction = confirm("Are you sure to clear the cart")
+        let confirmAction = confirm("Are you surewant to clear the cart")
         if (confirmAction) {
             localStorage.removeItem("cartData");
 
@@ -424,4 +470,5 @@
 
 
     }
+    console.log(sss, 'ddddddddddd')
 </script>
