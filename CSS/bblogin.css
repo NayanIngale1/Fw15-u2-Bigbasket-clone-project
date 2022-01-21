@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Licorice&family=Outfit:wght@300;400&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: "Outfit";
+    font-weight: 300;
+    box-sizing: border-box;
+    background-color: #fff;
+    }   
+
+    #main-container{
+        width:80vw;
+        margin: auto;
+    }
+    img {
+        cursor: pointer;
+    }
+
+.bblogo{
+    width: 8vw;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    padding: 0px;
+    margin-bottom: 2vw;
+    display: block;
+    /* box-shadow: rgba(96, 146, 30, 0.199) 0px 0px 10px; */
+}
+.bblogo img{
+    width: 100%;
+    margin: 0px;
+}
+/* ----------------------------------------------login Css---------------------------------------------------- */
+#login-container {
+    width: 25vw;
+    border: 1px solid rgb(132,194,37);
+    border-radius: 5px;
+    margin:5vw auto 0 auto;
+    padding: 2vw;
+    box-shadow: rgba(43, 63, 13, 0.397) 0px 5px 6px -3px, rgba(48, 71, 13, 0.418) 0px 4px 6px -2px;
+}
+    
+/* #login-container>div:nth-child(2) {
+    height: 2px;
+    box-shadow: rgba(17, 17, 26, 0.541) 0px 1px 0px;
+    margin-bottom: 1vw;
+} */
+    
+#login-container>span {
+    /* margin-top: 2vw ; */
+    line-height: 1vw;
+    font-size: 0.9vw;
+}
+    
+#login-container>span>a {
+    margin: 0;
+    font-weight: normal;
+    text-decoration: underline;
+}
+    
+h1 {
+    margin-top: 0px;
+    padding: 0px;
+    font-size: 2vw;
+    color: rgb(132,194,37);
+}
+    
+input {
+    height: 2vw;
+    width: 90%;
+    margin: 0.5vw auto 0.9vw auto;
+    height: 2vw;
+    padding: 0.1vw 0;
+    line-height: normal;
+    font-size: 1.1vw;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(132,194,37);
+        }
+
+#btn {
+    width: 95%;
+    height: 3vw;
+    margin: 1.3vw auto;
+    background-color: rgb(132,194,37);
+    color: white;
+    border: 0.2vw solid rgb(151, 224, 40);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: ease-in-out 0.3s;
+}
+ #btn:hover {
+    background-color: rgb(102, 160, 15);
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+p{
+    border: 1px solid red;
+    font-size: 0.3;
+}
+label{
+        font-size: 1.5vw;
+        margin-top: 1vw;
+}
+
+ @media only screen and (max-width:768px){
+    #login-container{
+        min-width: 40vw;
+        width: 50%;
+    }
+           
+}
+ @media only screen and (max-width:400px){
+    #login-container{
+        min-width: 80vw;
+        width: 50%;
+    }
+           
+}
