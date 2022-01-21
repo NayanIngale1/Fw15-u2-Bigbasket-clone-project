@@ -1,0 +1,433 @@
+
+body
+{
+    padding: 1vw;
+}
+#container
+{
+    border: 1px solid;
+    padding: 1vw;
+    width: 80vw;
+    margin: auto;
+    display: flex;
+}
+#infobox
+{
+    border: 1px solid;
+    padding: .5vw;
+    width: 80%;
+}
+#voucherbox
+{
+    border: 1px solid;
+    padding: .5vw;
+    width: 20%;
+}
+#locationtagbox
+{
+    border: 1px solid;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    grid-gap: .5vw;
+}
+#locationtag
+{
+    width: 2vw;
+    height: 2vw;
+    border: 1px solid;
+}
+#DeliveryAddress
+{
+    width: fit-content;
+    font-size: 1vw;
+    margin: auto;
+}
+#PersonalAddressBox
+{
+    margin-top: 4vw;
+    border: 1px solid;
+    width: 99.5%;
+}
+#infoform
+{
+    padding: .5vw;
+    border: 1px solid;
+    width: 98%;
+}
+#PersonalDetails
+{
+    border: 1px solid;
+    width: fit-content;
+    font-size: 1.4vw;
+    font-weight: bold;
+}
+#PersonalDetailsBox
+{
+    border: 1px solid;
+    width: 99.4%;
+    margin-top: .5vw;
+    display: flex;
+    grid-gap: .5vw;
+}
+#firstname1
+{
+    border: 1px solid;
+    width: 25%;
+}
+#lastname1
+{
+    border: 1px solid;
+    width: 25%;
+}
+#contact1
+{
+    border: 1px solid;
+    width: 48%;
+}
+#first
+{
+    font-size: 1vw;
+    width: fit-content;
+    margin-bottom: .2vw;
+}
+#fname
+{
+    border: 1px solid;
+    width: 99%;
+    height: 2.5vw;
+    display: flex;
+}
+#fname1
+{
+    width: 96%;
+    height: 82%;
+}
+#last
+{
+    font-size: 1vw;
+    width: fit-content;
+    margin-bottom: .2vw;
+}
+#lname
+{
+    border: 1px solid;
+    width: 99%;
+    height: 2.5vw;
+    display: flex;
+}
+#lname1
+{
+    width: 96%;
+    height: 82%;
+}
+#number
+{
+    font-size: 1vw;
+    width: fit-content;
+    margin-bottom: .2vw;
+}
+#number1
+{
+    border: 1px solid;
+    width: 99%;
+    height: 2.5vw;
+    display: flex;
+}
+#number2
+{
+    width: 100%;
+    height: 82%;
+}
+#AddressDetails
+{
+    border: 1px solid;
+    width: fit-content;
+    font-size: 1.4vw;
+    font-weight: bold;
+    margin-top: .8vw;
+}
+#AddressDetailsBox
+{
+    border: 1px solid;
+    width: 99.4%;
+    margin-top: .5vw;
+    display: flex;
+    grid-gap: .5vw;
+}
+#HouseBox
+{
+    border: 1px solid;
+    width: 25%;
+}
+#House
+{
+    font-size: 1vw;
+    width: fit-content;
+    margin-bottom: .2vw;
+}
+#House1
+{
+    border: 1px solid;
+    width: 99%;
+    height: 2.5vw;
+    display: flex;
+}
+#House2
+{
+    width: 96%;
+    height: 82%;
+}
+#ApartmentBox
+{
+    border: 1px solid;
+    width: 75%;
+}
+#Apart
+{
+    font-size: 1vw;
+    width: fit-content;
+    margin-bottom: .2vw;
+}
+#Apart1
+{
+    border: 1px solid;
+    width: 99%;
+    height: 2.5vw;
+    display: flex;
+}
+#Apart2
+{
+    width: 100%;
+    height: 82%;
+}
+#StreetBox
+{
+    border: 1px solid;
+    width: 50%;
+}
+#Street
+{
+    font-size: 1vw;
+    width: fit-content;
+    margin-bottom: .2vw;
+}
+#Street1
+{
+    border: 1px solid;
+    width: 99%;
+    height: 2.5vw;
+    display: flex;
+}
+#Street2
+{
+    width: 100%;
+    height: 82%;
+}
+#LandMarkBox
+{
+    border: 1px solid;
+    width: 50%;
+}
+#LandMark
+{
+    font-size: 1vw;
+    width: fit-content;
+    margin-bottom: .2vw;
+}
+#LandMark1
+{
+    border: 1px solid;
+    width: 99%;
+    height: 2.5vw;
+    display: flex;
+}
+#LandMark2
+{
+    width: 100%;
+    height: 82%;
+}
+#CityBox
+{
+    border: 1px solid;
+    width: 25%;
+}
+#City
+{
+    font-size: 1vw;
+    width: fit-content;
+    margin-bottom: .2vw;
+}
+#City1
+{
+    border: 1px solid;
+    width: 99%;
+    height: 2.5vw;
+    display: flex;
+}
+#City2
+{
+    width: 96%;
+    height: 82%;
+}
+#AreaBox
+{
+    border: 1px solid;
+    width: 48%;
+}
+#Area
+{
+    font-size: 1vw;
+    width: fit-content;
+    margin-bottom: .2vw;
+}
+#Area1
+{
+    border: 1px solid;
+    width: 99%;
+    height: 2.5vw;
+    display: flex;
+}
+#Area2
+{
+    width: 96%;
+    height: 82%;
+}
+#PincodeBox
+{
+    border: 1px solid;
+    width: 25%;
+}
+#Pincode
+{
+    font-size: 1vw;
+    width: fit-content;
+    margin-bottom: .2vw;
+}
+#Pincode1
+{
+    border: 1px solid;
+    width: 99%;
+    height: 2.5vw;
+    display: flex;
+}
+#Pincode2
+{
+    width: 100%;
+    height: 82%;
+}
+#submit
+{
+    margin-top: .5vw;
+    padding-left: .5vw;
+    padding-right: .5vw;
+    font-size: 1.2vw;
+    background-color: rgb(195, 195, 209);
+}
+#totalpriceBox
+{
+    border: 1px solid;
+    width: 99%;
+    display: flex;
+}
+#totalprice
+{
+    border: 1px solid;
+    font-size: 1.5vw;
+    padding: .2vw;
+    background-color: blue;
+    color: white;
+}
+#totalAmount
+{
+    border: 1px solid;
+    font-size: 1.4vw;
+    padding: .2vw;
+    padding-left: .6vw;
+    padding-right: .6vw;
+}
+#couponbox
+{
+    border: 1px solid;
+    margin-top: .5vw;
+    width: 99%;
+    display: flex;
+}
+#promobtn
+{
+    border: 1px solid;
+    display: flex;
+    width: 6vw;
+}
+#applypromo
+{
+    border: 1px solid;
+}
+#applycode
+{
+    width: 100%;
+    font-size: .9vw;
+    padding: .5vw;
+}
+#applycode:hover
+{
+    border-width: .1vw;
+    background-color: slateblue;
+    color: white;
+}
+#inputpromo
+{
+    border: 1px solid;
+    width: 60%;
+    display: flex;
+}
+#input
+{
+    width: 100%;
+    text-align: center;
+    font-size: 1.2vw;
+}
+#applymasai30
+{
+    border: 1px solid;
+    margin-top: .5vw;
+    width: 99%;
+    font-size: 1vw;
+    margin-bottom: auto;
+}
+.SaveAmountBox
+{
+    border: 1px solid;
+    width: 99%;
+    display: flex;
+    margin-top: .5vw;
+}
+.YourSavePrice
+{
+    border: 1px solid;
+    font-size: 1.5vw;
+    padding: .2vw;
+    background-color: rgb(188, 230, 38);
+    color: rgb(90, 12, 158);
+}
+.ShowSavePrice
+{
+    border: 1px solid;
+    font-size: 1.4vw;
+    padding: .2vw;
+    padding-left: .6vw;
+    padding-right: .6vw;
+}
+#GoToPayment
+{
+    border: 1px solid;
+    margin-top: .5vw;
+    display: flex;
+    width: 99%;
+}
+#GoToPayment1
+{
+    width: 100%;
+    padding: .5vw;
+    font-size: 1.2vw;
+}
