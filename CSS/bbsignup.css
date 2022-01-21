@@ -29,30 +29,22 @@ img {
   width: 100%;
   margin: 0px;
 }
-/* ----------------------------------------------login Css---------------------------------------------------- */
-#login-container {
-  width: 25vw;
+/* ------------------------------------Css for signup container----------------------------------------- */
+#signup-container {
+  width: 25%;
   border: 1px solid rgb(132, 194, 37);
   border-radius: 5px;
-  margin: 5vw auto 0 auto;
-  padding: 2vw;
+  margin: 30px auto;
+  padding: 20px;
   box-shadow: rgba(43, 63, 13, 0.397) 0px 5px 6px -3px,
     rgba(48, 71, 13, 0.418) 0px 4px 6px -2px;
 }
 
-/* #login-container>div:nth-child(2) {
-    height: 2px;
-    box-shadow: rgba(17, 17, 26, 0.541) 0px 1px 0px;
-    margin-bottom: 1vw;
-} */
-
-#login-container > span {
-  /* margin-top: 2vw ; */
-  line-height: 1vw;
-  font-size: 0.9vw;
+#signup-container > span {
+  font-size: 12px;
 }
 
-#login-container > span > a {
+#signup-container > span > a {
   margin: 0;
   font-weight: normal;
   text-decoration: underline;
@@ -61,7 +53,6 @@ img {
 h1 {
   margin-top: 0px;
   padding: 0px;
-  font-size: 2vw;
   color: rgb(132, 194, 37);
 }
 
@@ -95,24 +86,20 @@ input {
   cursor: pointer;
   font-weight: 600;
 }
-p {
-  border: 1px solid red;
-  font-size: 0.3;
+@media only screen and (max-width: 1283px) {
+  #signup-container {
+    width: 30%;
+    min-width: 300px;
+  }
 }
-label {
-  font-size: 1.5vw;
-  margin-top: 1vw;
-}
-
 @media only screen and (max-width: 768px) {
-  #login-container {
-    min-width: 40vw;
+  #signup-container {
+    min-width: 300px;
     width: 50%;
   }
 }
-@media only screen and (max-width: 400px) {
-  #login-container {
-    min-width: 80vw;
-    width: 50%;
+@media only screen and (max-width: 380px) {
+  #signup-container {
+    width: 70%;
   }
 }
