@@ -107,23 +107,26 @@
     </style>
 </head>
 
-<body class="">
+<body >
 
     <div class="container ">
         <div class="row">
             <div id="cartLength">
 
             </div>
+           
         </div>
+        <hr>
     </div>
+   
     <div class="container">
         <div class="row">
-            <table class="table">
+            <table class="table" id="table">
                 <thead class="bg-secondary ">
                     <tr>
                         <th scope="col">item Deiscription</th>
                         <th scope="col">Orginal Price</th>
-                        <th scope="col">Unit Price</th>
+                        <th scope="col">Discount Price</th>
                         <th scope="col">quantity</th>
                         <th scope="col">Sub Total</th>
                         <th scope="col" style="background-color: #b9ac56;">Saving</th>
@@ -141,7 +144,7 @@
 
 
     <div class="container mt-5">
-        <hr>
+        <hr id="hrTag">
         <!-- flex-sm-row justify-content-sm-between  -->
         <div class="row justify-content-between ">
             <div class="col">
@@ -149,7 +152,7 @@
                     class=" h-100 d-flex flex-row justify-content-between   flex-md-column justify-content-md-between ">
                     <div>
                         <button id="clrCart" onclick="clearTheCart()"
-                            class="shadow-sm rounded border border-success p-2 d-flex align-items-center justify-content-between "><svg
+                            class="shadow-sm rounded border border-success p-2 d-flex align-items-center justify-content-between "><svg 
                                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-basket" viewBox="0 0 16 16">
                                 <path
@@ -157,13 +160,13 @@
                             </svg> Empty basket</button>
                     </div>
                     <div>
-                        <button class="shadow-sm rounded border border-success p-1" onclick="window.location.href='index.html'">CONTINUE SHOPPING</button>
+                        <button class="shadow-sm rounded border border-success p-2" onclick="window.location.href='index.html'">CONTINUE SHOPPING</button>
                     </div>
                 </div>
 
             </div>
             <div class="col-md-6">
-                <div class="card shadow-sm">
+                <div class="card shadow-sm" id="card">
                     <div class="card-body">
                         <div id="totalPrice">
 
@@ -215,9 +218,11 @@
 <script>
     var arr2 = []
     var savingSum = 0
+    var cartArrr=[]
 
-    var cartData = JSON.parse(localStorage.getItem("cartData"))
-    showCart(cartData)
+    var cartData1 = JSON.parse(localStorage.getItem("cartData"))
+    
+    showCart(cartData1)
     function showCart(cartData) {
         document.querySelector("tbody").textContent = ""
 
@@ -302,6 +307,9 @@
                     span.textContent = Number(span.textContent) + (-1)
                     td5.textContent = (td5.textContent - p3.textContent).toFixed(2)
                     item.totalPrice = Number(td5.textContent)
+                    item.quantity=span.textContent
+                    console.log(typeof(span.textContent,"tyoeeeee"))
+                    // alert(span.textContent)
 
 
                     // item.totalPrice = Number(td5.textContent)
@@ -314,9 +322,11 @@
                     }
 
                     td9.textContent = (item.StrikePrice - item.productprice) * span.textContent
-                    console.log("update saving -1", td9.textContent)
+                    // console.log("update saving -1", td9.textContent)
 
                     updateSaving(-(item.StrikePrice - item.productprice))
+                    localStorage.setItem("updatedBigBasketCartData", JSON.stringify(cartData1))
+
 
 
 
@@ -324,8 +334,10 @@
                 }
                 if (k == 1) {
                     span.textContent = Number(span.textContent) + 1
+                    item.quantity=span.textContent
+
                     td5.textContent = (p3.textContent * span.textContent).toFixed(2)
-                    console.log(Number(td5.textContent), ';;;;;;;')
+                    // console.log(Number(td5.textContent), ';;;;;;;')
 
 
 
@@ -336,6 +348,7 @@
                     console.log("update saving 1", td9.textContent)
                     updateSaving(item.StrikePrice - item.productprice)
 
+                    localStorage.setItem("updatedBigBasketCartData", JSON.stringify(cartData1))
 
 
 
@@ -346,7 +359,7 @@
 
                 }
                 item.totalPrice = Number(td5.textContent)
-                var total = cartData.reduce((accumalator, cv) => {
+                var total = cartData1.reduce((accumalator, cv) => {
                     return accumalator + cv.totalPrice
                 }, 0)
                 console.log(total)
@@ -383,10 +396,10 @@
 
 
 
-                cartData.splice(index, 1)
+                cartData1.splice(index, 1)
                 localStorage.setItem("cartData", JSON.stringify(cartData))
                 // td5.textContent = item.totalPrice
-                showCart(cartData)
+                showCart(cartData1)
 
 
                 location.reload()
@@ -400,18 +413,21 @@
             arr2.push(cartData[index].totalPrice)
             console.log(item.productprice * item.quantity, "dddd")
 
+            
+
 
         })
+        
 
     }
-    console.log(cartData, "fghnjmuygtvbhjn")
-    var total = cartData.reduce((accumalator, cv) => {
+    
+    console.log(cartData1, "fghnjmuygtvbhjn")
+    var total = cartData1.reduce((accumalator, cv) => {
         return accumalator + (cv.productprice * cv.quantity)
     }, 0)
 
-    console.log(Object.keys(cartData).length)
     var h1 = document.createElement("h1")
-    h1.textContent = `Your Basket (${Object.keys(cartData).length} items)`
+    h1.textContent = `Your Basket (${Object.keys(cartData1).length} items)`
     document.querySelector("#cartLength").append(h1)
 
     // var h2 = document.createElement("h2")
@@ -425,6 +441,8 @@
         // ------------------------------------------TOTAL AMOUNT LOCAL STORAGE-----------------------------------------------------------------------------------------------------------------
 
         localStorage.setItem("totalAmount", total)
+       
+
         // ------------------------------------------------------------------------------------------------------------------------------------------------------
     })
     checkout.innerHTML = "CHECKOUT" + " " + '<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>'
@@ -471,13 +489,15 @@
         let confirmAction = confirm("Are you surewant to clear the cart")
         if (confirmAction) {
             localStorage.removeItem("cartData");
-            cartData=[]
-            showCart(cartData)
+            cartData1=[]
+            showCart(cartData1)
             span.textContent ="Rs."+0
             document.querySelector("#show-saving").textContent=0
 
             document.querySelector("#clrCart").style.visibility="hidden"
-            document.querySelector("#checkOutSection").style.display="none"
+            document.querySelector("#card").style.display="none"
+            document.querySelector("#table").style.display="none"
+            document.querySelector("#hrTag").style.display="none"
             h1.textContent = `Your Basket is Empty😒`
             document.querySelector("#cartLength").append(h1)
             // location.reload()
@@ -489,4 +509,12 @@
 
 
     }
+
+
+
+    localStorage.setItem("updatedBigBasketCartData", JSON.stringify(cartData1))
+        console.log(cartData1,"CART!")
+     
+        
+
 </script>
