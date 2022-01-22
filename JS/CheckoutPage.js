@@ -93,24 +93,81 @@ function ShowReduceAmount()
 
     //------------------------------------------------
     //------------------------------------------------
-    var ReduceAmountBox = document.createElement("div");
-    ReduceAmountBox.setAttribute("class","SaveAmountBox");
+    // var ReduceAmountBox = document.createElement("div");
+    // ReduceAmountBox.setAttribute("class","SaveAmountBox");
 
-    var ReducePrice = document.createElement("div");
-    ReducePrice.setAttribute("class","YourSavePrice");
-    ReducePrice.innerHTML = "Total Amount"
+    // var ReducePrice = document.createElement("div");
+    // ReducePrice.setAttribute("class","YourSavePrice");
+    // ReducePrice.innerHTML = "Total Amount"
 
-    var ShowReducePrice = document.createElement("div");
-    ShowReducePrice.setAttribute("class","ShowSavePrice");
-    ShowReducePrice.innerHTML = `Rs. ${totalPrice[totalPrice.length-1]}`
+    // var ShowReducePrice = document.createElement("div");
+    // ShowReducePrice.setAttribute("class","ShowSavePrice");
+    // ShowReducePrice.innerHTML = `Rs. ${totalPrice[totalPrice.length-1]}`
 
-    document.querySelector("#voucherbox").append(ReduceAmountBox);
-    ReduceAmountBox.append(ReducePrice,ShowReducePrice);
+    document.querySelector("#totalAmount").innerHTML =`Rs. ${totalPrice[totalPrice.length-1]}`;
+    //document.querySelector("#voucherbox").append(ReduceAmountBox);
+    //ReduceAmountBox.append(ReducePrice,ShowReducePrice);
 
-    document.querySelector("#voucherbox").append(document.querySelector("#GoToPayment"));
+    document.querySelector("#voucherbox").append(document.querySelector("#GoToPayment"),document.querySelector("#totalItemBox"),document.querySelector("#ProductShowBox"));
 }
 document.querySelector("#GoToPayment1").addEventListener("click",function()
 {
     alert("Thank You!");
     window.location.href = "";//------------Here You Add Payment File Location
 })
+
+var Product = JSON.parse(localStorage.getItem("cart_data"));
+console.log(Product);
+productDetails(Product);
+function productDetails(Product)
+{
+    // <div id = "ProductShowBox">
+    //         <div id = "ProductImage">
+    //             <img id = "ProductImage1">
+    //         </div>
+    //         <div id = "ProductDetails">
+    //             <div class = "BrandName"></div>
+    //             <div class = "ProductName" id = "ProductName1">B</div>
+    //             <div class = "ProductName" id = "ProductMrpPrice">C</div>
+    //             <div class = "ProductName">D</div>
+    //         </div>
+    // </div>
+    Product.map(function(element,index)
+    {
+        var EachProductBox = document.createElement("div");
+        EachProductBox.setAttribute("class","EachProductBox");
+
+        var Productimage = document.createElement("div");
+        Productimage.setAttribute("class","ProductImage");
+
+        var ProductImage1 = document.createElement("img");
+        ProductImage1.setAttribute("class","ProductImage1")
+        ProductImage1.setAttribute("src",element.image);
+
+        var Productdetails = document.createElement("div");
+        Productdetails.setAttribute("class","ProductDetails");
+
+        var BrandName = document.createElement("div");
+        BrandName.setAttribute("class","BrandName");
+        BrandName.innerHTML = `Brand : ${element.Brand}`;
+
+        var ProductName = document.createElement("div");
+        ProductName.setAttribute("class","ProductName");
+        ProductName.innerHTML = `Product : ${element.productName}`;
+
+        var ProductMrpPrice = document.createElement("div");
+        ProductMrpPrice.setAttribute("class","ProductMrpPrice");
+        ProductMrpPrice.innerHTML = `MRP : Rs. ${element.StrikePrice}`;
+
+        var ProductPrice = document.createElement("div");
+        ProductPrice.setAttribute("class","ProductPrice");
+        ProductPrice.innerHTML = `Offer Price : Rs. ${element.productprice}`
+
+        document.querySelector("#totalItemShow").innerHTML = Product.length;
+        document.querySelector("#ProductShowBox").append(EachProductBox);
+        EachProductBox.append(Productimage,Productdetails);
+        Productimage.append(ProductImage1);
+        Productdetails.append(BrandName,ProductName,ProductMrpPrice,ProductPrice);
+        
+    })
+}
