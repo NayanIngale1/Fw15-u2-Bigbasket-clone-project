@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account to BigBasket</title>
+    <link rel="stylesheet" href="CSS/bbsignup.css" />
+  </head>
+  <body>
+    <div id="signup-container">
+      <div class="bblogo">
+        <a href="index.html"><img src="bblogo.png" alt="" id="bblogo" /></a>
+      </div>
+      <h1>Create account</h1>
+      <form>
+        <label for="name">Your Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="enter name"
+          required
+        />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="enter email"
+          required
+        />
+        <label for="mobile">Mobile number</label>
+        <input
+          type="tel"
+          name="mobile"
+          id="mobile"
+          placeholder="enter mobile number"
+          maxlength="10"
+          minlength="10"
+        />
+        <label for="pass">password</label>
+        <input
+          type="password"
+          name="pass "
+          id="password"
+          placeholder="enter password "
+          minlength="4 "
+          required
+        />
+        <input type="submit" id="btn" value="Create account" />
+      </form>
+      <div></div>
+      <span>Already have an account?<a href="bblogin.html">Sign in</a></span>
+    </div>
+  </body>
+</html>
+<script src="JS/bbsignup.js"></script>

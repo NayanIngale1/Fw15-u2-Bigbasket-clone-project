@@ -10,7 +10,13 @@ body {
 img {
   cursor: pointer;
 }
-
+body a {
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  text-decoration: none;
+}
 /*--------------------------- nav bar css----------------------------------  */
 #out-nav {
   width: 100vw;
@@ -53,6 +59,10 @@ img {
 #nav-top > div:hover {
   color: rgb(132, 194, 37);
 }
+#nav-top a {
+  text-decoration: none;
+  color: black;
+}
 #nav-mid {
   display: flex;
   justify-content: space-between;
@@ -89,7 +99,6 @@ img {
 #basket-cart img {
   height: 3vw;
 }
-
 
 /*----------------------------------------- nav bar css ends----------------------------------------------------------- */
 
@@ -283,14 +292,14 @@ img {
   border-radius: 0.5vw;
   transition: 0.5s;
 }
-.card:hover{
+.card:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .discount {
   padding: 0.5vw;
   display: flex;
   justify-content: right;
-  
+
   box-shadow: rgba(68, 72, 77, 0.226) 0px 2px 5px 1px;
 }
 .get-off {
@@ -597,9 +606,6 @@ img {
   width: 40vw;
 }
 
-
-
-
 /* ----------------------------------------------- media queries for medium screen ------------------------------------------ */
 @media only screen and (max-width: 991px) {
   .offer-banner {
@@ -634,7 +640,7 @@ img {
   .items img:nth-child(6) {
     display: none;
   }
-   .card{
+  .card {
     min-width: 20vw;
   }
 }
@@ -693,7 +699,7 @@ img {
   .footer {
     grid-template-columns: repeat(2, 1fr);
   }
-  .card{
+  .card {
     min-width: 20vw;
   }
 }

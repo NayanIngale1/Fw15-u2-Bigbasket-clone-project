@@ -17,6 +17,7 @@ function Details(ProductDetails) {
     small.setAttribute("class", "smallpic");
     small.setAttribute("src", element.image);
     //var QtyValue = document.querySelector("#QtyInputBox").value;
+    
     document
       .querySelector("#AddToCartButton")
       .addEventListener("click", function () {
@@ -91,6 +92,7 @@ function addtocart(QtyValue, totalprice, element) {
   cartArr.push(cartdata);
 
   localStorage.setItem("cartData", JSON.stringify(cartArr));
+  window.location.reload();
   // console.log(cartArr);
   alert(
     `Your ${cartdata.productName} successfully added with ${cartdata.quantity} quantity Thank You`
