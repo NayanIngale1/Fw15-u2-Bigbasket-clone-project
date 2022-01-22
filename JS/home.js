@@ -5,6 +5,10 @@ document.querySelector("#read-more-btn").addEventListener('click', function () {
     document.querySelector("#read-more-btn").style.display = "none";
 })
 
+document.querySelector("#basket-cart").addEventListener("click",function(){
+  window.location.href = "basketcart.html";
+})
+
 function newFunction() {
     $('.carousel').carousel({
         interval: 1000

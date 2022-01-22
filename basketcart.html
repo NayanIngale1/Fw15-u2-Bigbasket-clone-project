@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details</title>
-    <link rel="stylesheet" href="./CSS/productDetails.css">
-</head>
-<body>
-    <!------------Container start---------->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/629044acfa.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <title>Basket</title>
+    <link rel="stylesheet" href="CSS/basketcart.css" />
+  </head>
+  <body>
 
-
-     <!-----------------------------------Nav Bar starts------------------------------------>
+    <!-----------------------------------Nav Bar starts------------------------------------>
         <div id="out-nav">
             <div id="navbar">
                 <div id="logo">
@@ -21,7 +29,7 @@
                     <div id="nav-top">
                         <div><img src="callpng.png" alt=""></i>1860 123 1000</div>
                         <div>Nashik</div>
-                        <div><img src="loginphoro.png" alt="">login/signup</div>
+                        <div><a href="bbsignup.html"><img src="loginphoro.png" alt="">login/signup</a></div>
                     </div>
                     <div id="nav-mid">
                         <div id="search">
@@ -39,87 +47,109 @@
         </div>
     
         <!-----------------------------------Nav Bar ends------------------------->
-    <div id="container">
-      <!-----------------------Left side box start-------------------------->
-      <!-----------------------Left side box start-------------------------->
-
-      <div id="leftsidebox">
-        <!-------------------Category-Container start---------------------->
-
-        <div id="left-box-category">Category</div>
-        <div id="category-container">
-          <p id="fruitsvegitables">Shop more</p>
-          <div id="all-category">
-            <a class="All-category-link" href="vegetablesAndFruits.html"
-              >Fruits & Vegetables</a
-            >
-            <a class="All-category-link" href="foodgrainsOilAndMasala.html"
-              >Foodgrains, Oil & Masala</a
-            >
-            <a class="All-category-link" href="bakeryCakesAndDairy.html"
-              >Bakery, Cakes & Dairy</a
-            >
-            <a class="All-category-link" href="snacksAndBrandedFood.html"
-              >Snacks & Branded Foods</a
-            >
-            <a class="All-category-link" href="eggMeaslAndFish.html"
-              >Eggs, Meat & Fish</a
-            >
-            <a class="All-category-link" href="cleaningAndHousehold.html"
-              >Cleaning & Household</a
-            >
-            <a class="All-category-link" href="">Beauty & Hygiene</a>
-            <a class="All-category-link" href="">Gourmet & World Food</a>
-            <a class="All-category-link" href="">Baby Care</a>
-            <a class="All-category-link" href="">View All</a>
-          </div>
-        </div>
+        
+    <div class="container" id="main">
+      <div class="row">
+        <div id="cartLength"></div>
       </div>
+      <hr />
+    </div>
 
-      <!--------------------Category-Container End----------------->
+    <div class="container">
+      <div class="row">
+        <table class="table" id="table">
+          <thead class="bg-secondary">
+            <tr>
+              <th scope="col">item Deiscription</th>
+              <th scope="col">Orginal Price</th>
+              <th scope="col">Discount Price</th>
+              <th scope="col">quantity</th>
+              <th scope="col">Sub Total</th>
+              <th scope="col" style="background-color: #b9ac56">Saving</th>
+              <th scope="col">Remove item</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
 
-      <!-----------------------Left side box End-------------------------->
-      <!-----------------------Left side box End-------------------------->
-
-      <!------------------------------Right side box start----------------------->
-      <!------------------------------Right side box start----------------------->
-
-      <div id="rightbox">
-        <div id="imagebox">
-          <div id="VegTagIconBox">
-            <div id="VegTagIcon"></div>
+    <div class="container">
+      <hr id="hrTag" />
+      <!-- flex-sm-row justify-content-sm-between  -->
+      <div class="row justify-content-between">
+        <div class="col">
+          <div
+            class="h-100 d-flex flex-row justify-content-between flex-md-column justify-content-md-between"
+          >
+            <div>
+              <button
+                id="clrCart"
+                onclick="clearTheCart()"
+                class="shadow-sm rounded border border-success p-2 d-flex align-items-center justify-content-between"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-basket"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"
+                  />
+                </svg>
+                Empty basket
+              </button>
+            </div>
+            <div>
+              <button
+                class="shadow-sm rounded border border-success p-2"
+                onclick="window.location.href='index.html'"
+              >
+                CONTINUE SHOPPING
+              </button>
+            </div>
           </div>
-          <div id="smallImage"></div>
         </div>
-        <div id="ProductDetailsBox">
-          <div id="BrandBox"></div>
-          <div id="BrandProductNameWeight"></div>
-          <div id="MrpStrickPricePriceBox">
-            <div id="Mrp"></div>
-            <div id="StrickPrice"></div>
-            <div id="Price"></div>
-            <div id="SavingOff"></div>
-            <div id="TaxContent"></div>
+        <div class="col-md-6">
+          <div class="card shadow-sm" id="card">
+            <div class="card-body">
+              <div id="totalPrice">
+                <div
+                  class="w-50 d-flex justify-content-between align-items-center"
+                >
+                  <h3 class="font-weight-bold">TOTAL</h3>
+                  <h3 id="showingTotal"></h3>
+                </div>
+
+                <div
+                  class="d-flex flex-column align-items-center border-left p-2"
+                >
+                  <img
+                    src="https://www.bbassets.com/static/v2500/uiv2/css/images/your_saved_icon.png"
+                    alt=""
+                    class="pink"
+                  />
+                  <p style="color: #e76a78">you saved!</p>
+                  <p id="show-saving" style="color: #e76a78"></p>
+                </div>
+              </div>
+              <hr />
+              <div id="checkOutSection">
+                <!-- <p>* For this order: Accepted food coupon is Rs. 51.51</p>
+                         <div id="chekOutButtn">
+                             <button>CHECKOUT</button>
+                         </div>
+                         <span>** Actual delivery charges computed at checkout time
+                        </span> -->
+              </div>
+            </div>
           </div>
-          <div id="QtyAddToCartBox">
-            <input id="QtyInputBox" type="text" />
-            <button id="AddToCartButton">ADD TO QUANTITY</button>
-            <button id="SaveButoon">SAVE</button>
-          </div>
-          <div id="DeliveryBox">
-            <img
-              id="DeliveryImage"
-              src="https://www.bbassets.com/static/v2498/custPage/build/content/img/standard-del.svg"
-              alt=""
-            />
-            <p id="DeliveryContent"></p>
-          </div>
-          <div class="TotalQtyAmount" id="Quantity"></div>
-          <div class="TotalQtyAmount" id="Amount"></div>
         </div>
       </div>
     </div>
-    <!------------Container End----------->
 
     <!------------------------ About section ----------------->
     
@@ -284,6 +314,22 @@
             </div>
         </div>
     </div>
-</body>
+  </body>
 </html>
-<script src="./JS/productDetails.js"></script>
+<script src="JS/basketcart.js"></script>
+<!-- Optional JavaScript -->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+  crossorigin="anonymous"
+></script>

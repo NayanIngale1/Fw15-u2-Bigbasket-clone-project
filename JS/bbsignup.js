@@ -20,5 +20,5 @@ function formSubmit(event) {
   // console.log(userDataBase);
   localStorage.setItem("bbuserDatabase", JSON.stringify(userDataBase));
   alert("Congratulation! Account Created Successfully. ");
-  window.location.href = "login.html";
+  window.location.href = "bblogin.html";
 }

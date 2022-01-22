@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="/CSS/payment.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Confirm Your Payment</h1>
+      <div class="first-row">
+        <div class="owner">
+          <h3>Your Name</h3>
+          <div class="input-field">
+            <input type="text" placeholder="enter name" />
+          </div>
+        </div>
+        <div class="cvv">
+          <h3>CVV</h3>
+          <div class="input-field">
+            <input type="password" placeholder="XXX" />
+          </div>
+        </div>
+      </div>
+      <div class="second-row">
+        <div class="card-number">
+          <h3>Card Number</h3>
+          <div class="input-field">
+            <input type="text" placeholder="XXXX - XXXX - XXXX - XXXX" />
+          </div>
+        </div>
+      </div>
+      <div class="third-row">
+        <h3>Card Expiry Date</h3>
+        <div class="selection">
+          <div class="date">
+            <div class="input-field">
+              <input type="text" id="months" placeholder="XX" />
+            </div>
+            <div class="input-field">
+              <input type="text" id="years" placeholder="XXXX" />
+            </div>
+          </div>
+          <div class="cards">
+            <img src="/projectImages/mc.png" alt="" />
+            <img src="/projectImages/vi.png" alt="" />
+            <img src="/projectImages/pp.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <a href="verifyOtp.html">Confirm</a>
+    </div>
+  </body>
+</html>

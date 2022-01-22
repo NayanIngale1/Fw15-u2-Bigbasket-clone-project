@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Licorice&family=Outfit:wght@300;400&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit";
+  font-weight: 300;
+  box-sizing: border-box;
+  background-color: #f2f2f213;
+}
+#quantity {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+tr,.row{
+    padding: 0px;
+    margin: 0px;
+}
+body a {
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  text-decoration: none;
+}
+/*--------------------------- nav bar css----------------------------------  */
+#out-nav {
+  width: 100vw;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.11) 0px 2px 8px;
+}
+#navbar {
+  width: 80vw;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1vw;
+}
+#nav-top {
+  /* height: 5vh; */
+  width: 65vw;
+  display: flex;
+  justify-content: flex-end;
+  /* border: 0.5px solid gray; */
+}
+#nav-top img {
+  height: 1vw;
+}
+#logo img {
+  width: 13vw;
+  cursor: pointer;
+}
+#box {
+  width: 65vw;
+  /* border: 1px solid red; */
+}
+#nav-top > div {
+  margin: 0px 2%;
+  padding: 3px;
+  cursor: pointer;
+}
+#nav-top > div:hover {
+  color: rgb(132, 194, 37);
+}
+#nav-top a{
+    text-decoration: none;
+    color: black;
+}
+#nav-mid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4vw;
+  /* border: 1px solid black; */
+}
+#search {
+  width: 50vw;
+  display: flex;
+}
+#search > img {
+  height: 2.5vw;
+  outline: 1px solid rgb(132, 194, 37);
+  cursor: pointer;
+}
+#nav-mid input {
+  width: 35vw;
+  outline: 1px solid rgb(132, 194, 37);
+  cursor: pointer;
+  /* height: 2.5vw; */
+  /* padding: 1vw; */
+}
+#basket-cart {
+  display: flex;
+  padding: 0.5vw;
+  max-height: 4vw;
+  cursor: pointer;
+  font-weight: 500;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(230, 230, 230);
+}
+#basket-cart img {
+  height: 3vw;
+}
+
+/*----------------------------------------- nav bar css ends----------------------------------------------------------- */
+
+#main{
+    margin-top: 100px;
+}
+#cartLength {
+  color: gray;
+  font-family: sans-serif;
+}
+
+#totalPrice {
+    /* border: 1px solid; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#checkOutSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#chekOutButtnDiv {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+#chekOutButtnDiv > button {
+  background-color: rgb(252, 226, 123);
+  padding: 20px;
+  color: gray;
+  /* font: 400 14px/16px Lato, sans-serif; */
+  width: 250px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+#td5::before {
+  /* a { */
+  content: "Rs.";
+}
+
+#td9::before {
+  /* a { */
+  content: "Rs.";
+}
+
+#td2::before {
+  /* a { */
+  content: "MRP.";
+}
+
+#show-saving::before {
+  content: "Rs.";
+}
+
+thead {
+  color: white;
+}
+
+.pink {
+  height: 30px;
+  width: 30px;
+}
+/* ----------------------------------------------- About Section CSS------------------------------------------ */
+#about {
+  border: 1px solid gray;
+  padding: 1.5vw;
+  text-align: justify;
+  width: 80vw;
+  margin: 2vw auto;
+}
+
+#read-more-btn {
+  outline: rgba(128, 128, 128, 0.514);
+  border: 1px solid silver;
+  padding: 0.5vw 1vw;
+}
+#read-more-btn:hover {
+  background-color: silver;
+}
+#more-text {
+  display: none;
+}
+
+/* ----------------------------------------------- Footer CSS------------------------------------------ */
+.footer {
+  width: 80vw;
+  margin: auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 8vw;
+  border-bottom: 1px solid gray;
+}
+.footer li {
+  list-style: none;
+}
+.footer li:nth-child(1) {
+  color: rgb(132, 194, 37);
+  font-size: 1.1em;
+}
+.footer li:hover {
+  color: rgb(132, 194, 37);
+  cursor: pointer;
+}
+.footer-end > div {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  padding: 2rem;
+}
+.footer-end > div h1 {
+  font-size: 1em;
+  font-weight: 300;
+  color: rgb(132, 194, 37);
+}
+.ft-div {
+  width: 20vw;
+}
+.ft-div ~ div {
+  width: 70vw;
+  display: flex;
+}
+#download-img {
+  display: block;
+  margin: 0.5rem;
+  height: 5vw;
+}
+.footer-contact div {
+  size: 3vw;
+  border: 1px solid red;
+}
+.footer-end img {
+  width: 40vw;
+}
+
+@media only screen and (max-width: 768px) {
+
+#main {
+    width: 100vw;
+}
+  #about,
+  .footer,
+  .footer li,
+  .footer-end {
+    font-size: 3vw;
+  }
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

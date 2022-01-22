@@ -65,9 +65,7 @@ input {
 }
 #search {
   width: 50vw;
-  /* height: 50%; */
   display: flex;
-  align-items: center;
 }
 #search > img {
   height: 2.5vw;
@@ -75,12 +73,11 @@ input {
   cursor: pointer;
 }
 #nav-mid input {
-  height: 1vw;
   width: 35vw;
   outline: 1px solid rgb(132, 194, 37);
   cursor: pointer;
-  font-size: 100%;
-  padding: 0.5vw;
+  /* height: 2.5vw; */
+  /* padding: 1vw; */
 }
 #basket-cart {
   display: flex;
@@ -208,8 +205,9 @@ input {
 
 #ProductDetailsBox {
   /* border: 1px solid; */
+  background-color: #f2f2f29c;
   width: 50%;
-  padding: 0.4vw;
+  padding: 1vw;
 }
 #BrandBox {
   /* border-bottom: 1px solid; */
@@ -264,7 +262,7 @@ input {
   width: fit-content;
   font-size: 0.8vw;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 #QtyAddToCartBox {
   /* border: 1px solid; */
@@ -304,6 +302,9 @@ input {
 }
 #DeliveryBox {
   /* border: 1px solid; */
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding: 1vw;
   margin-top: 2vw;
   display: flex;
   grid-gap: 0.5vw;
