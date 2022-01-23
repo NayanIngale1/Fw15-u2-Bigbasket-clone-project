@@ -473,16 +473,14 @@
     font-size: 0.8vw;
     margin-bottom: 0px;
 }
-.strick-price
-{
+.strick-price{
     /* border: 1px solid ; */
     margin: 0.2vw;
     font-size: 1vw; 
     color: gray;
     text-decoration: line-through;
 }
-.product-price
-{
+.product-price {
     margin: 0.2vw;
     font-size: 1.1vw;
     margin-left: 0.4vw;
@@ -503,7 +501,7 @@
     width: 15%;
     /* height: 20px; */
 }
-.delivery-date
+.delivery-date 
 {
     /* border: 1px solid; */
     text-align: center;
@@ -520,7 +518,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.qty-border
+.qty-border 
 {
     /* border: 1px solid; */
     margin: 0px;
@@ -538,7 +536,7 @@
     width: 40%;
     background-color: rgb(228, 228, 228);
 }
-.qty-input
+.qty-input 
 {
     width: 80%;
     font-size: 1vw;
@@ -551,7 +549,7 @@
     margin: auto;
     width: 50%;
 }
-.add-to-cart-button
+.add-to-cart-button 
 {
     width: 100%;
     height: 2vw;
@@ -647,10 +645,34 @@
     #leftsidebox{
         display: none;
     }
+      #gridcontainer{
+    grid-template-columns: repeat(3,1fr);      
+  }
+    .card{
+      max-width: 28vw;
+  }
      #navbar,
   #container,#bannerphoto,
   #main-container {
     width: 90vw;
+  }
+    .get-off{
+    font-size:50%
+  }
+  .brandName{
+    font-size:50%
+  }
+  .product-name{
+    font-size: 60%;
+  }
+.add-to-cart-button ,.qty-input, .delivery-date ,.product-price ,.strick-price,.mrp-border{
+    font-size: 60%;
+  } 
+  .qty-border{
+    font-size: 50%;
+  }
+  .add-to-cart-button {
+    height: 20%;
   }
 
 }
@@ -666,7 +688,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .card{
-      max-width: 27vw;
+      max-width: 45vw;
   }
   #navbar,
   #container,#bannerphoto,
@@ -674,8 +696,25 @@
     width: 90vw;
   }
   #gridcontainer{
-      grid-template-columns: repeat(3,1fr);
-      
+    grid-template-columns: repeat(2,1fr);      
+  }
+  .get-off{
+    font-size:50%
+  }
+  .brandName{
+    font-size:50%
+  }
+  .product-name{
+    font-size: 60%;
+  }
+.add-to-cart-button ,.qty-input, .delivery-date ,.product-price ,.strick-price,.mrp-border{
+    font-size: 60%;
+  } 
+  .qty-border{
+    font-size: 50%;
+  }
+  .add-to-cart-button {
+    height: 20%;
   }
 }
  
