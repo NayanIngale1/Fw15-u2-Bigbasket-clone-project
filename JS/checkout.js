@@ -110,7 +110,7 @@ function ShowReduceAmount() {
     );
 }
 document.querySelector("#GoToPayment1").addEventListener("click", function () {
-  console.log("heello");
+  // console.log("heello");
   var check = JSON.parse(localStorage.getItem("CheckOutData"));
   var user = checkUser(check);
   if (user == true) {
@@ -152,7 +152,7 @@ Product.map(function (el, index) {
   var ttl = el.quantity * el.productprice;
   var para1 = document.createElement("p");
   para1.setAttribute("class", "totalitems");
-  para1.innerHTML = `<b>${index + 1})</b> ${el.productName} `;
+  para1.innerHTML = `<b>${index + 1})</b> ${el.productName}`;
 
   var para2 = document.createElement("p");
   para2.setAttribute("class", "totalprc");
