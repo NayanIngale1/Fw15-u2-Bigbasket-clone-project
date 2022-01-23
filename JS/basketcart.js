@@ -167,8 +167,6 @@ var h1 = document.createElement("h1");
 h1.textContent = `Your Basket (${Object.keys(cartData).length} items)`;
 document.querySelector("#cartLength").append(h1);
 
-// var h2 = document.createElement("h2")
-// h2.textContent = "TOTAL "
 var chekOutButtnDiv = document.createElement("div");
 chekOutButtnDiv.setAttribute("id", "chekOutButtnDiv");
 var checkout = document.createElement("button");
@@ -220,7 +218,7 @@ document
   .querySelector("#checkOutSection")
   .append(pchkout2, chekOutButtnDiv, pchkout3);
 
-document.querySelector("#show-saving").textContent = savingSum;
+document.querySelector("#show-saving").textContent = roundOff(savingSum,2);
 function updateSaving(k) {
   document.querySelector("#show-saving").textContent = roundOff(
     Number(k) + savingSum,

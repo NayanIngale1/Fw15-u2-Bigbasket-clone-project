@@ -646,10 +646,34 @@
     #leftsidebox{
         display: none;
     }
+      #gridcontainer{
+    grid-template-columns: repeat(3,1fr);      
+  }
+    .card{
+      max-width: 28vw;
+  }
      #navbar,
   #container,#bannerphoto,
   #main-container {
     width: 90vw;
+  }
+    .get-off{
+    font-size:50%
+  }
+  .brandName{
+    font-size:50%
+  }
+  .product-name{
+    font-size: 60%;
+  }
+.add-to-cart-button ,.qty-input, .delivery-date ,.product-price ,.strick-price,.mrp-border{
+    font-size: 60%;
+  } 
+  .qty-border{
+    font-size: 50%;
+  }
+  .add-to-cart-button {
+    height: 20%;
   }
 
 }
@@ -665,7 +689,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .card{
-      max-width: 27vw;
+      max-width: 45vw;
   }
   #navbar,
   #container,#bannerphoto,
@@ -673,8 +697,24 @@
     width: 90vw;
   }
   #gridcontainer{
-      grid-template-columns: repeat(3,1fr);
-      
+    grid-template-columns: repeat(2,1fr);      
+  }
+  .get-off{
+    font-size:50%
+  }
+  .brandName{
+    font-size:50%
+  }
+  .product-name{
+    font-size: 60%;
+  }
+.add-to-cart-button ,.qty-input, .delivery-date ,.product-price ,.strick-price,.mrp-border{
+    font-size: 60%;
+  } 
+  .qty-border{
+    font-size: 50%;
+  }
+  .add-to-cart-button {
+    height: 20%;
   }
 }
- 

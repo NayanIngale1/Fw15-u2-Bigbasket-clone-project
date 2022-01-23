@@ -13,20 +13,6 @@ function savedata(event) {
   var city = document.querySelector("#City2").value;
   var area = document.querySelector("#Area2").value;
   var pincode = document.querySelector("#Pincode2").value;
-//   if (
-//     fname == "" ||
-//     lname == "" ||
-//     number == "" ||
-//     House == "" ||
-//     Apartment == "" ||
-//     StreetName == "" ||
-//     landmark == "" ||
-//     city == "" ||
-//     area == "" ||
-//     pincode == ""
-//   ) {
-//     var valid = flase;
-//   }
 
   var checkoutdata = {
     FName: fname,
@@ -41,9 +27,9 @@ function savedata(event) {
     Pincode: pincode,
   };
   // checkoutArray.push(checkoutdata);
-    
-     alert("Your Information is store successfully Thank You!");
-        localStorage.setItem("CheckOutData", JSON.stringify(checkoutdata));
+
+  alert("Your Information is store successfully Thank You!");
+  localStorage.setItem("CheckOutData", JSON.stringify(checkoutdata));
   // }
 }
 var totalamount = JSON.parse(localStorage.getItem("totalAmount"));
@@ -87,7 +73,10 @@ function ShowReduceAmount() {
 
   var ShowSavePrice = document.createElement("div");
   ShowSavePrice.setAttribute("class", "ShowSavePrice");
-  ShowSavePrice.innerHTML = `: <b>Rs. ${saveamount[saveamount.length - 1]}</b>`;
+  ShowSavePrice.innerHTML = `: <b>Rs. ${roundOff(
+    saveamount[saveamount.length - 1],
+    2
+  )}</b>`;
 
   document.querySelector("#voucherbox").append(SaveAmountBox);
   SaveAmountBox.append(YourSavePrice, ShowSavePrice);
@@ -103,9 +92,10 @@ function ShowReduceAmount() {
 
   var ShowReducePrice = document.createElement("div");
   ShowReducePrice.setAttribute("class", "ShowSavePrice");
-  ShowReducePrice.innerHTML = `: <b>Rs. ${
-    totalPrice[totalPrice.length - 1]
-  }</b>`;
+  ShowReducePrice.innerHTML = `: <b>Rs. ${roundOff(
+    totalPrice[totalPrice.length - 1],
+    2
+  )}</b>`;
 
   //   document.querySelector("#totalAmount").innerHTML =`Rs. ${totalPrice[totalPrice.length-1]}`;
   document.querySelector("#voucherbox").append(ReduceAmountBox);
@@ -120,42 +110,37 @@ function ShowReduceAmount() {
     );
 }
 document.querySelector("#GoToPayment1").addEventListener("click", function () {
-    console.log('heello')
-    var check = JSON.parse(localStorage.getItem("CheckOutData"));
-    var user = checkUser(check);
-    if (user == true) {
-        alert('Thank You!');
-         window.location.href = "payment.html";
-    }
-    else {
-        alert("Please fill The form ..!")
-    }
-     
-    
-   
-   //------------Here You Add Payment File Location
+  console.log("heello");
+  var check = JSON.parse(localStorage.getItem("CheckOutData"));
+  var user = checkUser(check);
+  if (user == true) {
+    alert("Thank You!");
+    window.location.href = "payment.html";
+  } else {
+    alert("Please fill The form ..!");
+  }
+
+  //------------Here You Add Payment File Location
 });
 
-
 function checkUser(check) {
-    console.log(check)
-    if (
-      check.FName == "" ||
-      check.LName == "" ||
-      check.ContactNo == "" ||
-      check.HouseNo == "" ||
-      check.Apart == "" ||
-      check.Street == "" ||
-      check.LandMark == "" ||
-      check.City == "" ||
-      check.Area == "" ||
-      check.Pincode == ""
-    ) {
-      return false;
-    }
-    return true
+  console.log(check);
+  if (
+    check.FName == "" ||
+    check.LName == "" ||
+    check.ContactNo == "" ||
+    check.HouseNo == "" ||
+    check.Apart == "" ||
+    check.Street == "" ||
+    check.LandMark == "" ||
+    check.City == "" ||
+    check.Area == "" ||
+    check.Pincode == ""
+  ) {
+    return false;
+  }
+  return true;
 }
-
 
 var Product = JSON.parse(localStorage.getItem("cartData"));
 
@@ -175,3 +160,14 @@ Product.map(function (el, index) {
 
   document.querySelector("#ProductShowBox").append(para1, para2);
 });
+
+function roundOff(value, round) {
+  return parseInt(value * 10 ** (round + 1)) -
+    parseInt(value * 10 ** round) * 10 >
+    4
+    ? parseFloat(
+        parseInt((value + parseFloat(1 / 10 ** round)) * 10 ** round)
+      ) /
+        10 ** round
+    : parseFloat(parseInt(value * 10 ** round)) / 10 ** round;
+}
