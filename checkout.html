@@ -5,8 +5,159 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
+    <link rel="stylesheet" href="css/checkout.css">
 </head>
 <body>
-    <a href="payment.html">payment</a>
+    <!-----------------------------------Nav Bar starts------------------------------------>
+        <div id="out-nav">
+            <div id="navbar">
+                <div id="logo">
+                    <a href="index.html"><img src="logo.png" alt=""></a>
+                </div>
+                <div id="box">
+                    <div id="nav-top">
+                        <div><img src="callpng.png" alt=""></i>1860 123 1000</div>
+                        <div>Nashik</div>
+                        <div><a href="bbsignup.html"><img src="loginphoro.png" alt="">login/signup</a></div>
+                    </div>
+                    <div id="nav-mid">
+                        <div id="search">
+                            <input type="text" placeholder="Search for products...">
+                            <img src="searchbtn.png" alt="" id="search-prod">
+                        </div>
+                        <div>
+                            <div id="basket-cart">
+                                <img src="basket.png" alt=""><span id="basket-items"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-----------------------------------Nav Bar ends------------------------->
+<div id = "container">
+        <!--information box start-->
+        <div id = "infobox">
+            <div id = "locationtagbox">
+                <img id = "locationtag" src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-09-512.png" alt="">
+                <p id = "DeliveryAddress">Delivery Address</p>
+            </div>
+            <div id = "PersonalAddressBox">
+                <form id = "infoform">
+                    <div id = "PersonalDetails">Personal Details</div>
+                    <div id = "PersonalDetailsBox">
+                        <div id = "firstname1">
+                            <div id = "first">* Enter First Name</div>
+                            <div id = "fname">
+                               <input id = "fname1" type="text" required>
+                            </div>
+                        </div>
+                        <div id = "lastname1">
+                            <div id = "last">* Enter Last Name</div>
+                            <div id = "lname">
+                                <input id = "lname1" type="text" required>
+                            </div>
+                        </div>
+                        <div id = "contact1">
+                            <div id = "number">* Enter Contact Number</div>
+                            <div id = "number1">
+                                <input id = "number2" type="number" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div id = "AddressDetails">Address Details</div>
+                    <div id = "AddressDetailsBox">
+                        <div id = "HouseBox">
+                            <div id = "House">* House No</div>
+                            <div id = "House1">
+                               <input id = "House2" type="text" required>
+                            </div>
+                        </div>
+                        <div id = "ApartmentBox">
+                            <div id = "Apart">Enter Apartment Name</div>
+                            <div id = "Apart1">
+                                <input id = "Apart2" type="text" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div id = "AddressDetailsBox">
+                        <div id = "StreetBox">
+                            <div id = "Street">Enter Street Details</div>
+                            <div id = "Street1">
+                               <input id = "Street2" type="text" required>
+                            </div>
+                        </div>
+                        <div id = "LandMarkBox">
+                            <div id = "LandMark">Enter Landmark For Easy Reach Out</div>
+                            <div id = "LandMark1">
+                                <input id = "LandMark2" type="text" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div id = "PersonalDetailsBox">
+                        <div id = "CityBox">
+                            <div id = "City">Enter City Name</div>
+                            <div id = "City1">
+                               <input id = "City2" type="text" required>
+                            </div>
+                        </div>
+                        <div id = "AreaBox">
+                            <div id = "Area">* Area Details</div>
+                            <div id = "Area1">
+                                <input id = "Area2" type="text" required>
+                            </div>
+                        </div>
+                        <div id = "PincodeBox">
+                            <div id = "Pincode">* Enter Pincode</div>
+                            <div id = "Pincode1">
+                                <input id = "Pincode2" type="number" required>
+                            </div>
+                        </div>
+                    </div>
+                    <button id = "submit" type = "submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div id = "voucherbox">
+            <div id = "totalpriceBox">
+                <div id = "totalprice">Total Price</div>
+                <div id = "totalAmount"></div>
+            </div>
+            <div id = "applymasai30"><u>Apply masai30 and get 30% disscount</u></div>
+            <div id = "couponbox">
+                <div id = "inputpromo">
+                    <input type="text" id = "input" placeholder="enter code.."/>
+                </div>
+                <div id = "promobtn">
+                    <button id = "applycode" >Apply PromoCode</button>
+                </div>
+            </div>
+                <!-- --------------get discounted price here ---------------------  -->
+
+            <div id = "GoToPayment">
+                <button id = "GoToPayment1">Go To Payment</button>
+            </div>
+
+            <div id = "totalItemBox">
+                <div id = "totalItem">Total Item</div>
+                <div id = "totalItemShow"></div>
+            </div>
+            <div id = "ProductShowBox">
+                    <!-- <div id = "ProductImage">
+                        <img id = "ProductImage1">
+                    </div>
+                    <div id = "ProductDetails">
+                        <div class = "BrandName"></div>
+                        <div class = "ProductName" id = "ProductName1">B</div>
+                        <div class = "ProductName" id = "ProductMrpPrice">C</div>
+                        <div class = "ProductName">D</div>
+                    </div> -->
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+<script src="JS/checkout.js"></script>

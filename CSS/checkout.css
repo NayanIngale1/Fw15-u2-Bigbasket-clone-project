@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Licorice&family=Outfit:wght@300;400&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: rgba(131, 194, 37, 0.24);
+  align-items: center;
+}
+/*--------------------------- nav bar css----------------------------------  */
+#out-nav {
+  width: 100vw;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.11) 0px 2px 8px;
+}
+#navbar {
+  width: 80vw;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1vw;
+}
+#nav-top {
+  /* height: 5vh; */
+  width: 65vw;
+  display: flex;
+  justify-content: flex-end;
+  /* border: 0.5px solid gray; */
+}
+#nav-top img {
+  height: 1vw;
+}
+#logo img {
+  width: 13vw;
+  cursor: pointer;
+}
+#box {
+  width: 65vw;
+  /* border: 1px solid red; */
+}
+#nav-top > div {
+  margin: 0px 2%;
+  padding: 3px;
+  cursor: pointer;
+}
+#nav-top > div:hover {
+  color: rgb(132, 194, 37);
+}
+#nav-top a {
+  text-decoration: none;
+  color: black;
+}
+#nav-mid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4vw;
+  /* border: 1px solid black; */
+}
+#search {
+  width: 50vw;
+  display: flex;
+}
+#search > img {
+  height: 2.5vw;
+  outline: 1px solid rgb(132, 194, 37);
+  cursor: pointer;
+}
+#nav-mid input {
+  width: 35vw;
+  outline: 1px solid rgb(132, 194, 37);
+  cursor: pointer;
+  height: 2.5vw;
+  padding: 1vw;
+}
+#basket-cart {
+  display: flex;
+  padding: 0.5vw;
+  max-height: 4vw;
+  cursor: pointer;
+  font-weight: 500;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(230, 230, 230);
+}
+#basket-cart img {
+  height: 3vw;
+}
+
+/*----------------------------------------- nav bar css ends----------------------------------------------------------- */
+
+#container {
+  /* border: 1px solid #f3f3f3; */
+  border-radius: 20px;
+  /* background-color: white; */
+  padding: 1vw;
+  width: 85vw;
+  margin: 6vw auto;
+  display: flex;
+}
+#infobox {
+  padding: 0.5vw;
+  width: 75%;
+  height: fit-content;
+  border-bottom-left-radius: 1vw;
+  border-top-left-radius: 1vw;
+}
+#locationtagbox {
+  /* border: 1px solid; */
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  grid-gap: 0.5vw;
+}
+#locationtag {
+  width: 2vw;
+  height: 2vw;
+  /* border: 1px solid; */
+}
+#DeliveryAddress {
+  width: fit-content;
+  font-size: 1vw;
+  margin: auto;
+  padding-right: 0.5vw;
+}
+#PersonalAddressBox {
+  margin-top: 2vw;
+  /* border: 1px solid; */
+  width: 99.5%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #f1f1f1;
+  border-radius: 1vw;
+  padding: 3vw;
+}
+
+#PersonalDetails {
+  /* border: 1px solid; */
+  width: fit-content;
+  font-size: 1.4vw;
+  font-weight: bold;
+  margin-top: 2vw;
+}
+#PersonalDetailsBox {
+  /* border: 1px solid; */
+  width: 99.4%;
+  margin-top: 0.5vw;
+  display: flex;
+  grid-gap: 0.5vw;
+}
+#firstname1,
+#lastname1 {
+  /* border: 1px solid; */
+  width: 25%;
+}
+
+#contact1 {
+  /* border: 1px solid; */
+  width: 48%;
+}
+#first {
+  font-size: 1vw;
+  width: fit-content;
+  margin-bottom: 0.2vw;
+}
+#fname {
+  /* border: 1px solid; */
+  width: 99%;
+  height: 2.5vw;
+  display: flex;
+}
+#fname1 {
+  width: 96%;
+  height: 82%;
+}
+#last {
+  font-size: 1vw;
+  width: fit-content;
+  margin-bottom: 0.2vw;
+}
+#lname {
+  /* border: 1px solid; */
+  width: 99%;
+  height: 2.5vw;
+}
+#lname1 {
+  width: 96%;
+  height: 82%;
+}
+#number {
+  font-size: 1vw;
+  width: fit-content;
+  margin-bottom: 0.2vw;
+}
+#number1 {
+  /* border: 1px solid; */
+  width: 99%;
+  height: 2.5vw;
+  display: flex;
+}
+#number2 {
+  width: 100%;
+  height: 82%;
+}
+#AddressDetails {
+  /* border: 1px solid; */
+  width: fit-content;
+  font-size: 1.4vw;
+  font-weight: bold;
+  margin-top: 0.8vw;
+}
+#AddressDetailsBox {
+  /* border: 1px solid; */
+  width: 99.4%;
+  margin-top: 0.5vw;
+  display: flex;
+  grid-gap: 0.5vw;
+}
+#HouseBox {
+  /* border: 1px solid; */
+  width: 25%;
+}
+#House {
+  font-size: 1vw;
+  width: fit-content;
+  margin-bottom: 0.2vw;
+}
+#House1 {
+  /* border: 1px solid; */
+  width: 99%;
+  height: 2.5vw;
+  display: flex;
+}
+#House2 {
+  width: 96%;
+  height: 82%;
+}
+#ApartmentBox {
+  /* border: 1px solid; */
+  width: 75%;
+}
+#Apart {
+  font-size: 1vw;
+  width: fit-content;
+  margin-bottom: 0.2vw;
+}
+#Apart1 {
+  /* border: 1px solid; */
+  width: 99%;
+  height: 2.5vw;
+  display: flex;
+}
+#Apart2 {
+  width: 100%;
+  height: 82%;
+}
+#StreetBox {
+  /* border: 1px solid; */
+  width: 50%;
+}
+#Street {
+  font-size: 1vw;
+  width: fit-content;
+  margin-bottom: 0.2vw;
+}
+#Street1 {
+  /* border: 1px solid; */
+  width: 99%;
+  height: 2.5vw;
+  display: flex;
+}
+#Street2 {
+  width: 100%;
+  height: 82%;
+}
+#LandMarkBox {
+  /* border: 1px solid; */
+  width: 50%;
+}
+#LandMark {
+  font-size: 1vw;
+  width: fit-content;
+  margin-bottom: 0.2vw;
+}
+#LandMark1 {
+  /* border: 1px solid; */
+  width: 99%;
+  height: 2.5vw;
+  display: flex;
+}
+#LandMark2 {
+  width: 100%;
+  height: 82%;
+}
+#CityBox {
+  /* border: 1px solid; */
+  width: 25%;
+}
+#City {
+  font-size: 1vw;
+  width: fit-content;
+  margin-bottom: 0.2vw;
+}
+#City1 {
+  /* border: 1px solid; */
+  width: 99%;
+  height: 2.5vw;
+  display: flex;
+}
+#City2 {
+  width: 96%;
+  height: 82%;
+}
+#AreaBox {
+  /* border: 1px solid; */
+  width: 48%;
+}
+#Area {
+  font-size: 1vw;
+  width: fit-content;
+  margin-bottom: 0.2vw;
+}
+#Area1 {
+  /* border: 1px solid; */
+  width: 99%;
+  height: 2.5vw;
+  display: flex;
+}
+#Area2 {
+  width: 96%;
+  height: 82%;
+}
+#PincodeBox {
+  /* border: 1px solid; */
+  width: 25%;
+}
+#Pincode {
+  font-size: 1vw;
+  width: fit-content;
+  margin-bottom: 0.2vw;
+}
+#Pincode1 {
+  /* border: 1px solid; */
+  width: 99%;
+  height: 2.5vw;
+  display: flex;
+}
+#Pincode2 {
+  width: 100%;
+  height: 82%;
+}
+#submit {
+  background-color: rgb(135, 201, 37);
+  color: white;
+  border: 0.2vw solid rgb(151, 224, 40);
+  border-radius: 10px;
+  font-weight: 600;
+  transition: ease-in-out 0.3s;
+  /* border-width: 0.1vw; */
+  margin: 1vw auto;
+  padding: 0.5vw 1vw;
+  font-size: 1.2vw;
+}
+#submit:hover {
+  background-color: rgb(102, 160, 15);
+}
+#voucherbox {
+  /* border: 1px solid; */
+  padding: 0.5vw;
+  width: 25%;
+  border-bottom-right-radius: 1vw;
+  border-top-right-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1vw;
+}
+#totalpriceBox {
+  /* border: 1px solid; */
+  width: 99%;
+  display: flex;
+}
+#totalprice {
+  /* border: 1px solid; */
+  font-size: 1.5vw;
+  padding: 0.1vw;
+}
+#totalAmount {
+  /* border: 1px solid; */
+  font-size: 1.4vw;
+  padding: 0.2vw;
+  padding-left: 0.6vw;
+  padding-right: 0.6vw;
+}
+#couponbox {
+  /* border: 1px solid; */
+  margin-top: 0.5vw;
+  width: 99%;
+}
+
+#applycode {
+  background-color: rgb(135, 201, 37);
+  color: white;
+  border: 0.2vw solid rgb(151, 224, 40);
+  border-radius: 5px;
+  width: 100%;
+  margin: 0.8vw 0px;
+  font-size: 0.9vw;
+  padding: 0.5vw;
+}
+
+#inputpromo {
+  /* border: 1px solid; */
+  width: 100%;
+  display: flex;
+}
+#input {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2vw;
+}
+#applymasai30 {
+  /* border: 1px solid; */
+  background-color: rgb(234, 242, 255);
+  margin-top: 0.5vw;
+  width: 99%;
+  font-size: 1vw;
+  margin-bottom: auto;
+}
+.SaveAmountBox {
+  /* border: 1px solid; */
+  width: 99%;
+  display: flex;
+  margin-top: 0.5vw;
+}
+.YourSavePrice {
+  /* border: 1px solid; */
+  font-size: 1.2vw;
+  padding: 0.2vw;
+}
+.ShowSavePrice {
+  /* border: 1px solid; */
+  font-size: 1.4vw;
+}
+#GoToPayment {
+  /* border: 1px solid; */
+  margin-top: 0.5vw;
+  display: flex;
+  width: 99%;
+}
+#GoToPayment1 {
+  background-color: rgb(113, 123, 255);
+  color: white;
+  border: 0.2vw solid rgb(83, 95, 255);
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.5vw;
+  font-size: 1.2vw;
+}
+#GoToPayment1:hover {
+  background-color: rgb(21, 37, 255);
+}
+#totalItemBox {
+  /* border: 1px solid; */
+  width: 99%;
+  display: flex;
+  margin-top: 0.5vw;
+}
+#totalItem {
+  /* border: 1px solid; */
+  font-size: 1.5vw;
+  padding: 0.2vw;
+}
+
+#totalItemShow {
+  /* border: 1px solid; */
+  font-size: 1.4vw;
+  padding: 0.2vw;
+  padding-left: 0.6vw;
+  padding-right: 0.6vw;
+}
