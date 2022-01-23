@@ -29,7 +29,7 @@
           <div class="card-number">
             <h3>Card Number</h3>
             <div class="input-field">
-              <input type="text" placeholder="XXXX - XXXX - XXXX - XXXX" />
+              <input type="password" placeholder="XXXX - XXXX - XXXX - XXXX" />
             </div>
           </div>
         </div>
@@ -82,7 +82,21 @@
     "#ttlitem"
   ).innerHTML = `<b>Total</b> : ${item} Items.`;
 
-  document.getElementById("totalprc").innerHTML = `<b>Amount</b> : Rs. ${
-    totalprc[totalprc.length - 1]
-  }`;
+  document.getElementById(
+    "totalprc"
+  ).innerHTML = `<b>Amount</b> : Rs. ${roundOff(
+    totalprc[totalprc.length - 1],
+    2
+  )}`;
+
+  function roundOff(value, round) {
+    return parseInt(value * 10 ** (round + 1)) -
+      parseInt(value * 10 ** round) * 10 >
+      4
+      ? parseFloat(
+          parseInt((value + parseFloat(1 / 10 ** round)) * 10 ** round)
+        ) /
+          10 ** round
+      : parseFloat(parseInt(value * 10 ** round)) / 10 ** round;
+  }
 </script>
