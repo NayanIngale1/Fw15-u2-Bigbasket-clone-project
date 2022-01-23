@@ -6,6 +6,10 @@ document.getElementById(
   "basket-items"
 ).innerHTML = `My Basket <br><b> ${cartArr.length} Items.</b>`;
 
+document.querySelector("#basket-cart").addEventListener("click", function () {
+  window.location.href = "basketcart.html";
+});
+
 Details(ProductDetails);
 function Details(ProductDetails) {
   ProductDetails.map(function (element, index) {

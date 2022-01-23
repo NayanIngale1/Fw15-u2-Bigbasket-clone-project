@@ -3,6 +3,10 @@ document.querySelector("#read-more-btn").addEventListener("click", function () {
   document.querySelector("#read-more-btn").style.display = "none";
 });
 
+
+document.querySelector("#basket-cart").addEventListener("click", function () {
+  window.location.href = "basketcart.html";
+});
 //---------------All Product Photo Start----------//
 
 var image3 = document.createElement("img");

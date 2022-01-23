@@ -14,22 +14,34 @@ body {
   font-weight: 300;
   justify-content: center;
   align-items: center;
-  background-color: rgba(131, 194, 37, 0.281);
+  background-color: rgba(131, 194, 37, 0.171);
+}
+.paycontainer{
+  min-width: 65%;
+  height: 500px;
+  border-right: 1px solid #aaaaaa;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  justify-content: space-around;
+  
+}
+#userdetails{
+ padding: 40px;
 }
 
 .container {
-  width: 750px;
+  width: 70vw;
   height: 500px;
   border: 1px solid #f3f3f3;
   border-radius: 20px;
   background-color: white;
   display: flex;
-  flex-direction: column;
-  padding: 40px;
-  justify-content: space-around;
+  justify-content: space-between;
   box-shadow: rgba(43, 63, 13, 0.397) 0px 5px 6px -3px,
     rgba(48, 71, 13, 0.418) 0px 4px 6px -2px;
 }
+
 
 .container h1 {
   text-align: center;

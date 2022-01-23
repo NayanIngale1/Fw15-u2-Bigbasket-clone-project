@@ -63,7 +63,7 @@ function showCart(cartData) {
     td5.setAttribute("id", "td5");
 
     // td5.textContent = item.totalPrice//total price
-    td5.textContent = item.quantity * item.productprice; //total price
+    td5.textContent = roundOff(item.quantity * item.productprice,2); //total price
 
     // showPrice(item.quantity*item.productprice)
 
