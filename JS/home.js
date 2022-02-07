@@ -71,8 +71,7 @@ var cartArr = JSON.parse(localStorage.getItem("cartData")) || [];
 var FruitVegArr = JSON.parse(localStorage.getItem("vegData"));
 var OneProduct = [];
 
-
-if (FruitVegArr.length == 0) {
+if (!FruitVegArr) {
   window.location.href = "Project-All-Data.html";
 }
 
