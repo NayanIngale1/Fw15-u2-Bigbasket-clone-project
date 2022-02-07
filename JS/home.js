@@ -71,6 +71,11 @@ var cartArr = JSON.parse(localStorage.getItem("cartData")) || [];
 var FruitVegArr = JSON.parse(localStorage.getItem("vegData"));
 var OneProduct = [];
 
+
+if (FruitVegArr.length == 0) {
+  window.location.href = "Project-All-Data.html";
+}
+
 document.getElementById(
   "basket-items"
 ).innerHTML = `My Basket <br><b> ${cartArr.length} Items.</b>`;
